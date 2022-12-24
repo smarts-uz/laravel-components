@@ -29,8 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Teamprodev\\LaravelComponents\\": "src/",
-            "Teamprodev\\LaravelComponents\\database\\seeds\\": "src/database/seeds"
+            "BladeUIKit\\": "src"
         }
     },
     "autoload-dev": {
