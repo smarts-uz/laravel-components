@@ -42,7 +42,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Teamprodev\\LaravelComponents\\ComponentsServiceProvider"
+                "BladeUIKit\\BladeUIKitServiceProvider"
             ]
         }
     },
