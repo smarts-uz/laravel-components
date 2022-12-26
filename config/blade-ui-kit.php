@@ -17,6 +17,7 @@ return [
 
     'components' => [
         'alert' => Components\Alerts\Alert::class,
+        'append-grid' => Components\Select\AppendGrid::class,
         'avatar' => Components\Support\Avatar::class,
         'carbon' => Components\DateTime\Carbon::class,
         'checkbox' => Components\Forms\Inputs\Checkbox::class,
@@ -88,6 +89,8 @@ return [
     */
 
     'assets' => [
+
+        'appendGrid' => 'https://cdn.jsdelivr.net/npm/jquery.appendgrid@2.0.0/dist/AppendGrid.min.js',
 
         'alpine' => 'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js',
 
