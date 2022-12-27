@@ -12,7 +12,7 @@ class AppendGrid extends BladeComponent
     public $name;
 
     /** @var string */
-    public $ds_name;
+    public $dsName;
 
     /** @var string */
     public $id;
@@ -25,19 +25,19 @@ class AppendGrid extends BladeComponent
     /**
      * @param string $name
      * @param string $id
-     * @param string $ds_name
+     * @param string $dsName
      * @param array $data
      */
-    public function __construct(string $name, string $id, string $ds_name, array $data)
+    public function __construct(string $name, string $id, string $dsName)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->ds_name = $ds_name;
-        $this->data = $data;
+        $this->dsName = $dsName;
+        $this->data = json_encode(['test', 'test2']);
     }
 
     public function render(): View
     {
-        return view('blade-ui-kit::components.select.append-grid');
+        return view('blade-ui-kit::components.select.append-grid', ['data' => $this->data]);
     }
 }

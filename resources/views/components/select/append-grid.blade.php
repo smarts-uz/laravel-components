@@ -1,5 +1,4 @@
-
-<table id="{{$id}}"></table>
+<table id="{{$id}}" {{ $attributes }}></table>
 <script>
     var myAppendGrid;
     document.addEventListener("DOMContentLoaded", function () {
@@ -9,7 +8,7 @@
             iconFramework: "fontawesome5",
             columns: [{
             name: "{{$name}}",
-            display: "{{$ds_name}}",
+            display: "{{$dsName}}",
             type: "select",
             ctrlAttr: {
                 "rows": 5
