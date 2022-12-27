@@ -16,15 +16,15 @@ return [
     */
 
     'components' => [
-        'alert' => Components\Alerts\Alert::class,
         'append-grid' => Components\Select\AppendGrid::class,
+        'alert' => Components\Alerts\Alert::class,
         'avatar' => Components\Support\Avatar::class,
         'carbon' => Components\DateTime\Carbon::class,
         'checkbox' => Components\Forms\Inputs\Checkbox::class,
         'color-picker' => Components\Forms\Inputs\ColorPicker::class,
         'countdown' => Components\DateTime\Countdown::class,
         'cron' => Components\Support\Cron::class,
-        'dropdown' => Components\Navigation\Dropdown::class,
+        'dropdown' => Components\Select\AppendGrid::class,
         'easy-mde' => Components\Editors\EasyMDE::class,
         'email' => Components\Forms\Inputs\Email::class,
         'error' => Components\Forms\Error::class,
@@ -90,7 +90,9 @@ return [
 
     'assets' => [
 
-        'appendGrid' => 'https://cdn.jsdelivr.net/npm/jquery.appendgrid@2.0.0/dist/AppendGrid.min.js',
+        'append-grid' => 'https://cdn.jsdelivr.net/npm/jquery.appendgrid@2.1.1/dist/AppendGrid.min.js',
+
+        'font-awesome' => 'https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css',
 
         'alpine' => 'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js',
 
