@@ -10,13 +10,7 @@
             name: "{{$name}}",
             display: "{{$dsName}}",
             type: "select",
-            ctrlAttr: {
-                "rows": 5
-            },
-            ctrlOptions: {
-                @foreach (json_decode($data) as $key =>  $item)
-        {{$key}}: "{{ $item }}",
-        @endforeach}
+            ctrlOptions: "{{ $ctrlOptions }}"
     }]
     });
     });

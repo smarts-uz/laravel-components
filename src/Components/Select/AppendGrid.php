@@ -28,16 +28,19 @@ class AppendGrid extends BladeComponent
      * @param string $dsName
      * @param array $data
      */
-    public function __construct(string $name, string $id, string $dsName)
+    public function __construct(string $name, string $id, string $dsName, array $data = ['null'])
     {
         $this->id = $id;
         $this->name = $name;
         $this->dsName = $dsName;
-        $this->data = json_encode(['test', 'test2']);
+
+        foreach ($data as $key => $val) {
+            $this->data .= $key . ':' . $val;
+        }
     }
 
     public function render(): View
     {
-        return view('blade-ui-kit::components.select.append-grid', ['data' => $this->data]);
+        return view('blade-ui-kit::components.select.append-grid');
     }
 }
