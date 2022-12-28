@@ -17,6 +17,7 @@ return [
 
     'components' => [
         'append-grid' => Components\Select\AppendGrid::class,
+        'select2' => Components\Select\Select2::class,
         'alert' => Components\Alerts\Alert::class,
         'avatar' => Components\Support\Avatar::class,
         'carbon' => Components\DateTime\Carbon::class,
@@ -24,7 +25,7 @@ return [
         'color-picker' => Components\Forms\Inputs\ColorPicker::class,
         'countdown' => Components\DateTime\Countdown::class,
         'cron' => Components\Support\Cron::class,
-        'dropdown' => Components\Select\AppendGrid::class,
+        'dropdown' => Components\Select\Select2::class,
         'easy-mde' => Components\Editors\EasyMDE::class,
         'email' => Components\Forms\Inputs\Email::class,
         'error' => Components\Forms\Error::class,
@@ -93,6 +94,11 @@ return [
         'append-grid' => 'https://cdn.jsdelivr.net/npm/jquery.appendgrid@2.1.1/dist/AppendGrid.min.js',
 
         'font-awesome' => 'https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css',
+
+        'select2' => [
+            'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css',
+            'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js'
+            ],
 
         'alpine' => 'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js',
 
