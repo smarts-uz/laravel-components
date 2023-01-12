@@ -136,7 +136,20 @@ return [
             'https://unpkg.com/trix@1.2.3/dist/trix.css',
             'https://unpkg.com/trix@1.2.3/dist/trix.js',
         ],
-
+        'yajra' => [
+            'https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css',
+            'https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css',
+            'https://cdn.datatables.net/searchbuilder/1.3.3/css/searchBuilder.dataTables.min.css',
+            'https://cdn.datatables.net/datetime/1.1.2/css/dataTables.dateTime.min.css',
+            'https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.dataTables.min.css',
+            'https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css',
+            'https://code.jquery.com/jquery-3.5.1.js',
+            'https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js',
+            'https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js',
+            'https://cdn.datatables.net/plug-ins/1.10.24/dataRender/datetime.js',
+            'https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js'
+        ]
     ],
 
 ];
