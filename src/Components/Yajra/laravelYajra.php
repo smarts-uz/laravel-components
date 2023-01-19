@@ -2,11 +2,12 @@
 
 namespace BladeUIKit\Components\Yajra;
 
+use BladeUIKit\Components\BladeComponent;
 use Illuminate\Http\Client\Request;
 use Illuminate\View\Component;
 use App\Text\textYajra;
 
-class laravelYajra extends Component
+class laravelYajra extends BladeComponent
 {
     /**
      * Create a new component instance.
@@ -30,6 +31,7 @@ class laravelYajra extends Component
     public string $pagingType;
 
     protected static $assets = ['yajra'];
+
     public function __construct(string      $tableTitle = null,
                                 string      $getData = null,
                                 string        $language = 'en-GB',
