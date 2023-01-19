@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class textYajra {
 
-    public function language_button($tableTitle)
+    public function buttons($tableTitle)
     {
         $copy = '<i class="fas fa-copy"></i>';
         $excel = '<i class="fas fa-file-excel"></i>';

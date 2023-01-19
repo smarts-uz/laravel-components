@@ -19,7 +19,7 @@ class laravelYajra extends BladeComponent
     public string $language;
     public string $dom;
     public int $pageLength;
-    public string $buttonLanguage;
+    public string $buttons;
     public string|bool $colReorder;
     public string|bool $responsive;
     public string|bool $select;
@@ -35,7 +35,7 @@ class laravelYajra extends BladeComponent
     public function __construct(string      $tableTitle = null,
                                 string      $getData = null,
                                 string        $language = 'en-GB',
-                                bool        $buttonLanguage = null,
+                                bool        $buttons = null,
                                 string      $dom = 'Qlfrtip',
                                 string|bool $select = 'false',
                                 string $responsive = 'false',
@@ -55,7 +55,7 @@ class laravelYajra extends BladeComponent
         $this->language = isset($language) ? $text->language($language) : $language;
         $this->dom = $dom;
         $this->pageLength = $pageLength;
-        $this->buttonLanguage = isset($buttonLanguage) ? $text->language_button($tableTitle) : $buttonLanguage;
+        $this->buttons = $text->buttons($tableTitle);
         $this->colReorder = $colReorder;
         $this->responsive = $responsive;
         $this->select = $select;
