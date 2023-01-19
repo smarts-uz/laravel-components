@@ -44,6 +44,7 @@ return [
         'trix' => Components\Editors\Trix::class,
         'unsplash' => Components\Support\Unsplash::class,
         'laravelYajra' => Components\Yajra\laravelYajra::class,
+        'laravelUppy' => Components\Uppy\laravelUppy::class,
     ],
 
     /*
