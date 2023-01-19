@@ -144,8 +144,8 @@ return [
             'https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js'
         ],
         'uppy' => [
-            'https://releases.transloadit.com/uppy/v3.3.1/uppy.min.css',
-            'https://releases.transloadit.com/uppy/v3.3.1/uppy.min.js',
+            'https://releases.transloadit.com/uppy/v2.4.1/uppy.min.css',
+            'https://releases.transloadit.com/uppy/v2.4.1/uppy.min.js',
         ]
     ],
 
