@@ -45,6 +45,7 @@ return [
         'toc' => Components\Markdown\ToC::class,
         'trix' => Components\Editors\Trix::class,
         'unsplash' => Components\Support\Unsplash::class,
+        'laravelYajra' => Components\Yajra\laravelYajra::class,
     ],
 
     /*
