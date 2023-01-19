@@ -141,6 +141,10 @@ return [
             'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js',
             'https://cdn.datatables.net/plug-ins/1.10.24/dataRender/datetime.js',
             'https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js'
+        ],
+        'uppy' => [
+            'https://releases.transloadit.com/uppy/v3.3.1/uppy.min.css',
+            'https://releases.transloadit.com/uppy/v3.3.1/uppy.min.js',
         ]
     ],
 
