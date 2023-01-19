@@ -18,6 +18,7 @@ final class BladeUIKitServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(__DIR__.'/../config/blade-ui-kit.php', 'blade-ui-kit');
+        $this->mergeConfigFrom(__DIR__.'/../config/uppy.php', 'uppy');
 
         if ($this->app->runningInConsole()) {
             $this->commands([
