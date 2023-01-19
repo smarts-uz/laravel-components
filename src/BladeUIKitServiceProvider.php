@@ -18,7 +18,6 @@ final class BladeUIKitServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(__DIR__.'/../config/blade-ui-kit.php', 'blade-ui-kit');
-        $this->mergeConfigFrom(__DIR__.'/../config/uppy.php', 'uppy');
 
         if ($this->app->runningInConsole()) {
             $this->commands([
@@ -112,7 +111,9 @@ final class BladeUIKitServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../config/blade-ui-kit.php' => $this->app->configPath('blade-ui-kit.php'),
             ], 'blade-ui-kit-config');
-
+            $this->publishes([
+                __DIR__.'/../config/uppy.php' => $this->app->configPath('uppy.php'),
+            ], 'uppy-config');
             $this->publishes([
                 __DIR__.'/../resources/views' => $this->app->resourcePath('views/vendor/blade-ui-kit'),
             ], 'blade-ui-kit-views');
