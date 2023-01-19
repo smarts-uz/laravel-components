@@ -5,7 +5,7 @@ namespace BladeUIKit\Components\Yajra;
 use BladeUIKit\Components\BladeComponent;
 use Illuminate\Http\Client\Request;
 use Illuminate\View\Component;
-use App\Text\textYajra;
+use BladeUIKit\Text\textYajra;
 
 class laravelYajra extends BladeComponent
 {
