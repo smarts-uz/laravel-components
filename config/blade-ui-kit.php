@@ -16,8 +16,6 @@ return [
     */
 
     'components' => [
-        'append-grid' => Components\Select\AppendGrid::class,
-        'select2' => Components\Select\Select2::class,
         'alert' => Components\Alerts\Alert::class,
         'avatar' => Components\Support\Avatar::class,
         'carbon' => Components\DateTime\Carbon::class,
@@ -25,7 +23,7 @@ return [
         'color-picker' => Components\Forms\Inputs\ColorPicker::class,
         'countdown' => Components\DateTime\Countdown::class,
         'cron' => Components\Support\Cron::class,
-        'dropdown' => Components\Select\Select2::class,
+        'dropdown' => Components\Navigation\Dropdown::class,
         'easy-mde' => Components\Editors\EasyMDE::class,
         'email' => Components\Forms\Inputs\Email::class,
         'error' => Components\Forms\Error::class,
@@ -92,15 +90,6 @@ return [
 
     'assets' => [
 
-        'append-grid' => 'https://cdn.jsdelivr.net/npm/jquery.appendgrid@2.1.1/dist/AppendGrid.min.js',
-
-        'font-awesome' => 'https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css',
-
-        'select2' => [
-            'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css',
-            'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js'
-            ],
-
         'alpine' => 'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js',
 
         'easy-mde' => [
@@ -146,6 +135,8 @@ return [
             'https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css',
             'https://code.jquery.com/jquery-3.5.1.js',
             'https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js',
+            'https://cdn.datatables.net/searchbuilder/1.4.0/js/dataTables.searchBuilder.min.js',
+            'https://cdn.datatables.net/datetime/1.2.0/js/dataTables.dateTime.min.js',
             'https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js',
             'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js',
             'https://cdn.datatables.net/plug-ins/1.10.24/dataRender/datetime.js',
