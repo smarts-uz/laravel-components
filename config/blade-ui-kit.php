@@ -136,6 +136,9 @@ return [
             "{{ asset('vendor/eimzo/assets/js/eimzo/e-imzo-client.js') }}",
             "{{ asset('vendor/eimzo/assets/js/eimzo/imzo.js') }}",
         ],
+        'tailwind' => [
+            'https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css'
+        ],
         'yajra' => [
             'https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css',
             'https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css',
