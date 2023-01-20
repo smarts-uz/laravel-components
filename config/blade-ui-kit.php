@@ -43,6 +43,7 @@ return [
         'toc' => Components\Markdown\ToC::class,
         'trix' => Components\Editors\Trix::class,
         'unsplash' => Components\Support\Unsplash::class,
+        'eimzo_login' => Components\Eimzo\EimzoLogin::class,
         'laravelYajra' => Components\Yajra\laravelYajra::class,
         'laravelUppy' => Components\Uppy\laravelUppy::class,
     ],
@@ -126,6 +127,14 @@ return [
         'trix' => [
             'https://unpkg.com/trix@1.2.3/dist/trix.css',
             'https://unpkg.com/trix@1.2.3/dist/trix.js',
+        ],
+        'jquery' => [
+            'https://code.jquery.com/jquery-3.5.1.js',
+        ],
+        'eimzo_login' => [
+            "{{ asset('vendor/eimzo/assets/js/eimzo/e-imzo.js') }}",
+            "{{ asset('vendor/eimzo/assets/js/eimzo/e-imzo-client.js') }}",
+            "{{ asset('vendor/eimzo/assets/js/eimzo/imzo.js') }}",
         ],
         'yajra' => [
             'https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css',

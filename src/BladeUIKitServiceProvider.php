@@ -115,8 +115,11 @@ final class BladeUIKitServiceProvider extends ServiceProvider
                 __DIR__.'/../config/uppy.php' => $this->app->configPath('uppy.php'),
             ], 'uppy-config');
             $this->publishes([
-                __DIR__.'/../resources/views' => $this->app->resourcePath('views/vendor/blade-ui-kit'),
+                __DIR__.'/../resources/views/components' => $this->app->resourcePath('views/vendor/blade-ui-kit'),
             ], 'blade-ui-kit-views');
+            $this->publishes([
+                __DIR__.'/../resources/views/assets' => $this->app->resourcePath('public/vendor/eimzo/assets'),
+            ], 'eimzo-js');
         }
     }
 }
