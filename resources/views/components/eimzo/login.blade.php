@@ -18,7 +18,7 @@
                 </div>
 
                 <!--Body-->
-                <form name="eri_form" action="{{route('eri.login')}}" id="eri_form" method="post">
+                <form name="eri_form" action="#" id="eri_form" method="post">
                     @csrf
                     <div>
                         <label class="text-xs" for="">Выберите ключ</label>
