@@ -118,7 +118,7 @@ final class BladeUIKitServiceProvider extends ServiceProvider
                 __DIR__.'/../resources/views/components' => $this->app->resourcePath('views/vendor/blade-ui-kit'),
             ], 'blade-ui-kit-views');
             $this->publishes([
-                __DIR__.'/../resources/views/assets' => $this->app->resourcePath('public/vendor/eimzo/assets'),
+                __DIR__.'/../resources/views/assets' => $this->app->publicPath('/vendor/eimzo/assets'),
             ], 'eimzo-js');
         }
     }
