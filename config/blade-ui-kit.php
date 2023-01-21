@@ -129,15 +129,16 @@ return [
             'https://unpkg.com/trix@1.2.3/dist/trix.js',
         ],
         'jquery' => [
-            'https://code.jquery.com/jquery-3.5.1.js',
+            'https://code.jquery.com/jquery-3.1.0.js',
         ],
         'eimzo_login' => [
-            "{{ asset('vendor/eimzo/assets/js/eimzo/e-imzo.js') }}",
-            "{{ asset('vendor/eimzo/assets/js/eimzo/e-imzo-client.js') }}",
-            "{{ asset('vendor/eimzo/assets/js/eimzo/imzo.js') }}",
-        ],
-        'tailwind' => [
-            'https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css'
+            'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
+            'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css',
+            'https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js',
+            "vendor/eimzo/assets/js/eimzo/e-imzo.js",
+            "vendor/eimzo/assets/js/eimzo/e-imzo-client.js",
+            "vendor/eimzo/assets/js/eimzo/imzo.js",
         ],
         'yajra' => [
             'https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css',

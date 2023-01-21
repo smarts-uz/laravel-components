@@ -1,47 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.css" rel="stylesheet">
-    <title>Uztelecom</title>
-    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
-    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+<section class="">
+
+    <!--Modal-->
+    <div class="w-full">
+
+        <div class="bg-white">
+
+            <!-- Add margin if you want to see some of the overlay behind the modal-->
+            <div class="d-flex justify-content-center">
+                <!--Title-->
+                <div class="">
+                    <div class="">
+                        <img src="http://www.rtmc.uz/wp-content/uploads/2017/03/uztelecom.png"
+                             alt="">
+                        <br>
+                        <h5>Система электронных заявок</h5>
+                    </div>
+
+                    <!--Body-->
+                    <form name="eri_form" action="#" id="eri_form" method="post">
+                        @csrf
+                        <div>
+                            <label class="" for="">Выберите ключ</label>
+                            <select id='social' class="w-full" name="key" onchange="cbChanged(this)" style='min-width:200px'>
+                                <option>12313</option>
+                            </select>
+                        </div>
+                        <script !src="">
+                            $(document).ready(function(){
+                                $("#social").select2({
+                                    templateResult: formatState
+                                });
+                            });
+
+                            function formatState (state) {
+                                var option = document.getElementById(state.id);
+                                // var vo = JSON.parse($(option).attr('vo'));
+                                // console.log(vo)
+                                var $state = $(
+                                    '<span ><img sytle="display: inline-block;" src="http://lorempixel.com/output/people-q-c-41-41-10.jpg" /> ' + state.text + '<br>12312321' + '</span>'
+                                );
+                                return $state;
+                            }
+                        </script>
+                        <div hidden id="keyId" class="none"></div>
+
+                        <input type="hidden" name="eri_fullname" id="eri_fullname">
+                        <input type="hidden" name="eri_inn" id="eri_inn">
+                        <input type="hidden" name="eri_pinfl" id="eri_pinfl">
+                        <input type="hidden" name="eri_sn" id="eri_sn">
+                        <textarea hidden class="none" name="eri_data" id="eri_data">Authorization</textarea>
+                        <textarea hidden class="none" name="eri_hash" id="eri_hash"></textarea>
 
 
-</head>
-<body>
+                        <!--Footer-->
+                        <div class="d-flex justify-content-evenly m-5">
+                            <button type="button"
+                                    class="btn btn-success"
+                                    id="eri_sign" onclick="sign()">
+                                Вход
+                            </button>
+                            <button type="button"
+                                    class="btn btn-primary"
+                                    id="eri_sign"
+                                    onclick="uiLoadKeys()"> Обновлять
+                            </button>
+                        </div>
+                    </form>
+                </div>
 
-
-
-<div id="second" class="p-4 {{\Route::currentRouteName()=="login" ? '' : "hidden" }}">
-    @if(session()->has('success'))
-        <div id="alert-border-3" class="flex p-4 mb-4 bg-green-100 border-t-4 border-green-500 dark:bg-green-200" role="alert">
-            <svg class="flex-shrink-0 w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-            <div class="ml-3 text-sm font-medium text-green-700">
-                {{ session()->get('success') }}
             </div>
-            <button type="button" class="ml-auto focus:outline-none -mx-1.5 -my-1.5 bg-green-100 dark:bg-green-200 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 dark:hover:bg-green-300 inline-flex h-8 w-8"  data-collapse-toggle="alert-border-3" aria-label="Close">
-                <span class="sr-only">Dismiss</span>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
         </div>
-    @endif
-    @if(session()->has('danger'))
-        <div id="alert-border-2" class="flex p-4 mb-4 bg-red-100 border-t-4 border-red-500 dark:bg-red-200" role="alert">
-            <svg class="flex-shrink-0 w-5 h-5 text-red-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-            <div class="ml-3 text-sm font-medium text-red-700">
-                {{ session()->get('danger') }}
-            </div>
-            <button type="button" class="ml-auto focus:outline-none -mx-1.5 -my-1.5 bg-red-100 dark:bg-red-200 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 dark:hover:bg-red-300 inline-flex h-8 w-8"  data-collapse-toggle="alert-border-2" aria-label="Close">
-                <span class="sr-only">Dismiss</span>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-        </div>
-    @endif
-    @include('blade-ui-kit::components.eimzo.login')
+    </div>
 
-</div>
-</body>
-</html>
+</section>
