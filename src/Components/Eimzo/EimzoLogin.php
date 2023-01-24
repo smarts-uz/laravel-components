@@ -13,7 +13,7 @@ class EimzoLogin extends BladeComponent
      * @return void
      */
 
-    protected static $assets = ['jquery','eimzo_login'];
+    protected static $assets = ['eimzo_login'];
 
     public function __construct()
     {
