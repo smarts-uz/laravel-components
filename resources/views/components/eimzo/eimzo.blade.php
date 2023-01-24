@@ -21,7 +21,7 @@
                         @csrf
                         <div>
                             <label class="" for="">Выберите ключ</label>
-                            <select id='social' class="w-full" name="key" onchange="cbChanged(this)" style='min-width:200px'>
+                            <select id='social' class="w-full" name="key" onchange="cbChanged(this)" style='min-width:400px'>
                                 <option>12313</option>
                             </select>
                         </div>
@@ -34,12 +34,36 @@
 
                             function formatState (state) {
                                 var option = document.getElementById(state.id);
-                                // var vo = JSON.parse($(option).attr('vo'));
-                                // console.log(vo)
-                                var $state = $(
-                                    '<span ><img sytle="display: inline-block;" src="http://lorempixel.com/output/people-q-c-41-41-10.jpg" /> ' + state.text + '<br>12312321' + '</span>'
-                                );
-                                return $state;
+                                var vo = $(option).attr('vo');
+                                if (vo !== undefined)
+                                {
+                                    var data = JSON.parse(vo);
+                                    var textValid = 'до ';
+                                    if (data.expired)
+                                        textValid = 'истекший ';
+                                    var $state = $(
+                                        '<span >'+
+                                        state.text + '<br>'+
+                                        data.TIN + '<br>'+
+                                        textValid + formatDate(data.validTo) +
+                                        '</span>'
+
+                                    );
+                                    return $state;
+                                }
+                            }
+                            function formatDate(date) {
+                                var d = new Date(date),
+                                    month = '' + (d.getMonth() + 1),
+                                    day = '' + d.getDate(),
+                                    year = d.getFullYear();
+
+                                if (month.length < 2)
+                                    month = '0' + month;
+                                if (day.length < 2)
+                                    day = '0' + day;
+
+                                return [year, month, day].join('-');
                             }
                         </script>
                         <div hidden id="keyId" class="none"></div>
