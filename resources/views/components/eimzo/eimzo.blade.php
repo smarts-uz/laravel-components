@@ -38,16 +38,13 @@
                                 if (vo !== undefined)
                                 {
                                     var data = JSON.parse(vo);
-                                    var textValid = 'до ';
-                                    if (data.expired)
-                                        textValid = 'истекший ';
+                                    console.log(data)
+                                    var valid = data.expired ? '<font size="-1" color=red><b>Срок действия сертификата: </b>' + formatDate(data.validFrom) + '-' + formatDate(data.validTo) +' истек</font>' : '<font size="-1"><b>Срок действия сертификата: </b>' + formatDate(data.validFrom) + '-' + formatDate(data.validTo) +'</font>';
+                                    var textUserType = (data.O === ''||data.O === 'НЕ УКАЗАНО') ? 'ФИЗИЧЕСКОЕ ЛИЦО' : 'ЮРИДИЧЕСКОЕ ЛИЦО';
+                                    var organization = (data.O === ''||data.O === 'НЕ УКАЗАНО') ? '': '<b>Организация: </b>' + data.O + '<br>';
                                     var $state = $(
-                                        '<span >'+
-                                        state.text + '<br>'+
-                                        data.TIN + '<br>'+
-                                        textValid + formatDate(data.validTo) +
-                                        '</span>'
-
+                                        '<span ><img src="https://esi.uz/oauth2/assets/images/icons/pfx.ico">'+
+                                        '<b>№ СЕРТИФИКАТА: </b>'+ data.serialNumber + '<br>' + '<b>ИНН: </b>' + data.TIN +'<b> '+ textUserType +'</b>' + '<br>' + '<b>Ф.И.О: </b>' + data.CN + '<br>' + organization + valid + '</span>'
                                     );
                                     return $state;
                                 }
