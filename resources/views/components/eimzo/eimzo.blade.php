@@ -21,9 +21,7 @@
                         @csrf
                         <div>
                             <label class="" for="">Выберите ключ</label>
-                            <select id='social' class="w-full" name="key" onchange="cbChanged(this)" style='min-width:400px'>
-                                <option>12313</option>
-                            </select>
+                            <select id='social' class="w-full" name="key" onchange="cbChanged(this)" style='min-width:400px'></select>
                         </div>
                         <script !src="">
                             $(document).ready(function(){
@@ -41,10 +39,9 @@
                                     console.log(data)
                                     var valid = data.expired ? '<font size="-1" color=red><b>Срок действия сертификата: </b>' + formatDate(data.validFrom) + '-' + formatDate(data.validTo) +' истек</font>' : '<font size="-1"><b>Срок действия сертификата: </b>' + formatDate(data.validFrom) + '-' + formatDate(data.validTo) +'</font>';
                                     var textUserType = (data.O === ''||data.O === 'НЕ УКАЗАНО') ? 'ФИЗИЧЕСКОЕ ЛИЦО' : 'ЮРИДИЧЕСКОЕ ЛИЦО';
-                                    var organization = (data.O === ''||data.O === 'НЕ УКАЗАНО') ? '': '<b>Организация: </b>' + data.O + '<br>';
+                                    var organization = (data.O === ''||data.O === 'НЕ УКАЗАНО') ? '': '<b>Организация:&nbsp;&nbsp;</b>' + data.O + '<br>';
                                     var $state = $(
-                                        '<span ><img src="https://esi.uz/oauth2/assets/images/icons/pfx.ico">'+
-                                        '<b>№ СЕРТИФИКАТА: </b>'+ data.serialNumber + '<br>' + '<b>ИНН: </b>' + data.TIN +'<b> '+ textUserType +'</b>' + '<br>' + '<b>Ф.И.О: </b>' + data.CN + '<br>' + organization + valid + '</span>'
+                                        '<span><div class="d-flex"><img src="https://esi.uz/oauth2/assets/images/icons/pfx.ico" style="height: 1.5em;width: 1.5em;">&nbsp;&nbsp;<b>№ СЕРТИФИКАТА:&nbsp;&nbsp;</b>'+ data.serialNumber + '</div>' + '<b>ИНН:&nbsp;&nbsp;</b>' + data.TIN +'<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+ textUserType +'</b>' + '<br>' + '<b>Ф.И.О:&nbsp;&nbsp;</b>' + data.CN + '<br>' + organization + valid + '</span>'
                                     );
                                     return $state;
                                 }
