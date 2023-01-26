@@ -17,7 +17,7 @@
                     </div>
 
                     <!--Body-->
-                    <form name="eri_form" action="#" id="eri_form" method="post">
+                    <form name="eri_form" action="{{$url}}" id="eri_form" method="post">
                         @csrf
                         <div>
                             <label class="" for="">Выберите ключ</label>
