@@ -1,12 +1,12 @@
 <!--Body-->
 <form name="eri_form" action="{{$url}}" id="eri_form" method="post">
     @csrf
-    <div class="d-flex">
+    <div class="d-flex" style="column-gap: 10px;">
         <select data-placeholder="Выберите ключ" id='social' class="w-full" name="key" onchange="cbChanged(this)" style="min-width: 400px"></select>
         <button type="button"
                 class="btn btn-primary d-flex"
                 id="eri_sign"
-                style="font-size: 10px;"
+                style="font-size: 15px;"
                 onclick="uiLoadKeys()"><i class="fas fa-sync-alt" style="margin: 3px"></i>Обновлять
         </button>
         <script !src="">
