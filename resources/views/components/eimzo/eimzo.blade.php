@@ -61,9 +61,9 @@
     <!--Footer-->
     <div class="d-flex justify-content-evenly m-4">
         <button type="button"
+                style="width: 7em;"
                 class="btn btn-success"
                 id="eri_sign" onclick="sign()">
-            <i class="fa-regular fa-person-walking"></i>
             Вход
         </button>
     </div>
