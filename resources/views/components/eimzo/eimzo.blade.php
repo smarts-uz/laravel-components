@@ -7,7 +7,7 @@
                 class="btn btn-primary d-flex"
                 id="eri_sign"
                 style="font-size: 15px;"
-                onclick="uiLoadKeys()"><i class="fas fa-sync-alt" style="margin: 3px"></i>Обновлять
+                onclick="uiLoadKeys()"><i class="fas fa-sync-alt" style="margin: 3px"></i>
         </button>
         <script !src="">
             $(document).ready(function(){
@@ -61,10 +61,11 @@
     <!--Footer-->
     <div class="d-flex justify-content-evenly m-4">
         <button type="button"
-                style="width: 7em;"
+                style="width: 15em;"
                 class="btn btn-success"
                 id="eri_sign" onclick="sign()">
-            Вход
+            <i class="fa fa-credit-card"></i>
+            Вход или Регистрация
         </button>
     </div>
 </form>
