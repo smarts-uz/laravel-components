@@ -23,5 +23,11 @@
             + '<h1 class="text-dark">' + '{{$tableTitle}}' + '</h1>'
             + '</div>';
         $("#fortext").append(divTitle);
+        $(".content").prepend('<div id = "buttons-container" class="buttons-container"></div>');
+        $("#buttons-container").append($(".dataTables_length"));
+        $("#buttons-container").append($(".daterangepicker-form"));
+        $("#buttons-container").append($(".dt-buttons"));
+        $("#buttons-container").append($(".dataTables_filter"));
+        $("#buttons-container").insertAfter($("#fortext"));
     });
 </script>
