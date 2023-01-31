@@ -13,13 +13,11 @@ class EimzoLogin extends BladeComponent
      * @return void
      */
 
-    public string $url;
-
     protected static $assets = ['eimzo_login'];
 
-    public function __construct($url)
+    public function __construct()
     {
-        $this->url = $url;
+        //
     }
 
     /**
