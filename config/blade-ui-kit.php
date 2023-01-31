@@ -141,6 +141,7 @@ return [
             'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',
             'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css',
             'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js',
+            'https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css',
         ],
         'yajra' => [
             'https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css',
