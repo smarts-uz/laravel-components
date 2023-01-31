@@ -1,6 +1,3 @@
-<!--Body-->
-<form name="eri_form" action="{{$url}}" id="eri_form" method="post">
-    @csrf
     <div class="d-flex" style="column-gap: 10px;">
         <select data-placeholder="Выберите ключ" id='social' class="w-full" name="key" onchange="cbChanged(this)" style="min-width: 400px"></select>
 
@@ -51,6 +48,3 @@
     <input type="hidden" name="eri_sn" id="eri_sn">
     <textarea hidden class="none" name="eri_data" id="eri_data">Authorization</textarea>
     <textarea hidden class="none" name="eri_hash" id="eri_hash"></textarea>
-
-
-</form>
