@@ -3,12 +3,7 @@
     @csrf
     <div class="d-flex" style="column-gap: 10px;">
         <select data-placeholder="Выберите ключ" id='social' class="w-full" name="key" onchange="cbChanged(this)" style="min-width: 400px"></select>
-        <button type="button"
-                class="btn btn-outline-primary d-flex"
-                id="eri_sign"
-                style="font-size: 15px;"
-                onclick="uiLoadKeys()"><i class="fas fa-sync-alt" style="margin: 3px"></i>
-        </button>
+
         <script !src="">
             $(document).ready(function(){
                 $("#social").select2({
@@ -58,15 +53,4 @@
     <textarea hidden class="none" name="eri_hash" id="eri_hash"></textarea>
 
 
-    <!--Footer-->
-    <div class="d-flex justify-content-evenly m-4">
-        <button type="button"
-                style="width: 15em;"
-                class="btn btn-outline-primary"
-                id="eri_sign" onclick="sign()">
-            <i class="fa fa-credit-card"></i>
-            &nbsp;
-            Вход или Регистрация
-        </button>
-    </div>
 </form>
