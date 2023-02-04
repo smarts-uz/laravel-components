@@ -2,6 +2,7 @@
     $(document).ready(function() {
         $.fn.dataTable.moment('DD-MM-YYYY');
         $('#example').DataTable( {
+            scrollX: true,
             keys: {{$keys}},
             rowReorder: {{$rowReorder}},
             rowGroup: {{$rowGroup}},
