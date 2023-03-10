@@ -29,8 +29,8 @@
             target: '{{$target}}',
             showProgressDetails: true,
             note: 'Все типы файлов, до 10 МБ',
-            width: 300,
-            height: 200,
+            width: '{{$width}}',
+            height:'{{$height}}',
             metaFields: [
                 {id: 'name', name: 'Name', placeholder: 'file name'},
                 {id: 'caption', name: 'Caption', placeholder: 'describe what the image is about'}

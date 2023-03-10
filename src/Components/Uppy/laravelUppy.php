@@ -15,14 +15,18 @@ class laravelUppy extends BladeComponent
     public $url;
     public $target;
     public $fieldName;
+    public $width;
+    public $height;
 
     protected static $assets = ['uppy'];
 
-    public function __construct($url,$target,$fieldName)
+    public function __construct($url,$target,$fieldName,$width,$height)
     {
         $this->url = $url;
         $this->target = $target;
         $this->fieldName = $fieldName;
+        $this->width = $width;
+        $this->height = $height;
     }
 
     /**
