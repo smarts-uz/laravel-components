@@ -92,6 +92,7 @@ class laravelYajra extends BladeComponent
         $this->startDate = $startDate;
         $this->endDate = $endDate;
         $this->exportId = $exportId;
+        $this->buttons = $buttons;
     }
 
     /**
