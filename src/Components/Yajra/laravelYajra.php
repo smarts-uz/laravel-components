@@ -24,6 +24,7 @@ class laravelYajra extends BladeComponent
     public string $buttons;
     public string|bool $colReorder;
     public string|bool $stateSave;
+    public string|bool $serverSide;
     public string|bool $scrollX;
     public string|bool $responsive;
     public string|bool $select;
@@ -38,7 +39,6 @@ class laravelYajra extends BladeComponent
     public array $dtHeaders ;
     public $exportId;
 
-    protected static $assets = ['yajra'];
 
     public function __construct(
         array $dtColumns,
@@ -56,6 +56,7 @@ class laravelYajra extends BladeComponent
         string $responsive = 'false',
         string|bool $colReorder = 'false',
         string|bool $stateSave = 'false',
+        string|bool $serverSide = 'false',
         string|bool $scrollX = 'false',
         int         $pageLength = 10,
         string|int $scrollY = null,
@@ -77,6 +78,7 @@ class laravelYajra extends BladeComponent
         $this->buttons = $text->buttons($tableTitle);
         $this->colReorder = $colReorder;
         $this->stateSave = $stateSave;
+        $this->serverSide = $serverSide;
         $this->scrollX = $scrollX;
         $this->responsive = $responsive;
         $this->select = $select;
