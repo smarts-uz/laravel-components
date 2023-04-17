@@ -50,7 +50,6 @@ class laravelYajra extends BladeComponent
         string      $tableId = "example",
         string      $getData = null,
         string        $language = 'en-GB',
-        bool        $buttons = null,
         string      $dom = 'Blfrtip',
         string|bool $select = 'false',
         string $responsive = 'false',
@@ -92,7 +91,6 @@ class laravelYajra extends BladeComponent
         $this->startDate = $startDate;
         $this->endDate = $endDate;
         $this->exportId = $exportId;
-        $this->buttons = $buttons;
     }
 
     /**
