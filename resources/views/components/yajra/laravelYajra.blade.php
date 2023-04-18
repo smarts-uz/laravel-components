@@ -37,7 +37,15 @@
                 @endforeach
             ],
             {!! $buttons !!}
-            ajax: "{{$getData}}",
+            ajax: {
+                url: " {{$getData}}",
+                data: {
+                    _token: '{{csrf_token()}}',
+                    startDate: '{{ $startDate ?? '' }}',
+                    endDate: '{{$endDate ?? '' }}'
+                },
+                type: "POST",
+            },
             "fnInitComplete": function(){
 
                 // Enable THEAD scroll bars
