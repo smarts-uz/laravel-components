@@ -32,8 +32,8 @@
             "language" : {!! $language !!},
             dom: "{{$dom}}",
             columns: [
-                    @foreach($dtColumns as $column)
-                {data: "{{$column['data']}}", name: "{{$column['name']}}" },
+                @foreach($dtColumns as $column)
+                    {data: "{{$column['data']}}", name: "{{$column['name']}}", render: {!! $column['render'] ?? 'null' !!} },
                 @endforeach
             ],
             {!! $buttons !!}
