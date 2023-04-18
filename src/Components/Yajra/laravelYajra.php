@@ -37,7 +37,6 @@ class laravelYajra extends BladeComponent
     public $startDate;
     public $endDate ;
     public array $dtHeaders ;
-    public $exportId;
 
 
     public function __construct(
@@ -45,7 +44,6 @@ class laravelYajra extends BladeComponent
               $dtHeaders,
               $startDate,
               $endDate,
-              $exportId,
         string      $tableTitle = null,
         string      $tableId = "example",
         string      $getData = null,
@@ -90,7 +88,6 @@ class laravelYajra extends BladeComponent
         $this->dtHeaders = $dtHeaders;
         $this->startDate = $startDate;
         $this->endDate = $endDate;
-        $this->exportId = $exportId;
     }
 
     /**
