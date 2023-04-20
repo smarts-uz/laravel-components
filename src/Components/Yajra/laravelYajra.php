@@ -38,6 +38,7 @@ class laravelYajra extends BladeComponent
     public $endDate ;
     public array $dtHeaders ;
 
+    protected static $assets = ['yajra'];
 
     public function __construct(
         array $dtColumns,
