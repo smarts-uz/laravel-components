@@ -7,13 +7,14 @@ use Illuminate\Support\Facades\Http;
 
 class textYajra {
 
-    public function buttons($tableTitle)
+    public function buttons($tableTitle,$exportId)
     {
         $copy = '<i class="fas fa-copy"></i>';
         $excel = '<i class="fas fa-file-excel"></i>';
         $pdf = '<i class="fas fa-file-pdf"></i>';
         $print = '<i class="fas fa-print"></i>';
         $eye = '<i class="fas fa-eye"></i>';
+        $exportId = route('report_export',$exportId);
         return "buttons: {
                 buttons: [
                     { extend: 'copyHtml5',
@@ -47,6 +48,12 @@ class textYajra {
                                 }
                             }
                         },
+                    },
+                    {
+                        text: 'Export',
+                        action: function ( e, dt, node, config ) {
+                            window.location.href = '$exportId';
+                        }
                     },
                     { extend: 'pdfHtml5',
                         text: '$pdf',

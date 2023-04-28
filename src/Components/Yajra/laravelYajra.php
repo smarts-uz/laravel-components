@@ -36,7 +36,7 @@ class laravelYajra extends BladeComponent
     public string $pagingType;
     public $startDate;
     public $endDate ;
-    public array $dtHeaders ;
+    public array $dtHeaders;
     public $exportId;
 
     protected static $assets = ['yajra'];
@@ -75,7 +75,7 @@ class laravelYajra extends BladeComponent
         $this->language = isset($language) ? $text->language($language) : $language;
         $this->dom = $dom;
         $this->pageLength = $pageLength;
-        $this->buttons = $text->buttons($tableTitle,$exportId,$dtColumns,$dtHeaders);
+        $this->buttons = $text->buttons($tableTitle,$exportId);
         $this->colReorder = $colReorder;
         $this->stateSave = $stateSave;
         $this->serverSide = $serverSide;
