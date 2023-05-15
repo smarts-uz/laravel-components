@@ -29,7 +29,9 @@
             "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "{{ __('Все') }}"] ] ,
             "pagingType": "{{$pagingType}}",
             pageLength: {{$pageLength}},
-            "language" : {!! $language !!},
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.12.1/i18n/{{$language}}.json"
+            },
             dom: "{{$dom}}",
             columns: [
                 @foreach($dtColumns as $column)
