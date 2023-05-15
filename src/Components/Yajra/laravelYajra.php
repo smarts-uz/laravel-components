@@ -72,7 +72,7 @@ class laravelYajra extends BladeComponent
         $this->dtColumns = $dtColumns;
         $this->tableId = $tableId;
         $this->getData = $getData;
-        $this->language = isset($language) ? $text->language($language) : $language;
+        $this->language = $language;
         $this->dom = $dom;
         $this->pageLength = $pageLength;
         $this->buttons = $text->buttons($tableTitle,$exportId);
