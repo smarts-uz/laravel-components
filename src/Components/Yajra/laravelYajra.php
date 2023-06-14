@@ -42,12 +42,9 @@ class laravelYajra extends BladeComponent
     protected static $assets = ['yajra'];
 
     public function __construct(
-        array $dtColumns,
-        $dtHeaders,
         $startDate,
         $endDate,
         $exportId,
-        string      $tableTitle = null,
         string      $tableId = "example",
         string      $getData = null,
         string        $language = 'en-GB',
@@ -64,12 +61,13 @@ class laravelYajra extends BladeComponent
         string|bool $keys = 'false',
         string|bool $rowReorder = 'false',
         string|bool $rowGroup = 'false',
-        string $pagingType = 'simple_numbers',
+        string $pagingType = 'simple_numbers'
     )
     {
         $text = new textYajra();
-        $this->tableTitle = $tableTitle;
-        $this->dtColumns = $dtColumns;
+        $this->tableTitle = $exportId::title();
+        $this->dtHeaders = $exportId::dtHeaders();
+        $this->dtColumns = $exportId::dtColumns();
         $this->tableId = $tableId;
         $this->getData = $getData;
         $this->language = $language;
@@ -88,7 +86,6 @@ class laravelYajra extends BladeComponent
         $this->rowReorder = $rowReorder;
         $this->rowGroup = $rowGroup;
         $this->pagingType = $pagingType;
-        $this->dtHeaders = $dtHeaders;
         $this->startDate = $startDate;
         $this->endDate = $endDate;
         $this->exportId = $exportId;
