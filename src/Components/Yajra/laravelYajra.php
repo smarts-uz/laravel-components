@@ -73,7 +73,7 @@ class laravelYajra extends BladeComponent
         $this->language = $language;
         $this->dom = $dom;
         $this->pageLength = $pageLength;
-        $this->buttons = $text->buttons($this->tableId,$exportId);
+        $this->buttons = $text->buttons($this->tableTitle,$exportId);
         $this->colReorder = $colReorder;
         $this->stateSave = $stateSave;
         $this->serverSide = $serverSide;
