@@ -22,17 +22,17 @@ class laravelYajra extends BladeComponent
     public string $dom;
     public int $pageLength;
     public string $buttons;
-    public string|bool $colReorder;
-    public string|bool $stateSave;
-    public string|bool $serverSide;
-    public string|bool $scrollX;
-    public string|bool $responsive;
-    public string|bool $select;
+    public bool $colReorder;
+    public bool $stateSave;
+    public bool $serverSide;
+    public bool $scrollX;
+    public bool $responsive;
+    public bool $select;
     public string|int $scrollY;
-    public string|bool $scroller;
-    public string|bool $keys;
-    public string|bool $rowReorder;
-    public string|bool $rowGroup;
+    public bool $scroller;
+    public bool $keys;
+    public bool $rowReorder;
+    public bool $rowGroup;
     public string $pagingType;
     public $startDate;
     public $endDate ;
@@ -42,25 +42,25 @@ class laravelYajra extends BladeComponent
     protected static $assets = ['yajra'];
 
     public function __construct(
-        $startDate,
-        $endDate,
-        $exportId,
-        string      $tableId = "example",
-        string      $getData = null,
-        string        $language = 'en-GB',
-        string      $dom = 'Blfrtip',
-        string|bool $select = 'false',
-        string $responsive = 'false',
-        string|bool $colReorder = 'false',
-        string|bool $stateSave = 'false',
-        string|bool $serverSide = 'false',
-        string|bool $scrollX = 'false',
-        int         $pageLength = 10,
-        string|int $scrollY = null,
-        string|bool $scroller = 'false',
-        string|bool $keys = 'false',
-        string|bool $rowReorder = 'false',
-        string|bool $rowGroup = 'false',
+        string $startDate,
+        string $endDate,
+        string $exportId,
+        string $tableId = "example",
+        string $getData = null,
+        string $language = 'en-GB',
+        string $dom = 'Blfrtip',
+        bool $select = false,
+        bool $responsive = false,
+        bool $colReorder = false,
+        bool $stateSave = false,
+        bool $serverSide = false,
+        bool $scrollX = false,
+        int $pageLength = 10,
+        int $scrollY = null,
+        bool $scroller = false,
+        bool $keys = false,
+        bool $rowReorder = false,
+        bool $rowGroup = false,
         string $pagingType = 'simple_numbers'
     )
     {

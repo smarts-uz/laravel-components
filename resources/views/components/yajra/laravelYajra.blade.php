@@ -18,14 +18,15 @@
         $('#{{$tableId}}').DataTable( {
             stateSave: "{{$stateSave}}",
             scrollX: "{{$scrollX}}",
+            scrollY: "{{$scrollY}}",
             serverSide: "{{$serverSide}}",
-            keys: {{$keys}},
-            rowReorder: {{$rowReorder}},
-            rowGroup: {{$rowGroup}},
-            responsive: {{$responsive}},
-            select: {{$select}},
+            keys: "{{$keys}}",
+            rowReorder: "{{$rowReorder}}",
+            rowGroup: "{{$rowGroup}}",
+            responsive: "{{$responsive}}",
+            select: "{{$select}}",
             order: [[0, 'desc']],
-            colReorder: {{$colReorder}},
+            colReorder: "{{$colReorder}}",
             "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "{{ __('Все') }}"] ] ,
             "pagingType": "{{$pagingType}}",
             pageLength: {{$pageLength}},
@@ -34,8 +35,8 @@
             },
             dom: "{{$dom}}",
             columns: [
-                @foreach($dtColumns as $column)
-                    {data: "{{$column['data']}}", name: "{{$column['name']}}", render: {!! $column['render'] ?? 'null' !!} },
+                    @foreach($dtColumns as $column)
+                {data: "{{$column['data']}}", name: "{{$column['name']}}", render: {!! $column['render'] ?? 'null' !!} },
                 @endforeach
             ],
             {!! $buttons !!}
