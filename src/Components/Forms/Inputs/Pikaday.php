@@ -17,7 +17,7 @@ class Pikaday extends Input
     /** @var array */
     public $options;
 
-    protected static $assets = ['alpine', 'moment', 'pikaday'];
+    public static array $assets = ['alpine', 'moment', 'pikaday'];
 
     public function __construct(
         string $name,

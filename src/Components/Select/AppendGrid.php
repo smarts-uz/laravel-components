@@ -20,7 +20,7 @@ class AppendGrid extends BladeComponent
     /** @var array */
     public $data;
 
-    protected static $assets = ['append-grid', 'font-awesome'];
+    public static array $assets = ['append-grid', 'font-awesome'];
 
     /**
      * @param string $name

@@ -24,7 +24,7 @@ class Carbon extends BladeComponent
     /** @var string|null */
     public $local;
 
-    protected static $assets = ['moment'];
+    public static array $assets = ['moment'];
 
     public function __construct(
         DateTimeInterface $date,

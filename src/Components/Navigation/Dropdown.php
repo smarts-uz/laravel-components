@@ -9,7 +9,7 @@ use Illuminate\Contracts\View\View;
 
 class Dropdown extends BladeComponent
 {
-    protected static $assets = ['alpine'];
+    public static array $assets = ['alpine'];
 
     public function render(): View
     {

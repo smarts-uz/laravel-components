@@ -37,13 +37,11 @@ class laravelYajra extends BladeComponent
     public $startDate;
     public $endDate ;
     public array $dtHeaders;
-    public $exportId;
-
-    protected static $assets = ['yajra'];
 
     public function __construct(
         string $startDate,
         string $endDate,
+        array $assets,
         string $exportId,
         string $tableId = "example",
         string $getData = null,
@@ -89,6 +87,10 @@ class laravelYajra extends BladeComponent
         $this->startDate = $startDate;
         $this->endDate = $endDate;
         $this->exportId = $exportId;
+    }
+    public static function assets(): array
+    {
+        return self::$exportId::assets();
     }
 
     /**

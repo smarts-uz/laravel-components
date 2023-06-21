@@ -21,7 +21,7 @@ class Mapbox extends BladeComponent
     /** @var array */
     public $markers;
 
-    protected static $assets = ['alpine', 'mapbox'];
+    public static array $assets = ['alpine', 'mapbox'];
 
     public function __construct(
         string $id = 'map',

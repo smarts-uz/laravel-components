@@ -12,7 +12,7 @@ class ColorPicker extends Input
     /** @var array */
     public $options;
 
-    protected static $assets = ['alpine', 'pickr'];
+    public static array $assets = ['alpine', 'pickr'];
 
     public function __construct(string $name, string $id = null, ?string $value = '', array $options = [])
     {

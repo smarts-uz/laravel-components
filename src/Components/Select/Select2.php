@@ -23,7 +23,7 @@ class Select2 extends BladeComponent
     /** @var array */
     public $options;
 
-    protected static $assets = ['select2'];
+    public static array $assets = ['select2'];
 
     /**
      * @param string $name

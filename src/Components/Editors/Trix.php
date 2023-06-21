@@ -18,7 +18,7 @@ class Trix extends BladeComponent
     /** @var string */
     public $styling;
 
-    protected static $assets = ['trix'];
+    public static array $assets = ['trix'];
 
     public function __construct(string $name, string $id = null, string $styling = 'trix-content')
     {

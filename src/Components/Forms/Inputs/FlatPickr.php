@@ -17,7 +17,7 @@ class FlatPickr extends Input
     /** @var array */
     public $options;
 
-    protected static $assets = ['alpine', 'flat-pickr'];
+    public static array $assets = ['alpine', 'flat-pickr'];
 
     public function __construct(
         string $name,

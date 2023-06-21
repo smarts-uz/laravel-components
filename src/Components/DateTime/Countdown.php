@@ -18,7 +18,7 @@ class Countdown extends BladeComponent
     /** @var DateTimeInterface */
     public $expires;
 
-    protected static $assets = ['alpine'];
+    public static array $assets = ['alpine'];
 
     public function __construct(DateTimeInterface $expires)
     {

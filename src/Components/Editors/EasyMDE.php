@@ -18,7 +18,7 @@ class EasyMDE extends BladeComponent
     /** @var array */
     public $options;
 
-    protected static $assets = ['alpine', 'easy-mde'];
+    public static array $assets = ['alpine', 'easy-mde'];
 
     public function __construct(string $name, string $id = null, array $options = [])
     {
