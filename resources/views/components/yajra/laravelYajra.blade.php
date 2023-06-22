@@ -17,6 +17,7 @@
 
         $('#{{$tableId}}').DataTable( {
             stateSave: "{{$stateSave}}",
+            searchBuilder: "{{$searchBuilder}}",
             scrollX: "{{$scrollX}}",
             scrollY: "{{$scrollY}}",
             serverSide: "{{$serverSide}}",
@@ -74,8 +75,6 @@
         $("#buttons-container").append($(".dt-buttons"));
         $("#buttons-container").append($(".dataTables_filter"));
         $("#buttons-container").insertAfter($("#fortext"));
-
-
 
     });
 </script>

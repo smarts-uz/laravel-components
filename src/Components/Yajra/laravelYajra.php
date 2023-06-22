@@ -2,10 +2,13 @@
 
 namespace BladeUIKit\Components\Yajra;
 
+use App\Reports\ALL;
+use App\Reports\One;
 use BladeUIKit\Components\BladeComponent;
 use Illuminate\Http\Client\Request;
 use Illuminate\View\Component;
 use BladeUIKit\Text\textYajra;
+use Illuminate\View\Component as IlluminateComponent;
 
 class laravelYajra extends BladeComponent
 {
@@ -37,11 +40,14 @@ class laravelYajra extends BladeComponent
     public $startDate;
     public $endDate ;
     public array $dtHeaders;
+    public $exportId;
+    public string $searchBuilder;
+
+    protected static $assets = ['yajra'];
 
     public function __construct(
         string $startDate,
         string $endDate,
-        array $assets,
         string $exportId,
         string $tableId = "example",
         string $getData = null,
@@ -59,7 +65,8 @@ class laravelYajra extends BladeComponent
         bool $keys = false,
         bool $rowReorder = false,
         bool $rowGroup = false,
-        string $pagingType = 'simple_numbers'
+        string $pagingType = 'simple_numbers',
+        string $searchBuilder = "{}"
     )
     {
         $text = new textYajra();
@@ -87,12 +94,8 @@ class laravelYajra extends BladeComponent
         $this->startDate = $startDate;
         $this->endDate = $endDate;
         $this->exportId = $exportId;
+        $this->searchBuilder = $searchBuilder;
     }
-    public static function assets(): array
-    {
-        return self::$exportId::assets();
-    }
-
     /**
      * Get the view / contents that represent the component.
      *

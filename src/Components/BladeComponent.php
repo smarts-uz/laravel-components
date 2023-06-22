@@ -9,7 +9,7 @@ use Illuminate\View\Component as IlluminateComponent;
 abstract class BladeComponent extends IlluminateComponent
 {
     /** @var array */
-    public static array $assets = [];
+    protected static $assets = [];
 
     public static function assets(): array
     {
