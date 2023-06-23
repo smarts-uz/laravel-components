@@ -42,6 +42,7 @@ class laravelYajra extends BladeComponent
     public array $dtHeaders;
     public $exportId;
     public string $searchBuilder;
+    public array $events;
 
     protected static $assets = ['yajra'];
 
@@ -94,6 +95,7 @@ class laravelYajra extends BladeComponent
         $this->startDate = $startDate;
         $this->endDate = $endDate;
         $this->exportId = $exportId;
+        $this->events = $exportId::events();
         $this->searchBuilder = $searchBuilder;
     }
     /**

@@ -70,11 +70,14 @@
 
         $(".content").prepend('<div id = "buttons-container" class="buttons-container"></div>');
 
+        @foreach($events as $key=>$value)
+            $('#{{$tableId}}').on("{{$key}}", {!! $value !!});
+        @endforeach
+
         $("#buttons-container").append($(".dataTables_length"));
         $("#buttons-container").append($(".daterangepicker-form"));
         $("#buttons-container").append($(".dt-buttons"));
         $("#buttons-container").append($(".dataTables_filter"));
         $("#buttons-container").insertAfter($("#fortext"));
-
     });
 </script>
