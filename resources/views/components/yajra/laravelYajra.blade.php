@@ -17,7 +17,6 @@
 
         $('#{{$tableId}}').DataTable( {
             stateSave: "{{$stateSave}}",
-            searchBuilder: "{{$searchBuilder}}",
             scrollX: "{{$scrollX}}",
             scrollY: "{{$scrollY}}",
             serverSide: "{{$serverSide}}",
@@ -40,7 +39,10 @@
                 {data: "{{$column['data']}}", name: "{{$column['name']}}", render: {!! $column['render'] ?? 'null' !!} },
                 @endforeach
             ],
-            {!! $buttons !!}
+            @foreach($options as $key=>$value)
+                    {{$key}}: "{{$value}}",
+            @endforeach
+                    {!! $buttons !!}
             ajax: {
                 url: " {{$getData}}",
                 data: {

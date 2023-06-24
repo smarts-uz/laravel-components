@@ -41,7 +41,7 @@ class laravelYajra extends BladeComponent
     public $endDate ;
     public array $dtHeaders;
     public $exportId;
-    public string $searchBuilder;
+    public array $options;
     public array $events;
 
     protected static $assets = ['yajra'];
@@ -67,13 +67,13 @@ class laravelYajra extends BladeComponent
         bool $rowReorder = false,
         bool $rowGroup = false,
         string $pagingType = 'simple_numbers',
-        string $searchBuilder = "{}"
     )
     {
         $text = new textYajra();
         $this->tableTitle = $exportId::title();
         $this->dtHeaders = $exportId::dtHeaders();
         $this->dtColumns = $exportId::dtColumns();
+        $this->options = $exportId::options();
         $this->tableId = $tableId;
         $this->getData = $getData;
         $this->language = $language;
@@ -96,7 +96,6 @@ class laravelYajra extends BladeComponent
         $this->endDate = $endDate;
         $this->exportId = $exportId;
         $this->events = $exportId::events();
-        $this->searchBuilder = $searchBuilder;
     }
     /**
      * Get the view / contents that represent the component.
