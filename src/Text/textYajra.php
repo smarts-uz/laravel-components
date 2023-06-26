@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Http;
 
 class textYajra {
 
-    public function buttons($tableTitle,$exportId)
+    public function buttons($tableTitle,$exportId,$startDate,$endDate)
     {
         $copy = '<i class="fas fa-copy"></i>';
         $excel = '<i class="fas fa-file-excel"></i>';
         $pdf = '<i class="fas fa-file-pdf"></i>';
         $print = '<i class="fas fa-print"></i>';
         $eye = '<i class="fas fa-eye"></i>';
-        $exportId = route('report_export',$exportId);
+        $exportId = route('report_export',[$exportId,'startDate' => $startDate,'endDate' => $endDate]);
         return "buttons: {
                 buttons: [
                     { extend: 'copyHtml5',

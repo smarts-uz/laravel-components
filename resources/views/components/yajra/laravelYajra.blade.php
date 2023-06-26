@@ -39,10 +39,7 @@
                 {data: "{{$column['data']}}", name: "{{$column['name']}}", render: {!! $column['render'] ?? 'null' !!} },
                 @endforeach
             ],
-            @foreach($options as $key=>$value)
-                    {{$key}}: "{{$value}}",
-            @endforeach
-                    {!! $buttons !!}
+            {!! $buttons !!}
             ajax: {
                 url: " {{$getData}}",
                 data: {
@@ -52,6 +49,9 @@
                 },
                 type: "POST",
             },
+            @foreach($options as $key=>$value)
+                    {{$key}}: "{{$value}}",
+            @endforeach
             "fnInitComplete": function(){
 
                 // Enable THEAD scroll bars
