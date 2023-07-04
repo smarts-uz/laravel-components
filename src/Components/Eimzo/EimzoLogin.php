@@ -13,7 +13,7 @@ class EimzoLogin extends BladeComponent
      * @return void
      */
 
-    public static array $assets = ['eimzo_login'];
+    public static $assets = ['eimzo_login'];
 
     public function __construct()
     {

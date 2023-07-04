@@ -18,7 +18,7 @@ class laravelUppy extends BladeComponent
     public $width;
     public $height;
 
-    public static array $assets = ['uppy'];
+    public static $assets = ['uppy'];
 
     public function __construct($url,$target,$fieldName,$width = '750',$height = '550')
     {
