@@ -71,8 +71,8 @@ class laravelYajra extends BladeComponent
     {
         $text = new textYajra();
         $this->tableTitle = $exportId::title();
-        $this->dtHeaders = $exportId::dtHeaders();
-        $this->dtColumns = $exportId::dtColumns();
+        $this->dtHeaders = $exportId::headers();
+        $this->dtColumns = $exportId::columns();
         $this->options = $exportId::options();
         $this->tableId = $tableId;
         $this->getData = $getData;
