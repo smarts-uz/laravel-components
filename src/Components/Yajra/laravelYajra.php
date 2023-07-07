@@ -2,8 +2,6 @@
 
 namespace BladeUIKit\Components\Yajra;
 
-use App\Reports\ALL;
-use App\Reports\One;
 use BladeUIKit\Components\BladeComponent;
 use Illuminate\Http\Client\Request;
 use Illuminate\View\Component;
