@@ -19,7 +19,7 @@ return [
         'eimzo_login' => Components\Eimzo\EimzoLogin::class,
         'eimzo_login_update_button' => Components\Eimzo\EimzoUpdateButton::class,
         'eimzo_login_sign_button' => Components\Eimzo\EimzoSignButton::class,
-        'laravelYajra' => Components\Yajra\laravelYajra::class,
+        'SmartsTable' => Components\Yajra\SmartsTable::class,
         'laravelUppy' => Components\Uppy\laravelUppy::class,
     ],
 

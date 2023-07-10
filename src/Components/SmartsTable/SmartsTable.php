@@ -8,7 +8,7 @@ use Illuminate\View\Component;
 use BladeUIKit\Text\textYajra;
 use Illuminate\View\Component as IlluminateComponent;
 
-class laravelYajra extends BladeComponent
+class SmartsTable extends BladeComponent
 {
     /**
      * Create a new component instance.
@@ -102,6 +102,6 @@ class laravelYajra extends BladeComponent
      */
     public function render()
     {
-        return view('blade-ui-kit::components.yajra.laravelYajra');
+        return view('blade-ui-kit::components.yajra.SmartsTable');
     }
 }
