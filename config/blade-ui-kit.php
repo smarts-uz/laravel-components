@@ -16,9 +16,9 @@ return [
     */
 
     'components' => [
-        'eimzo_login' => Components\Eimzo\EimzoLogin::class,
-        'eimzo_login_update_button' => Components\Eimzo\EimzoUpdateButton::class,
-        'eimzo_login_sign_button' => Components\Eimzo\EimzoSignButton::class,
+        'smarts_eimzo_login' => Components\SmartsEimzo\SmartsEimzoLogin::class,
+        'smarts_eimzo_login_update_button' => Components\SmartsEimzo\SmartsEimzoUpdateButton::class,
+        'smarts_eimzo_login_sign_button' => Components\SmartsEimzo\SmartsEimzoSignButton::class,
         'SmartsTable' => Components\SmartsTable\SmartsTable::class,
         'SmartsUppy' => Components\SmartsUppy\SmartsUppy::class,
     ],

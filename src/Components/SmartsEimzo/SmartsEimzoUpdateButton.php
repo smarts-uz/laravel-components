@@ -1,11 +1,10 @@
 <?php
 
-namespace BladeUIKit\Components\Eimzo;
+namespace BladeUIKit\Components\SmartsEimzo;
 
 use BladeUIKit\Components\BladeComponent;
-use BladeUIKit\Text\textYajra;
 
-class EimzoUpdateButton extends BladeComponent
+class SmartsEimzoUpdateButton extends BladeComponent
 {
     /**
      * Create a new component instance.
@@ -25,6 +24,6 @@ class EimzoUpdateButton extends BladeComponent
      */
     public function render()
     {
-        return view('blade-ui-kit::components.eimzo.update');
+        return view('blade-ui-kit::components.smartsEimzo.smarts_update');
     }
 }

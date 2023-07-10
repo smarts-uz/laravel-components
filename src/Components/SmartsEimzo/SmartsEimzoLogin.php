@@ -1,11 +1,10 @@
 <?php
 
-namespace BladeUIKit\Components\Eimzo;
+namespace BladeUIKit\Components\SmartsEimzo;
 
 use BladeUIKit\Components\BladeComponent;
-use BladeUIKit\Text\textYajra;
 
-class EimzoLogin extends BladeComponent
+class SmartsEimzoLogin extends BladeComponent
 {
     /**
      * Create a new component instance.
@@ -27,6 +26,6 @@ class EimzoLogin extends BladeComponent
      */
     public function render()
     {
-        return view('blade-ui-kit::components.eimzo.eimzo');
+        return view('blade-ui-kit::components.smartsEimzo.smarts_eimzo');
     }
 }
