@@ -1,6 +1,6 @@
 <?php
 
-namespace BladeUIKit\Components\Yajra;
+namespace BladeUIKit\Components\SmartsTable;
 
 use BladeUIKit\Components\BladeComponent;
 use Illuminate\Http\Client\Request;
@@ -102,6 +102,6 @@ class SmartsTable extends BladeComponent
      */
     public function render()
     {
-        return view('blade-ui-kit::components.yajra.SmartsTable');
+        return view('blade-ui-kit::components.smartsTable.SmartsTable');
     }
 }
