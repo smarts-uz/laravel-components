@@ -1,6 +1,6 @@
 <?php
 
-namespace BladeUIKit\Components\Uppy;
+namespace BladeUIKit\Components\SmartsUppy;
 
 use BladeUIKit\Components\BladeComponent;
 use Illuminate\View\Component;

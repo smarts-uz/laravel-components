@@ -20,7 +20,7 @@ return [
         'eimzo_login_update_button' => Components\Eimzo\EimzoUpdateButton::class,
         'eimzo_login_sign_button' => Components\Eimzo\EimzoSignButton::class,
         'SmartsTable' => Components\SmartsTable\SmartsTable::class,
-        'SmartsUppy' => Components\Uppy\SmartsUppy::class,
+        'SmartsUppy' => Components\SmartsUppy\SmartsUppy::class,
     ],
 
     /*
