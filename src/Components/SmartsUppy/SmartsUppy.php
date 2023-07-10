@@ -36,6 +36,6 @@ class SmartsUppy extends BladeComponent
      */
     public function render()
     {
-        return view('blade-ui-kit::components.uppy.SmartsUppy');
+        return view('blade-ui-kit::components.SmartsUppy.SmartsUppy');
     }
 }
