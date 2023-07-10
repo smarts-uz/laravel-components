@@ -5,7 +5,7 @@ namespace BladeUIKit\Components\Uppy;
 use BladeUIKit\Components\BladeComponent;
 use Illuminate\View\Component;
 
-class laravelUppy extends BladeComponent
+class SmartsUppy extends BladeComponent
 {
     /**
      * Create a new component instance.
@@ -36,6 +36,6 @@ class laravelUppy extends BladeComponent
      */
     public function render()
     {
-        return view('blade-ui-kit::components.uppy.laravelUppy');
+        return view('blade-ui-kit::components.uppy.SmartsUppy');
     }
 }
