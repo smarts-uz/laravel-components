@@ -25,6 +25,6 @@ class SmartsEimzoSignButton extends BladeComponent
      */
     public function render()
     {
-        return view('blade-ui-kit::components.smartsEimzo.smarts_sign');
+        return view('smarts::components.smartsEimzo.smarts_sign');
     }
 }
