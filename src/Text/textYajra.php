@@ -1,6 +1,6 @@
 <?php
 
-namespace BladeUIKit\Text;
+namespace Smarts\Text;
 
 
 use Illuminate\Support\Facades\Http;

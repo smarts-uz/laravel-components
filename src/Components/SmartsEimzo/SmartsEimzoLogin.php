@@ -1,8 +1,8 @@
 <?php
 
-namespace BladeUIKit\Components\SmartsEimzo;
+namespace Smarts\Components\SmartsEimzo;
 
-use BladeUIKit\Components\BladeComponent;
+use Smarts\Components\BladeComponent;
 
 class SmartsEimzoLogin extends BladeComponent
 {
@@ -26,6 +26,6 @@ class SmartsEimzoLogin extends BladeComponent
      */
     public function render()
     {
-        return view('blade-ui-kit::components.smartsEimzo.smarts_eimzo');
+        return view('smarts::components.smartsEimzo.smarts_eimzo');
     }
 }

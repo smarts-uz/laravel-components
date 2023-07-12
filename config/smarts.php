@@ -1,6 +1,6 @@
 <?php
 
-use BladeUIKit\Components;
+use Smarts\Components;
 
 return [
 

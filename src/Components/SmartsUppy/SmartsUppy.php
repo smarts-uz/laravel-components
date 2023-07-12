@@ -1,8 +1,8 @@
 <?php
 
-namespace BladeUIKit\Components\SmartsUppy;
+namespace Smarts\Components\SmartsUppy;
 
-use BladeUIKit\Components\BladeComponent;
+use Smarts\Components\BladeComponent;
 use Illuminate\View\Component;
 
 class SmartsUppy extends BladeComponent
@@ -36,6 +36,6 @@ class SmartsUppy extends BladeComponent
      */
     public function render()
     {
-        return view('blade-ui-kit::components.SmartsUppy.SmartsUppy');
+        return view('smarts::components.SmartsUppy.SmartsUppy');
     }
 }

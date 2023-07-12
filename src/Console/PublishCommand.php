@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BladeUIKit\Console;
+namespace Smarts\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -29,7 +29,7 @@ final class PublishCommand extends Command
 
     public function handle(Filesystem $filesystem): int
     {
-        $components = config('blade-ui-kit.components');
+        $components = config('smarts.components');
         $alias = $this->argument('component');
 
         if (! $component = $components[$alias] ?? null) {
@@ -38,12 +38,12 @@ final class PublishCommand extends Command
             return 1;
         }
 
-        $class = str_replace('BladeUIKit\\Components\\', '', $component);
+        $class = str_replace('Smarts\\Components\\', '', $component);
         $view = str_replace(['_', '.-'], ['-', '/'], Str::snake(str_replace('\\', '.', $class))).'.blade.php';
 
         if ($this->option('view') || ! $this->option('class')) {
             $originalView = __DIR__.'/../../resources/views/components/'.$view;
-            $publishedView = $this->laravel->resourcePath('views/vendor/blade-ui-kit/components/'.$view);
+            $publishedView = $this->laravel->resourcePath('views/vendor/smarts/components/'.$view);
             $path = Str::beforeLast($publishedView, '/');
 
             if (! $this->option('force') && $filesystem->exists($publishedView)) {
@@ -87,8 +87,8 @@ final class PublishCommand extends Command
             $this->info('Successfully published the component class!');
 
             // Update config entry of component to new class.
-            if ($filesystem->missing($config = $this->laravel->configPath('blade-ui-kit.php'))) {
-                $this->call('vendor:publish', ['--tag' => 'blade-ui-kit-config']);
+            if ($filesystem->missing($config = $this->laravel->configPath('smarts.php'))) {
+                $this->call('vendor:publish', ['--tag' => 'smarts-config']);
             }
 
             $originalConfig = $filesystem->get($config);

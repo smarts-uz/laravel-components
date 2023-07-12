@@ -2,7 +2,7 @@
     "name": "teamprodev/laravel-components",
     "description": "A set of renderless components to utilise in your Laravel Blade views.",
     "type": "library",
-    "keywords": ["Blade", "UI", "Laravel"],
+    "keywords": ["Blade", "Smarts", "Laravel"],
     "license": "MIT",
     "authors": [
         {
@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BladeUIKit\\": "src"
+            "Smarts\\": "src"
         }
     },
     "autoload-dev": {
@@ -41,7 +41,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BladeUIKit\\BladeUIKitServiceProvider"
+                "Smarts\\SmartsServiceProvider"
             ]
         }
     },

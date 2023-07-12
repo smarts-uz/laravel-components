@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace BladeUIKit;
+namespace Smarts;
 
-use BladeUIKit\Components\BladeComponent;
-use BladeUIKit\Components\LivewireComponent;
-use BladeUIKit\Console\PublishCommand;
+use Smarts\Components\BladeComponent;
+use Smarts\Components\LivewireComponent;
+use Smarts\Console\PublishCommand;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Illuminate\View\Compilers\BladeCompiler;
 use Livewire\Livewire;
 
-final class BladeUIKitServiceProvider extends ServiceProvider
+final class SmartsServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/blade-ui-kit.php', 'blade-ui-kit');
+        $this->mergeConfigFrom(__DIR__.'/../config/smarts.php', 'smarts');
 
         if ($this->app->runningInConsole()) {
             $this->commands([
@@ -37,17 +37,17 @@ final class BladeUIKitServiceProvider extends ServiceProvider
 
     private function bootResources(): void
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'blade-ui-kit');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'smarts');
     }
 
     private function bootBladeComponents(): void
     {
         $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
-            $prefix = config('blade-ui-kit.prefix', '');
-            $assets = config('blade-ui-kit.assets', []);
+            $prefix = config('smarts.prefix', '');
+            $assets = config('smarts.assets', []);
 
             /** @var BladeComponent $component */
-            foreach (config('blade-ui-kit.components', []) as $alias => $component) {
+            foreach (config('smarts.components', []) as $alias => $component) {
                 $blade->component($component, $alias, $prefix);
 
                 $this->registerAssets($component, $assets);
@@ -62,11 +62,11 @@ final class BladeUIKitServiceProvider extends ServiceProvider
             return;
         }
 
-        $prefix = config('blade-ui-kit.prefix', '');
-        $assets = config('blade-ui-kit.assets', []);
+        $prefix = config('smarts.prefix', '');
+        $assets = config('smarts.assets', []);
 
         /** @var LivewireComponent $component */
-        foreach (config('blade-ui-kit.livewire', []) as $alias => $component) {
+        foreach (config('smarts.livewire', []) as $alias => $component) {
             $alias = $prefix ? "$prefix-$alias" : $alias;
 
             Livewire::component($alias, $component);
@@ -83,13 +83,13 @@ final class BladeUIKitServiceProvider extends ServiceProvider
             collect($files)->filter(function (string $file) {
                 return Str::endsWith($file, '.css');
             })->each(function (string $style) {
-                BladeUIKit::addStyle($style);
+                Smarts::addStyle($style);
             });
 
             collect($files)->filter(function (string $file) {
                 return Str::endsWith($file, '.js');
             })->each(function (string $script) {
-                BladeUIKit::addScript($script);
+                Smarts::addScript($script);
             });
         }
     }
@@ -97,11 +97,11 @@ final class BladeUIKitServiceProvider extends ServiceProvider
     private function bootDirectives(): void
     {
         Blade::directive('bukStyles', function (string $expression) {
-            return "<?php echo BladeUIKit\\BladeUIKit::outputStyles($expression); ?>";
+            return "<?php echo Smarts\\Smarts::outputStyles($expression); ?>";
         });
 
         Blade::directive('bukScripts', function (string $expression) {
-            return "<?php echo BladeUIKit\\BladeUIKit::outputScripts($expression); ?>";
+            return "<?php echo Smarts\\Smarts::outputScripts($expression); ?>";
         });
     }
 
@@ -109,14 +109,14 @@ final class BladeUIKitServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/blade-ui-kit.php' => $this->app->configPath('blade-ui-kit.php'),
-            ], 'blade-ui-kit-config');
+                __DIR__.'/../config/smarts.php' => $this->app->configPath('smarts.php'),
+            ], 'smarts-config');
             $this->publishes([
                 __DIR__.'/../config/uppy.php' => $this->app->configPath('uppy.php'),
             ], 'uppy-config');
             $this->publishes([
-                __DIR__.'/../resources/views/components' => $this->app->resourcePath('views/vendor/blade-ui-kit'),
-            ], 'blade-ui-kit-views');
+                __DIR__.'/../resources/views/components' => $this->app->resourcePath('views/vendor/smarts'),
+            ], 'smarts-views');
             $this->publishes([
                 __DIR__.'/../resources/views/assets' => base_path('public/vendor/eimzo/assets'),
             ], 'eimzo-js');

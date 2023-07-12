@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BladeUIKit\Components;
+namespace Smarts\Components;
 
 use Livewire\Component;
 

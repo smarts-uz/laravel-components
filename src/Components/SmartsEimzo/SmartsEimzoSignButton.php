@@ -1,8 +1,8 @@
 <?php
 
-namespace BladeUIKit\Components\SmartsEimzo;
+namespace Smarts\Components\SmartsEimzo;
 
-use BladeUIKit\Components\BladeComponent;
+use Smarts\Components\BladeComponent;
 
 class SmartsEimzoSignButton extends BladeComponent
 {

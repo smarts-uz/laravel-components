@@ -1,8 +1,8 @@
 <?php
 
-namespace BladeUIKit\Components\SmartsEimzo;
+namespace Smarts\Components\SmartsEimzo;
 
-use BladeUIKit\Components\BladeComponent;
+use Smarts\Components\BladeComponent;
 
 class SmartsEimzoUpdateButton extends BladeComponent
 {
@@ -24,6 +24,6 @@ class SmartsEimzoUpdateButton extends BladeComponent
      */
     public function render()
     {
-        return view('blade-ui-kit::components.smartsEimzo.smarts_update');
+        return view('smarts::components.smartsEimzo.smarts_update');
     }
 }

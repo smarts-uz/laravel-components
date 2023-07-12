@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BladeUIKit;
+namespace Smarts;
 
-final class BladeUIKit
+final class Smarts
 {
     /** @var array */
     private static $styles = [];
