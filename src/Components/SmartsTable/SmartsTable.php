@@ -65,13 +65,14 @@ class SmartsTable extends BladeComponent
         bool $rowReorder = false,
         bool $rowGroup = false,
         string $pagingType = 'simple_numbers',
+        array $options = null,
     )
     {
         $text = new textYajra();
         $this->tableTitle = $exportId::title();
         $this->dtHeaders = $exportId::headers();
         $this->dtColumns = $exportId::columns();
-        $this->options = $exportId::options();
+        $this->options = $options ? array_merge($exportId::options(),$options) : $exportId::options();
         $this->tableId = $tableId;
         $this->getData = $getData;
         $this->language = $language;
