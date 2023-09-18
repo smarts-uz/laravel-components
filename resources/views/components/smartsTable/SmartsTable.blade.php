@@ -1,4 +1,4 @@
-<div id="fortext"></div>
+<div id="{{$tableId}}Text"></div>
 
 <table id="{{$tableId}}" class="display wrap table-bordered " style="border-collapse: collapse; width: 100%; padding-top: 10px">
     <thead class="border border-dark">
@@ -15,7 +15,8 @@
     $(document).ready(function() {
         $.fn.dataTable.moment('DD-MM-YYYY');
 
-        $('#{{$tableId}}').DataTable( {
+        var table = $('#{{$tableId}}').DataTable( {
+            autoFill: true,
             stateSave: "{{$stateSave}}",
             scrollX: "{{$scrollX}}",
             scrollY: "{{$scrollY}}",
@@ -49,9 +50,6 @@
                 },
                 type: "POST",
             },
-            @foreach($options as $key=>$value)
-                    {{$key}}: "{{$value}}",
-            @endforeach
             "fnInitComplete": function(){
 
                 // Enable THEAD scroll bars
@@ -63,23 +61,17 @@
                 });
             },
         });
+        console.log(table.autoFill().enabled())
         var divTitle = ''
             + '<div class="col-12 text-center text-md-left pt-4 pb-4 display-2" style="text-align: center !important;">'
             + '<h1 class="text-dark">' + '{{$tableTitle}}' + '</h1>'
             + '</div>';
 
-        $("#fortext").append(divTitle);
-
-        $(".content").prepend('<div id = "buttons-container" class="buttons-container"></div>');
+        $("#{{$tableId}}Text").append(divTitle);
 
         @foreach($events as $key=>$value)
-            $('#{{$tableId}}').on("{{$key}}", {!! $value !!});
+        $('#{{$tableId}}').on("{{$key}}", {!! $value !!});
         @endforeach
 
-        $("#buttons-container").append($(".dataTables_length"));
-        $("#buttons-container").append($(".daterangepicker-form"));
-        $("#buttons-container").append($(".dt-buttons"));
-        $("#buttons-container").append($(".dataTables_filter"));
-        $("#buttons-container").insertAfter($("#fortext"));
     });
 </script>

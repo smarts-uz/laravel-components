@@ -42,7 +42,7 @@ class SmartsTable extends BladeComponent
     public array $options;
     public array $events;
 
-    protected static $assets = ['yajra'];
+    public array $asset;
 
     public function __construct(
         string $startDate,
@@ -66,6 +66,7 @@ class SmartsTable extends BladeComponent
         bool $rowGroup = false,
         string $pagingType = 'simple_numbers',
         array $options = null,
+        array $asset = []
     )
     {
         $text = new textYajra();
@@ -95,6 +96,10 @@ class SmartsTable extends BladeComponent
         $this->endDate = $endDate;
         $this->exportId = $exportId;
         $this->events = $exportId::events();
+
+        $this->asset = $asset;
+        $assetsLocal = array_merge($asset, ['yajra']);
+        self::$assets = $assetsLocal;
     }
     /**
      * Get the view / contents that represent the component.
