@@ -42,7 +42,7 @@ class SmartsTable extends BladeComponent
     public array $options;
     public array $events;
 
-    public array $asset;
+    protected static $assets = ['yajra'];
 
     public function __construct(
         string $startDate,
