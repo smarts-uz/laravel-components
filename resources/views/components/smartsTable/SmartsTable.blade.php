@@ -16,7 +16,6 @@
         $.fn.dataTable.moment('DD-MM-YYYY');
 
         var table = $('#{{$tableId}}').DataTable( {
-            autoFill: true,
             stateSave: "{{$stateSave}}",
             scrollX: "{{$scrollX}}",
             scrollY: "{{$scrollY}}",
@@ -50,6 +49,9 @@
                 },
                 type: "POST",
             },
+            @foreach($options as $key=>$value)
+                    {{$key}}: "{{$value}}",
+            @endforeach
             "fnInitComplete": function(){
 
                 // Enable THEAD scroll bars
