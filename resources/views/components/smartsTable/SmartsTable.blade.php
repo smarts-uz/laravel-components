@@ -63,7 +63,9 @@
                 });
             },
         });
-        console.log(table.autoFill().enabled())
+        @foreach($objects as $key => $value)
+                {{$key}} = {!! $value !!};
+        @endforeach
         var divTitle = ''
             + '<div class="col-12 text-center text-md-left pt-4 pb-4 display-2" style="text-align: center !important;">'
             + '<h1 class="text-dark">' + '{{$tableTitle}}' + '</h1>'
@@ -71,7 +73,7 @@
 
         $("#{{$tableId}}Text").append(divTitle);
 
-        @foreach($events as $key=>$value)
+        @foreach($events as $key => $value)
         $('#{{$tableId}}').on("{{$key}}", {!! $value !!});
         @endforeach
 

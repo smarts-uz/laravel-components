@@ -41,6 +41,7 @@ class SmartsTable extends BladeComponent
     public $exportId;
     public array $options;
     public array $events;
+    public array $objects;
 
     public static $assets = ['yajra'];
 
@@ -66,7 +67,7 @@ class SmartsTable extends BladeComponent
         bool $rowGroup = false,
         string $pagingType = 'simple_numbers',
         array $options = null,
-        array $asset = []
+        array $objects = []
     )
     {
         $text = new textYajra();
@@ -96,6 +97,7 @@ class SmartsTable extends BladeComponent
         $this->endDate = $endDate;
         $this->exportId = $exportId;
         $this->events = $exportId::events();
+        $this->objects = $objects;
     }
     /**
      * Get the view / contents that represent the component.
