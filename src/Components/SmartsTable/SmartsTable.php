@@ -88,7 +88,7 @@ class SmartsTable extends BladeComponent
         $this->scrollX = $scrollX;
         $this->responsive = $responsive;
         $this->select = $select;
-        $this->scrollY = isset($scrollY) ? "scrollY:  $scrollY," : "";
+        $this->scrollY = $scrollY;
         $this->scroller = $scroller;
         $this->keys = $keys;
         $this->rowReorder = $rowReorder;
