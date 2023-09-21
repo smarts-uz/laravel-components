@@ -50,7 +50,7 @@
                 type: "POST",
             },
             @foreach($options as $key=>$value)
-                    {{$key}}: "{{$value}}",
+                    {{$key}}: {!! $value !!},
             @endforeach
             "fnInitComplete": function(){
 
