@@ -67,7 +67,8 @@ class SmartsTable extends BladeComponent
         bool $rowGroup = false,
         string $pagingType = 'simple_numbers',
         array $options = null,
-        array $objects = []
+        array $objects = [],
+        array $events = []
     )
     {
         $text = new textYajra();
@@ -96,7 +97,7 @@ class SmartsTable extends BladeComponent
         $this->startDate = $startDate;
         $this->endDate = $endDate;
         $this->exportId = $exportId;
-        $this->events = $exportId::events();
+        $this->events = $events ? array_merge($exportId::events(),$events) : $exportId::events();
         $this->objects = $objects;
     }
     /**
