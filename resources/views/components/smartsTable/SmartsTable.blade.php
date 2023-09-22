@@ -15,6 +15,10 @@
     $(document).ready(function() {
         $.fn.dataTable.moment('DD-MM-YYYY');
 
+        @if($headerclone)
+            $('#{{$tableId}} thead tr').clone(true).addClass('filters').appendTo( '#{{$tableId}} thead' );
+        @endif
+
         var table = $('#{{$tableId}}').DataTable( {
             stateSave: "{{$stateSave}}",
             scrollX: "{{$scrollX}}",
@@ -49,6 +53,7 @@
                 },
                 type: "POST",
             },
+
             @foreach($options as $key=>$value)
                     {{$key}}: {!! $value !!},
             @endforeach
