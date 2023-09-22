@@ -18,7 +18,7 @@
         var table = $('#{{$tableId}}').DataTable( {
             stateSave: "{{$stateSave}}",
             scrollX: "{{$scrollX}}",
-            scrollY: "{{$scrollY}}",
+            scrollY: {{$scrollY}},
             serverSide: "{{$serverSide}}",
             keys: "{{$keys}}",
             rowReorder: "{{$rowReorder}}",
