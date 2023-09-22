@@ -26,7 +26,7 @@ class SmartsTable extends BladeComponent
     public bool $colReorder;
     public bool $stateSave;
     public bool $serverSide;
-    public bool $scrollX;
+    public string $scrollX;
     public bool $responsive;
     public bool $select;
     public string|int $scrollY;
@@ -58,9 +58,9 @@ class SmartsTable extends BladeComponent
         bool $colReorder = false,
         bool $stateSave = false,
         bool $serverSide = false,
-        bool $scrollX = false,
         int $pageLength = 10,
-        int $scrollY = null,
+        string|int $scrollY = "null",
+        bool $scrollX = false,
         bool $scroller = false,
         bool $keys = false,
         bool $rowReorder = false,
