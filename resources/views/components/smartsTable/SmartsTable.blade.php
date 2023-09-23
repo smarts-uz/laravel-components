@@ -13,6 +13,11 @@
 </table>
 <script>
     $(document).ready(function() {
+        @foreach($functions as $key => $value)
+        function {{$key}}(str) {
+            {!! $value !!}
+        }
+        @endforeach
         $.fn.dataTable.moment('DD-MM-YYYY');
 
         @if($headerclone)
