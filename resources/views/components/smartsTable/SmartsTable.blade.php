@@ -32,7 +32,7 @@
             keys: "{{$keys}}",
             rowReorder: "{{$rowReorder}}",
             rowGroup: "{{$rowGroup}}",
-            responsive: "{{$responsive}}",
+            responsive: {!! $responsive !!},
             select: "{{$select}}",
             order: [[0, 'desc']],
             colReorder: "{{$colReorder}}",

@@ -27,7 +27,7 @@ class SmartsTable extends BladeComponent
     public bool $stateSave;
     public bool $serverSide;
     public string $scrollX;
-    public bool $responsive;
+    public bool|string $responsive;
     public bool $select;
     public string|int $scrollY;
     public bool $scroller;
@@ -57,7 +57,7 @@ class SmartsTable extends BladeComponent
         string $language = 'en-GB',
         string $dom = 'Blfrtip',
         bool $select = false,
-        bool $responsive = false,
+        bool|string $responsive = "null",
         bool $colReorder = false,
         bool $stateSave = false,
         bool $serverSide = false,
