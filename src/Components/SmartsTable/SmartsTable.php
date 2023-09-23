@@ -42,6 +42,7 @@ class SmartsTable extends BladeComponent
     public array $options;
     public array $events;
     public array $objects;
+    public array $addEventListener;
     public bool $headerclone;
 
     public static $assets = ['yajra'];
@@ -70,6 +71,7 @@ class SmartsTable extends BladeComponent
         array $options = null,
         array $objects = [],
         array $events = [],
+        array $addEventListener = [],
         bool $headerclone = false,
     )
     {
@@ -101,6 +103,7 @@ class SmartsTable extends BladeComponent
         $this->exportId = $exportId;
         $this->objects = $objects;
         $this->events = $events ? array_merge($exportId::events(),$events) : $exportId::events();
+        $this->addEventListener = $addEventListener;
         $this->headerclone = $headerclone;
     }
     /**

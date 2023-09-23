@@ -16,7 +16,7 @@
         $.fn.dataTable.moment('DD-MM-YYYY');
 
         @if($headerclone)
-            $('#{{$tableId}} thead tr').clone(true).addClass('filters').appendTo( '#{{$tableId}} thead' );
+        $('#{{$tableId}} thead tr').clone(true).addClass('filters').appendTo( '#{{$tableId}} thead' );
         @endif
 
         var table = $('#{{$tableId}}').DataTable( {
@@ -68,7 +68,10 @@
                 });
             },
         });
-        @foreach($objects as $key => $value)
+        @foreach($addEventListener as $key => $value)
+        document.querySelector('{{$key}}').addEventListener({{$value}});
+        @endforeach
+                @foreach($objects as $key => $value)
                 {{$key}} = {!! $value !!};
         @endforeach
         var divTitle = ''
