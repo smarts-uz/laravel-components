@@ -13,9 +13,9 @@
 </table>
 <script>
     $(document).ready(function() {
-        @foreach($functions as $key => $value)
-        function {{$key}}(str) {
-            {!! $value !!}
+        @foreach($functions as $key => $option)
+        function {{$key}}({{$option['parameters']}}) {
+            {!! $option['value'] !!}
         }
         @endforeach
         $.fn.dataTable.moment('DD-MM-YYYY');
@@ -31,7 +31,7 @@
             serverSide: "{{$serverSide}}",
             keys: "{{$keys}}",
             rowReorder: "{{$rowReorder}}",
-            rowGroup: "{{$rowGroup}}",
+            rowGroup: {!! $rowGroup !!},
             responsive: {!! $responsive !!},
             select: "{{$select}}",
             order: [[0, 'desc']],
@@ -58,7 +58,6 @@
                 },
                 type: "POST",
             },
-
             @foreach($options as $key=>$value)
                     {{$key}}: {!! $value !!},
             @endforeach
