@@ -34,6 +34,7 @@ class SmartsTable extends BladeComponent
     public bool $keys;
     public bool|string $rowReorder;
     public bool|string $searchBuilder;
+    public array $fn;
     public bool|string $rowGroup;
     public string $pagingType;
     public $startDate;
@@ -70,6 +71,7 @@ class SmartsTable extends BladeComponent
         bool $keys = false,
         bool|string $rowReorder = "null",
         bool|string $searchBuilder = "null",
+        array $fn = [],
         bool|string $rowGroup = "false",
         string $pagingType = 'simple_numbers',
         array $options = null,
@@ -103,6 +105,7 @@ class SmartsTable extends BladeComponent
         $this->keys = $keys;
         $this->rowReorder = $rowReorder;
         $this->searchBuilder = $searchBuilder;
+        $this->fn = $fn;
         $this->rowGroup = $rowGroup;
         $this->pagingType = $pagingType;
         $this->startDate = $startDate;

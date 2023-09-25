@@ -19,7 +19,9 @@
         }
         @endforeach
         $.fn.dataTable.moment('DD-MM-YYYY');
-
+        @foreach($fn as $fnvalue)
+        {!! $fnvalue !!}
+        @endforeach
         @if($headerclone)
         $('#{{$tableId}} thead tr').clone(true).addClass('filters').appendTo( '#{{$tableId}} thead' );
         @endif
