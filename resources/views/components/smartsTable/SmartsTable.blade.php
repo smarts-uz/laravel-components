@@ -30,7 +30,7 @@
             scrollY: {{$scrollY}},
             serverSide: "{{$serverSide}}",
             keys: "{{$keys}}",
-            rowReorder: "{{$rowReorder}}",
+            rowReorder: {!! $rowReorder !!},
             rowGroup: {!! $rowGroup !!},
             responsive: {!! $responsive !!},
             select: "{{$select}}",
@@ -86,10 +86,10 @@
         $("#{{$tableId}}Text").append(divTitle);
 
         @foreach($events as $key => $value)
-            table.on("{{$key}}", {!! $value !!});
+        table.on("{{$key}}", {!! $value !!});
         @endforeach
         @foreach($querySelectorAll as $key => $value)
-            document.querySelectorAll("{{$key}}").{!! $value !!};
+        document.querySelectorAll("{{$key}}").{!! $value !!};
         @endforeach
     });
 </script>

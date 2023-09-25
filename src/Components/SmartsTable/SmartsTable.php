@@ -32,7 +32,7 @@ class SmartsTable extends BladeComponent
     public string|int $scrollY;
     public bool $scroller;
     public bool $keys;
-    public bool $rowReorder;
+    public bool|string $rowReorder;
     public bool|string $rowGroup;
     public string $pagingType;
     public $startDate;
@@ -67,7 +67,7 @@ class SmartsTable extends BladeComponent
         bool $scrollX = false,
         bool $scroller = false,
         bool $keys = false,
-        bool $rowReorder = false,
+        bool|string $rowReorder = "null",
         bool|string $rowGroup = "false",
         string $pagingType = 'simple_numbers',
         array $options = null,
