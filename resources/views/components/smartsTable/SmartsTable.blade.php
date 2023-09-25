@@ -86,8 +86,10 @@
         $("#{{$tableId}}Text").append(divTitle);
 
         @foreach($events as $key => $value)
-        $('#{{$tableId}}').on("{{$key}}", {!! $value !!});
+            table.on("{{$key}}", {!! $value !!});
         @endforeach
-
+        @foreach($querySelectorAll as $key => $value)
+            document.querySelectorAll("{{$key}}").{!! $value !!};
+        @endforeach
     });
 </script>
