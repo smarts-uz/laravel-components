@@ -33,6 +33,7 @@
             rowReorder: {!! $rowReorder !!},
             rowGroup: {!! $rowGroup !!},
             responsive: {!! $responsive !!},
+            searchBuilder: {!! $searchBuilder !!},
             select: "{{$select}}",
             order: [[0, 'desc']],
             colReorder: "{{$colReorder}}",
