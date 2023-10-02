@@ -7,6 +7,10 @@
             @foreach($data as $header=>$key)
                 <th colspan="{{$key["colspan"]}}" rowspan="{{$key["rowspan"]}}" style="text-align: center;" class="border border-dark">{{ $header }}</th>
             @endforeach
+            @if($tableControlers)
+                <th colspan="0" rowspan="0" style="text-align: center;" class="border border-dark">Action</th>
+                <th colspan="0" rowspan="0" style="text-align: center;" class="border border-dark">Action</th>
+            @endif
         </tr>
     @endforeach
     </thead>
@@ -18,7 +22,7 @@
             {!! $option['value'] !!}
         }
         @endforeach
-        $.fn.dataTable.moment('DD-MM-YYYY');
+        // $.fn.dataTable.moment('DD-MM-YYYY');
         @foreach($fn as $fnvalue)
         {!! $fnvalue !!}
         @endforeach
@@ -36,20 +40,34 @@
             rowGroup: {!! $rowGroup !!},
             responsive: {!! $responsive !!},
             searchBuilder: {!! $searchBuilder !!},
-            select: "{{$select}}",
+            select: {!! $select !!},
             order: [[0, 'desc']],
             colReorder: "{{$colReorder}}",
             "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "{{ __('Все') }}"] ] ,
             "pagingType": "{{$pagingType}}",
             pageLength: {{$pageLength}},
             "language": {
-                "url": "https://cdn.datatables.net/plug-ins/1.12.1/i18n/{{$language}}.json"
-            },
+                        "url": "https://cdn.datatables.net/plug-ins/1.12.1/i18n/{{$language}}.json"
+                    },
             dom: "{{$dom}}",
             columns: [
                     @foreach($dtColumns as $column)
                 {data: "{{$column['data']}}", name: "{{$column['name']}}", render: {!! $column['render'] ?? 'null' !!} },
-                @endforeach
+                    @endforeach
+                    @if($tableControlers)
+                {
+                    data: null,
+                    className: 'dt-center editor-edit',
+                    defaultContent: '<i class="fa fa-pencil"/>',
+                    orderable: false
+                },
+                {
+                    data: null,
+                    className: 'dt-center editor-delete',
+                    defaultContent: '<i class="fa fa-trash"/>',
+                    orderable: false
+                }
+                @endif
             ],
             {!! $buttons !!}
             ajax: {

@@ -28,7 +28,7 @@ class SmartsTable extends BladeComponent
     public bool $serverSide;
     public string $scrollX;
     public bool|string $responsive;
-    public bool $select;
+    public bool|string $select;
     public string|int $scrollY;
     public bool $scroller;
     public bool $keys;
@@ -48,6 +48,7 @@ class SmartsTable extends BladeComponent
     public array $functions;
     public array $querySelectorAll;
     public bool $headerclone;
+    public bool $tableControlers;
 
     public static $assets = ['yajra'];
 
@@ -59,7 +60,7 @@ class SmartsTable extends BladeComponent
         string $getData = null,
         string $language = 'en-GB',
         string $dom = 'Blfrtip',
-        bool $select = false,
+        bool|string $select = "false",
         bool|string $responsive = "null",
         bool $colReorder = false,
         bool $stateSave = false,
@@ -81,6 +82,7 @@ class SmartsTable extends BladeComponent
         array $functions = [],
         array $querySelectorAll = [],
         bool $headerclone = false,
+        bool $tableControlers = false,
     )
     {
         $text = new textYajra();
@@ -117,6 +119,7 @@ class SmartsTable extends BladeComponent
         $this->functions = $functions;
         $this->querySelectorAll = $querySelectorAll;
         $this->headerclone = $headerclone;
+        $this->tableControlers = $tableControlers;
     }
     /**
      * Get the view / contents that represent the component.
