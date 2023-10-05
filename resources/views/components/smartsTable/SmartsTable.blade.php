@@ -18,19 +18,19 @@
 <script>
     $(document).ready(function() {
         @foreach($functions as $key => $option)
-        function {{$key}}({{$option['parameters']}}) {
-            {!! $option['value'] !!}
-        }
+            function {{$key}}({{$option['parameters']}}) {
+                {!! $option['value'] !!}
+            }
         @endforeach
         // $.fn.dataTable.moment('DD-MM-YYYY');
         @foreach($fn as $fnvalue)
-        {!! $fnvalue !!}
+            {!! $fnvalue !!}
         @endforeach
         @if($headerclone)
-        $('#{{$tableId}} thead tr').clone(true).addClass('filters').appendTo( '#{{$tableId}} thead' );
+            $('#{{$tableId}} thead tr').clone(true).addClass('filters').appendTo( '#{{$tableId}} thead' );
         @endif
 
-        var table = $('#{{$tableId}}').DataTable( {
+        var {{$tableId}} = $('#{{$tableId}}').DataTable( {
             stateSave: "{{$stateSave}}",
             scrollX: "{{$scrollX}}",
             scrollY: {{$scrollY}},
@@ -47,14 +47,14 @@
             "pagingType": "{{$pagingType}}",
             pageLength: {{$pageLength}},
             "language": {
-                        "url": "https://cdn.datatables.net/plug-ins/1.12.1/i18n/{{$language}}.json"
-                    },
+                "url": "https://cdn.datatables.net/plug-ins/1.12.1/i18n/{{$language}}.json"
+            },
             dom: "{{$dom}}",
             columns: [
                     @foreach($dtColumns as $column)
                 {data: "{{$column['data']}}", name: "{{$column['name']}}", render: {!! $column['render'] ?? 'null' !!} },
-                    @endforeach
-                    @if($tableControlers)
+                @endforeach
+                @if($tableControlers)
                 {
                     data: null,
                     className: 'dt-center editor-edit',
@@ -94,10 +94,10 @@
             },
         });
         @foreach($addEventListener as $key => $value)
-        document.querySelector('{{$key}}').addEventListener({{$value}});
+            document.querySelector('{{$key}}').addEventListener({{$value}});
         @endforeach
-                @foreach($objects as $key => $value)
-                {{$key}} = {!! $value !!};
+        @foreach($objects as $key => $value)
+            {{$key}} = {!! $value !!};
         @endforeach
         var divTitle = ''
             + '<div class="col-12 text-center text-md-left pt-4 pb-4 display-2" style="text-align: center !important;">'
@@ -105,12 +105,11 @@
             + '</div>';
 
         $("#{{$tableId}}Text").append(divTitle);
-
         @foreach($events as $key => $value)
-        table.on("{{$key}}", {!! $value !!});
+            {{$tableId}}.on("{{$key}}", {!! $value !!});
         @endforeach
         @foreach($querySelectorAll as $key => $value)
-        document.querySelectorAll("{{$key}}").{!! $value !!};
+            document.querySelectorAll("{{$key}}").{!! $value !!};
         @endforeach
     });
 </script>
