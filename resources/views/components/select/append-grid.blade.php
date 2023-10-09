@@ -2,19 +2,19 @@
 <script>
     var myAppendGrid;
     document.addEventListener("DOMContentLoaded", function () {
-            myAppendGrid = new AppendGrid({
-                element: {{$id}},
-                uiFramework: "bootstrap5",
-                iconFramework: "fontawesome5",
-                columns: [
+        myAppendGrid = new AppendGrid({
+            element: {{$id}},
+            uiFramework: "{{$uiFramework}}",
+            iconFramework: "{{$iconFramework}}",
+            columns: [
                     @foreach($columns as $column)
-                        {
-                        @foreach($column as $key=>$value)
+                {
+                    @foreach($column as $key=>$value)
                             {{$key}}: "{{$value}}",
-                        @endforeach
-                        },
                     @endforeach
-                ]
+                },
+                @endforeach
+            ]
         });
     });
 </script>
