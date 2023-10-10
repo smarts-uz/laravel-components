@@ -23,19 +23,24 @@ class AppendGrid extends BladeComponent
     /** @var string */
     public $iconFramework;
 
+    /** @var array */
+    public $options;
+
     protected static $assets = ['append-grid'];
 
     public function __construct(string $id,
                                 array $columns,
                                 string $attributes = null,
                                 string $uiFramework = 'bootstrap5',
-                                string $iconFramework = 'fontawesome5')
+                                string $iconFramework = 'fontawesome5',
+                                array $options = [])
     {
         $this->id = $id;
         $this->columns = $columns;
         $this->attributes = $attributes;
         $this->uiFramework = $uiFramework;
         $this->iconFramework = $iconFramework;
+        $this->options = $options;
     }
 
     public function render(): View

@@ -3,7 +3,7 @@
     var myAppendGrid;
     document.addEventListener("DOMContentLoaded", function () {
         myAppendGrid = new AppendGrid({
-            element: {{$id}},
+            element: "{{$id}}",
             uiFramework: "{{$uiFramework}}",
             iconFramework: "{{$iconFramework}}",
             columns: [
@@ -14,7 +14,10 @@
                     @endforeach
                 },
                 @endforeach
-            ]
+            ],
+            @foreach($options as $key=>$value)
+                    {{$key}}: {!! $value !!},
+            @endforeach
         });
     });
 </script>
