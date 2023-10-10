@@ -37,6 +37,69 @@
             ],
             browserBackButtonClose: true
         })
+        @if($webcam)
+        .use(Uppy.Webcam, { target: Uppy.Dashboard })
+        @endif
+        @if($screenCapture)
+        .use(Uppy.ScreenCapture, { target: Uppy.Dashboard })
+        @endif
+        @if($audio)
+        .use(Uppy.Audio, { target: Uppy.Dashboard })
+        @endif
+        @if($boxUrl)
+        .use(Uppy.Box, {
+            target: Uppy.Dashboard,
+            companionUrl: '{{$boxUrl}}',
+        })
+        @endif
+        @if($dropboxUrl)
+        .use(Uppy.Dropbox, {
+            target: Uppy.Dashboard,
+            companionUrl: '{{$dropboxUrl}}',
+        })
+        @endif
+        @if($facebookUrl)
+        .use(Uppy.Facebook, {
+            target: Uppy.Dashboard,
+            companionUrl: '{{$facebookUrl}}',
+        })
+        @endif
+        @if($googleDriveUrl)
+        .use(Uppy.GoogleDrive, {
+            target: Uppy.Dashboard,
+            companionUrl: '{{$googleDriveUrl}}',
+        })
+        @endif
+        @if($instagramUrl)
+        .use(Uppy.Instagram, {
+            target: Uppy.Dashboard,
+            companionUrl: '{{$instagramUrl}}',
+        })
+        @endif
+        @if($oneDriveUrl)
+        .use(Uppy.OneDrive, {
+            target: Uppy.Dashboard,
+            companionUrl: '{{$oneDriveUrl}}',
+        })
+        @endif
+        @if($unsplashUrl)
+        .use(Uppy.Unsplash, {
+            target: Uppy.Dashboard,
+            companionUrl: '{{$unsplashUrl}}',
+        })
+        @endif
+        @if($urlsourceUrl)
+        .use(Uppy.Url, {
+            target: Uppy.Dashboard,
+            companionUrl: '{{$urlsourceUrl}}',
+        })
+        @endif
+        @if($zoomUrl)
+        .use(Uppy.Zoom, {
+            target: Uppy.Dashboard,
+            companionUrl: '{{$zoomUrl}}',
+        })
+        @endif
         .use(Uppy.XHRUpload, {
             endpoint: '{{$url}}',
             formData: true,

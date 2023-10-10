@@ -17,16 +17,52 @@ class SmartsUppy extends BladeComponent
     public $fieldName;
     public $width;
     public $height;
-
+    public $boxUrl;
+    public $dropboxUrl;
+    public $facebookUrl;
+    public $googleDriveUrl;
+    public $instagramUrl;
+    public $oneDriveUrl;
+    public $unsplashUrl;
+    public $urlsourceUrl;
+    public $zoomUrl;
+    public $webcam;
+    public $screenCapture;
+    public $audio;
     public static $assets = ['uppy'];
 
-    public function __construct($url,$target,$fieldName,$width = '750',$height = '550')
+    public function __construct($url,$target,$fieldName,
+                                $width = '750',$height = '550',
+                                string $boxUrl = null,
+                                string $dropboxUrl = null,
+                                string $facebookUrl = null,
+                                string $googleDriveUrl = null,
+                                string $instagramUrl = null,
+                                string $oneDriveUrl = null,
+                                string $unsplashUrl = null,
+                                string $urlsourceUrl = null,
+                                string $zoomUrl = null,
+                                string $webcam = null,
+                                string $screenCapture = null,
+                                string $audio = null,
+    )
     {
         $this->url = $url;
         $this->target = $target;
         $this->fieldName = $fieldName;
         $this->width = $width;
         $this->height = $height;
+        $this->boxUrl = $boxUrl;
+        $this->dropboxUrl = $dropboxUrl;
+        $this->facebookUrl = $facebookUrl;
+        $this->googleDriveUrl = $googleDriveUrl;
+        $this->instagramUrl = $instagramUrl;
+        $this->oneDriveUrl = $oneDriveUrl;
+        $this->unsplashUrl = $unsplashUrl;
+        $this->urlsourceUrl = $urlsourceUrl;
+        $this->webcam = $webcam;
+        $this->screenCapture = $screenCapture;
+        $this->audio = $audio;
     }
 
     /**
