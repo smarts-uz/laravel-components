@@ -1,3 +1,5 @@
+<script src="https://releases.transloadit.com/uppy/locales/v3.0.7/{{$locale}}.min.js"></script>
+
 <script>
     var uppy = new Uppy.Core({
         debug: true,
@@ -13,12 +15,7 @@
         onBeforeFileAdded: (currentFile, files) => currentFile,
         onBeforeUpload: (files) => {
         },
-        locale: {
-            strings: {
-                browseFiles: 'прикрепить файл',
-                dropPasteFiles: '%{browseFiles}',
-            }
-        },
+        locale: Uppy.locales.{{$locale}},
         store: new Uppy.DefaultStore(),
         logger: Uppy.justErrorsLogger,
         infoTimeout: 5000,
@@ -29,13 +26,15 @@
             target: '{{$target}}',
             showProgressDetails: true,
             note: 'Все типы файлов, до 10 МБ',
-            width: '{{$width}}',
-            height:'{{$height}}',
+            width: {{$width}},
+            height:{{$height}},
             metaFields: [
                 {id: 'name', name: 'Name', placeholder: 'file name'},
                 {id: 'caption', name: 'Caption', placeholder: 'describe what the image is about'}
             ],
-            browserBackButtonClose: true
+            browserBackButtonClose: true,
+            theme: "{{ $theme }}",
+            disabled: "{{ $disabled }}",
         })
         @if($webcam)
         .use(Uppy.Webcam, { target: Uppy.Dashboard })

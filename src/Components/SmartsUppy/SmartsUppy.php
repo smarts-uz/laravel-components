@@ -29,10 +29,14 @@ class SmartsUppy extends BladeComponent
     public $webcam;
     public $screenCapture;
     public $audio;
+    public $theme;
+    public $disabled;
+    public $locale;
+
     public static $assets = ['uppy'];
 
     public function __construct($url,$target,$fieldName,
-                                $width = '750',$height = '550',
+                                $width = '650',$height = '550',
                                 string $boxUrl = null,
                                 string $dropboxUrl = null,
                                 string $facebookUrl = null,
@@ -45,6 +49,9 @@ class SmartsUppy extends BladeComponent
                                 string $webcam = null,
                                 string $screenCapture = null,
                                 string $audio = null,
+                                string $theme = null,
+                                string $disabled = null,
+                                string $locale = 'en_US',
     )
     {
         $this->url = $url;
@@ -63,6 +70,9 @@ class SmartsUppy extends BladeComponent
         $this->webcam = $webcam;
         $this->screenCapture = $screenCapture;
         $this->audio = $audio;
+        $this->theme = $theme;
+        $this->disabled = $disabled;
+        $this->locale = $locale;
     }
 
     /**
