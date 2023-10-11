@@ -25,7 +25,7 @@
             inline: true,
             target: '{{$target}}',
             showProgressDetails: true,
-            note: 'Все типы файлов, до 10 МБ',
+            note: '{{$note}}',
             width: {{$width}},
             height:{{$height}},
             metaFields: [
