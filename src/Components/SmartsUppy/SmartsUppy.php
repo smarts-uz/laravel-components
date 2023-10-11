@@ -36,6 +36,7 @@ class SmartsUppy extends BladeComponent
     public $restrictions;
     public $debug;
     public $autoProceed;
+    public $showProgressDetails;
 
     public static $assets = ['uppy'];
 
@@ -63,6 +64,7 @@ class SmartsUppy extends BladeComponent
         string $restrictions = "{}",
         string $debug = "true",
         string $autoProceed = "false",
+        string $showProgressDetails = "false",
     )
     {
         $this->url = $url;
@@ -88,6 +90,7 @@ class SmartsUppy extends BladeComponent
         $this->restrictions = $restrictions;
         $this->debug = $debug;
         $this->autoProceed = $autoProceed;
+        $this->showProgressDetails = $showProgressDetails;
     }
 
     /**

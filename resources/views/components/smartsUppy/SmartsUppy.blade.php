@@ -18,7 +18,7 @@
             trigger: '.UppyModalOpenerBtn',
             inline: true,
             target: '{{$target}}',
-            showProgressDetails: true,
+            showProgressDetails: {{$showProgressDetails}},
             note: '{{$note}}',
             width: {{$width}},
             height:{{$height}},
