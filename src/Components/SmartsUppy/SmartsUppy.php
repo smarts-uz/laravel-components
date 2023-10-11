@@ -34,28 +34,33 @@ class SmartsUppy extends BladeComponent
     public $locale;
     public $note;
     public $restrictions;
+    public $debug;
 
     public static $assets = ['uppy'];
 
-    public function __construct($url,$target,$fieldName,
-                                $width = '650',$height = '550',
-                                string $boxUrl = null,
-                                string $dropboxUrl = null,
-                                string $facebookUrl = null,
-                                string $googleDriveUrl = null,
-                                string $instagramUrl = null,
-                                string $oneDriveUrl = null,
-                                string $unsplashUrl = null,
-                                string $urlsourceUrl = null,
-                                string $zoomUrl = null,
-                                string $webcam = null,
-                                string $screenCapture = null,
-                                string $audio = null,
-                                string $theme = null,
-                                string $disabled = null,
-                                string $locale = 'en_US',
-                                string $note = null,
-                                string $restrictions = "{}",
+    public function __construct(
+        $url,
+        $target,
+        $fieldName,
+        $width = '650',$height = '550',
+        string $boxUrl = null,
+        string $dropboxUrl = null,
+        string $facebookUrl = null,
+        string $googleDriveUrl = null,
+        string $instagramUrl = null,
+        string $oneDriveUrl = null,
+        string $unsplashUrl = null,
+        string $urlsourceUrl = null,
+        string $zoomUrl = null,
+        string $webcam = null,
+        string $screenCapture = null,
+        string $audio = null,
+        string $theme = null,
+        string $disabled = null,
+        string $locale = 'en_US',
+        string $note = null,
+        string $restrictions = "{}",
+        string $debug = "true",
     )
     {
         $this->url = $url;
@@ -79,6 +84,7 @@ class SmartsUppy extends BladeComponent
         $this->locale = $locale;
         $this->note = $note;
         $this->restrictions = $restrictions;
+        $this->debug = $debug;
     }
 
     /**

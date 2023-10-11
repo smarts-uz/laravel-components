@@ -2,7 +2,7 @@
 
 <script>
     var uppy = new Uppy.Core({
-        debug: true,
+        debug: {{$debug}},
         autoProceed: true,
         restrictions: {!! $restrictions !!},
         meta: {},
