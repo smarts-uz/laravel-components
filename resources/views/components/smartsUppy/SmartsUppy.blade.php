@@ -4,13 +4,7 @@
     var uppy = new Uppy.Core({
         debug: true,
         autoProceed: true,
-        restrictions: {
-            minFileSize: null,
-            maxTotalFileSize: null,
-            minNumberOfFiles: 0,
-            allowedFileTypes: null,
-            requiredMetaFields: [],
-        },
+        restrictions: {!! $restrictions !!},
         meta: {},
         onBeforeFileAdded: (currentFile, files) => currentFile,
         onBeforeUpload: (files) => {

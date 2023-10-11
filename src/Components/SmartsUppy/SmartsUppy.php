@@ -33,6 +33,7 @@ class SmartsUppy extends BladeComponent
     public $disabled;
     public $locale;
     public $note;
+    public $restrictions;
 
     public static $assets = ['uppy'];
 
@@ -54,6 +55,7 @@ class SmartsUppy extends BladeComponent
                                 string $disabled = null,
                                 string $locale = 'en_US',
                                 string $note = null,
+                                string $restrictions = "{}",
     )
     {
         $this->url = $url;
@@ -76,6 +78,7 @@ class SmartsUppy extends BladeComponent
         $this->disabled = $disabled;
         $this->locale = $locale;
         $this->note = $note;
+        $this->restrictions = $restrictions;
     }
 
     /**
