@@ -3,7 +3,7 @@
 <script>
     var uppy = new Uppy.Core({
         debug: {{$debug}},
-        autoProceed: true,
+        autoProceed: {{$autoProceed}},
         restrictions: {!! $restrictions !!},
         meta: {},
         onBeforeFileAdded: (currentFile, files) => currentFile,
