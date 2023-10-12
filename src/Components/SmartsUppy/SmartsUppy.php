@@ -41,6 +41,7 @@ class SmartsUppy extends BladeComponent
     public $trigger;
     public $metaFields;
     public $waitForThumbnailsBeforeUpload;
+    public $showLinkToFileUploadResult;
 
     public static $assets = ['uppy'];
 
@@ -76,6 +77,7 @@ class SmartsUppy extends BladeComponent
             ['id' => 'caption','name' => 'Caption', 'placeholder' => 'describe what the image is about']
         ],
         string $waitForThumbnailsBeforeUpload = "false",
+        string $showLinkToFileUploadResult = "false",
     )
     {
         $this->url = $url;
@@ -106,6 +108,7 @@ class SmartsUppy extends BladeComponent
         $this->trigger = $trigger;
         $this->metaFields = $metaFields;
         $this->waitForThumbnailsBeforeUpload = $waitForThumbnailsBeforeUpload;
+        $this->showLinkToFileUploadResult = $showLinkToFileUploadResult;
     }
 
     /**

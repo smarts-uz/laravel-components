@@ -29,6 +29,7 @@
             ],
             browserBackButtonClose: true,
             waitForThumbnailsBeforeUpload: {{$waitForThumbnailsBeforeUpload}},
+            showLinkToFileUploadResult: {{$showLinkToFileUploadResult}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
