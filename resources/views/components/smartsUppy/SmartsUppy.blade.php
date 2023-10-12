@@ -16,7 +16,7 @@
     })
         .use(Uppy.Dashboard, {
             trigger: '.UppyModalOpenerBtn',
-            inline: true,
+            inline: {{$inline}},
             target: '{{$target}}',
             showProgressDetails: {{$showProgressDetails}},
             note: '{{$note}}',
