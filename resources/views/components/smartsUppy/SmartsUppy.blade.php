@@ -31,6 +31,7 @@
             waitForThumbnailsBeforeUpload: {{$waitForThumbnailsBeforeUpload}},
             showLinkToFileUploadResult: {{$showLinkToFileUploadResult}},
             hideUploadButton: {{$hideUploadButton}},
+            hideRetryButton: {{$hideRetryButton}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
