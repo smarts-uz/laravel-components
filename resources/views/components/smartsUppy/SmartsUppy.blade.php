@@ -23,8 +23,9 @@
             width: {{$width}},
             height:{{$height}},
             metaFields: [
-                {id: 'name', name: 'Name', placeholder: 'file name'},
-                {id: 'caption', name: 'Caption', placeholder: 'describe what the image is about'}
+                @foreach($metaFields as $metaField)
+                    {id: '{{$metaField['id']}}', name: '{{$metaField['name']}}', placeholder: '{{$metaField['placeholder']}}'},
+                @endforeach
             ],
             browserBackButtonClose: true,
             theme: "{{ $theme }}",

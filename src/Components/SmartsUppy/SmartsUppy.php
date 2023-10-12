@@ -39,6 +39,7 @@ class SmartsUppy extends BladeComponent
     public $showProgressDetails;
     public $inline;
     public $trigger;
+    public $metaFields;
 
     public static $assets = ['uppy'];
 
@@ -69,6 +70,10 @@ class SmartsUppy extends BladeComponent
         string $showProgressDetails = "false",
         string $inline = "true",
         string $trigger = null,
+        array $metaFields = [
+            ['id' => 'name','name' => 'Name', 'placeholder' => 'file name'],
+            ['id' => 'caption','name' => 'Caption', 'placeholder' => 'describe what the image is about']
+        ],
     )
     {
         $this->url = $url;
@@ -97,6 +102,7 @@ class SmartsUppy extends BladeComponent
         $this->showProgressDetails = $showProgressDetails;
         $this->inline = $inline;
         $this->trigger = $trigger;
+        $this->metaFields = $metaFields;
     }
 
     /**
