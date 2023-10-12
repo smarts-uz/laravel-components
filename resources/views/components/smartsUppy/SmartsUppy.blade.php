@@ -15,7 +15,7 @@
         infoTimeout: 5000,
     })
         .use(Uppy.Dashboard, {
-            trigger: '.UppyModalOpenerBtn',
+            trigger: '{{$trigger}}',
             inline: {{$inline}},
             target: '{{$target}}',
             showProgressDetails: {{$showProgressDetails}},
