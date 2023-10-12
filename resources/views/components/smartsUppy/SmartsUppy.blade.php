@@ -28,6 +28,7 @@
                 @endforeach
             ],
             browserBackButtonClose: true,
+            waitForThumbnailsBeforeUpload: {{$waitForThumbnailsBeforeUpload}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
