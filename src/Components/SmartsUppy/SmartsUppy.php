@@ -57,6 +57,7 @@ class SmartsUppy extends BladeComponent
     public $proudlyDisplayPoweredByUppy;
     public $disableStatusBar;
     public $disableInformer;
+    public $disableThumbnailGenerator;
 
     public static $assets = ['uppy'];
 
@@ -108,6 +109,7 @@ class SmartsUppy extends BladeComponent
         string $proudlyDisplayPoweredByUppy = "true",
         string $disableStatusBar = "false",
         string $disableInformer = "false",
+        string $disableThumbnailGenerator = "false",
     )
     {
         $this->url = $url;
@@ -154,6 +156,7 @@ class SmartsUppy extends BladeComponent
         $this->proudlyDisplayPoweredByUppy = $proudlyDisplayPoweredByUppy;
         $this->disableStatusBar = $disableStatusBar;
         $this->disableInformer = $disableInformer;
+        $this->disableThumbnailGenerator = $disableThumbnailGenerator;
     }
 
     /**

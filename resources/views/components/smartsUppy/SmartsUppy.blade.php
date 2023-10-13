@@ -45,6 +45,7 @@
             proudlyDisplayPoweredByUppy: {{$proudlyDisplayPoweredByUppy}},
             disableStatusBar: {{$disableStatusBar}},
             disableInformer: {{$disableInformer}},
+            disableThumbnailGenerator: {{$disableThumbnailGenerator}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
