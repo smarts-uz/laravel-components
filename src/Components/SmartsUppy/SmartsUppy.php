@@ -52,6 +52,7 @@ class SmartsUppy extends BladeComponent
     public $closeModalOnClickOutside;
     public $closeAfterFinish;
     public $disablePageScrollWhenModalOpen;
+    public $animateOpenClose;
 
     public static $assets = ['uppy'];
 
@@ -98,6 +99,7 @@ class SmartsUppy extends BladeComponent
         string $closeModalOnClickOutside = "false",
         string $closeAfterFinish = "false",
         string $disablePageScrollWhenModalOpen = "true",
+        string $animateOpenClose = "true",
     )
     {
         $this->url = $url;
@@ -139,6 +141,7 @@ class SmartsUppy extends BladeComponent
         $this->closeModalOnClickOutside = $closeModalOnClickOutside;
         $this->closeAfterFinish = $closeAfterFinish;
         $this->disablePageScrollWhenModalOpen = $disablePageScrollWhenModalOpen;
+        $this->animateOpenClose = $animateOpenClose;
     }
 
     /**

@@ -40,6 +40,7 @@
             closeModalOnClickOutside: {{$closeModalOnClickOutside}},
             closeAfterFinish: {{$closeAfterFinish}},
             disablePageScrollWhenModalOpen: {{$disablePageScrollWhenModalOpen}},
+            animateOpenClose: {{$animateOpenClose}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
