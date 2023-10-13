@@ -36,6 +36,7 @@
             hideCancelButton: {{$hideCancelButton}},
             hideProgressAfterFinish: {{$hideProgressAfterFinish}},
             showSelectedFiles: {{$showSelectedFiles}},
+            singleFileFullScreen: {{$singleFileFullScreen}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
