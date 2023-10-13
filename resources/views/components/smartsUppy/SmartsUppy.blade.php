@@ -33,6 +33,7 @@
             hideUploadButton: {{$hideUploadButton}},
             hideRetryButton: {{$hideRetryButton}},
             hidePauseResumeButton: {{$hidePauseResumeButton}},
+            hideCancelButton: {{$hideCancelButton}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
