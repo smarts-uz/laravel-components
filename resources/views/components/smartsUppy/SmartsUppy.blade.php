@@ -43,6 +43,7 @@
             animateOpenClose: {{$animateOpenClose}},
             fileManagerSelectionType: "{{$fileManagerSelectionType}}",
             proudlyDisplayPoweredByUppy: {{$proudlyDisplayPoweredByUppy}},
+            disableStatusBar: {{$disableStatusBar}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })

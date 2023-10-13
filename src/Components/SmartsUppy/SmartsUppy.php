@@ -55,6 +55,7 @@ class SmartsUppy extends BladeComponent
     public $animateOpenClose;
     public $fileManagerSelectionType;
     public $proudlyDisplayPoweredByUppy;
+    public $disableStatusBar;
 
     public static $assets = ['uppy'];
 
@@ -104,6 +105,7 @@ class SmartsUppy extends BladeComponent
         string $animateOpenClose = "true",
         string $fileManagerSelectionType = "files",
         string $proudlyDisplayPoweredByUppy = "true",
+        string $disableStatusBar = "false",
     )
     {
         $this->url = $url;
@@ -148,6 +150,7 @@ class SmartsUppy extends BladeComponent
         $this->animateOpenClose = $animateOpenClose;
         $this->fileManagerSelectionType = $fileManagerSelectionType;
         $this->proudlyDisplayPoweredByUppy = $proudlyDisplayPoweredByUppy;
+        $this->disableStatusBar = $disableStatusBar;
     }
 
     /**
