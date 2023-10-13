@@ -35,6 +35,7 @@
             hidePauseResumeButton: {{$hidePauseResumeButton}},
             hideCancelButton: {{$hideCancelButton}},
             hideProgressAfterFinish: {{$hideProgressAfterFinish}},
+            showSelectedFiles: {{$showSelectedFiles}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })

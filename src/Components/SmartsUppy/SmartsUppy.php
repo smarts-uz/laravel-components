@@ -47,6 +47,7 @@ class SmartsUppy extends BladeComponent
     public $hidePauseResumeButton;
     public $hideCancelButton;
     public $hideProgressAfterFinish;
+    public $showSelectedFiles;
 
     public static $assets = ['uppy'];
 
@@ -88,6 +89,7 @@ class SmartsUppy extends BladeComponent
         string $hidePauseResumeButton = "false",
         string $hideCancelButton = "false",
         string $hideProgressAfterFinish = "false",
+        string $showSelectedFiles = "true",
     )
     {
         $this->url = $url;
@@ -124,6 +126,7 @@ class SmartsUppy extends BladeComponent
         $this->hidePauseResumeButton = $hidePauseResumeButton;
         $this->hideCancelButton = $hideCancelButton;
         $this->hideProgressAfterFinish = $hideProgressAfterFinish;
+        $this->showSelectedFiles = $showSelectedFiles;
     }
 
     /**
