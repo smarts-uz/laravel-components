@@ -51,6 +51,7 @@ class SmartsUppy extends BladeComponent
     public $singleFileFullScreen;
     public $closeModalOnClickOutside;
     public $closeAfterFinish;
+    public $disablePageScrollWhenModalOpen;
 
     public static $assets = ['uppy'];
 
@@ -96,6 +97,7 @@ class SmartsUppy extends BladeComponent
         string $singleFileFullScreen = "true",
         string $closeModalOnClickOutside = "false",
         string $closeAfterFinish = "false",
+        string $disablePageScrollWhenModalOpen = "true",
     )
     {
         $this->url = $url;
@@ -136,6 +138,7 @@ class SmartsUppy extends BladeComponent
         $this->singleFileFullScreen = $singleFileFullScreen;
         $this->closeModalOnClickOutside = $closeModalOnClickOutside;
         $this->closeAfterFinish = $closeAfterFinish;
+        $this->disablePageScrollWhenModalOpen = $disablePageScrollWhenModalOpen;
     }
 
     /**

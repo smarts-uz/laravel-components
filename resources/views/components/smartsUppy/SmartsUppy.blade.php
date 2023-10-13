@@ -39,6 +39,7 @@
             singleFileFullScreen: {{$singleFileFullScreen}},
             closeModalOnClickOutside: {{$closeModalOnClickOutside}},
             closeAfterFinish: {{$closeAfterFinish}},
+            disablePageScrollWhenModalOpen: {{$disablePageScrollWhenModalOpen}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
