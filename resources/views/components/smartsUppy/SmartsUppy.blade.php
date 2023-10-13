@@ -37,6 +37,7 @@
             hideProgressAfterFinish: {{$hideProgressAfterFinish}},
             showSelectedFiles: {{$showSelectedFiles}},
             singleFileFullScreen: {{$singleFileFullScreen}},
+            closeModalOnClickOutside: {{$closeModalOnClickOutside}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })

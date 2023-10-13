@@ -49,6 +49,7 @@ class SmartsUppy extends BladeComponent
     public $hideProgressAfterFinish;
     public $showSelectedFiles;
     public $singleFileFullScreen;
+    public $closeModalOnClickOutside;
 
     public static $assets = ['uppy'];
 
@@ -92,6 +93,7 @@ class SmartsUppy extends BladeComponent
         string $hideProgressAfterFinish = "false",
         string $showSelectedFiles = "true",
         string $singleFileFullScreen = "true",
+        string $closeModalOnClickOutside = "false",
     )
     {
         $this->url = $url;
@@ -130,6 +132,7 @@ class SmartsUppy extends BladeComponent
         $this->hideProgressAfterFinish = $hideProgressAfterFinish;
         $this->showSelectedFiles = $showSelectedFiles;
         $this->singleFileFullScreen = $singleFileFullScreen;
+        $this->closeModalOnClickOutside = $closeModalOnClickOutside;
     }
 
     /**
