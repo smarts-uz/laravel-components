@@ -34,6 +34,7 @@
             hideRetryButton: {{$hideRetryButton}},
             hidePauseResumeButton: {{$hidePauseResumeButton}},
             hideCancelButton: {{$hideCancelButton}},
+            hideProgressAfterFinish: {{$hideProgressAfterFinish}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })

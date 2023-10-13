@@ -46,6 +46,7 @@ class SmartsUppy extends BladeComponent
     public $hideRetryButton;
     public $hidePauseResumeButton;
     public $hideCancelButton;
+    public $hideProgressAfterFinish;
 
     public static $assets = ['uppy'];
 
@@ -86,6 +87,7 @@ class SmartsUppy extends BladeComponent
         string $hideRetryButton = "false",
         string $hidePauseResumeButton = "false",
         string $hideCancelButton = "false",
+        string $hideProgressAfterFinish = "false",
     )
     {
         $this->url = $url;
@@ -121,6 +123,7 @@ class SmartsUppy extends BladeComponent
         $this->hideRetryButton = $hideRetryButton;
         $this->hidePauseResumeButton = $hidePauseResumeButton;
         $this->hideCancelButton = $hideCancelButton;
+        $this->hideProgressAfterFinish = $hideProgressAfterFinish;
     }
 
     /**
