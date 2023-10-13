@@ -38,6 +38,7 @@
             showSelectedFiles: {{$showSelectedFiles}},
             singleFileFullScreen: {{$singleFileFullScreen}},
             closeModalOnClickOutside: {{$closeModalOnClickOutside}},
+            closeAfterFinish: {{$closeAfterFinish}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
