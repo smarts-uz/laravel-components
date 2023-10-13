@@ -46,6 +46,7 @@
             disableStatusBar: {{$disableStatusBar}},
             disableInformer: {{$disableInformer}},
             disableThumbnailGenerator: {{$disableThumbnailGenerator}},
+            disableLocalFiles: {{$disableLocalFiles}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
