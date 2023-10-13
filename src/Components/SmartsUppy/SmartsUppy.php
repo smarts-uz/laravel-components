@@ -54,6 +54,7 @@ class SmartsUppy extends BladeComponent
     public $disablePageScrollWhenModalOpen;
     public $animateOpenClose;
     public $fileManagerSelectionType;
+    public $proudlyDisplayPoweredByUppy;
 
     public static $assets = ['uppy'];
 
@@ -102,6 +103,7 @@ class SmartsUppy extends BladeComponent
         string $disablePageScrollWhenModalOpen = "true",
         string $animateOpenClose = "true",
         string $fileManagerSelectionType = "files",
+        string $proudlyDisplayPoweredByUppy = "true",
     )
     {
         $this->url = $url;
@@ -145,6 +147,7 @@ class SmartsUppy extends BladeComponent
         $this->disablePageScrollWhenModalOpen = $disablePageScrollWhenModalOpen;
         $this->animateOpenClose = $animateOpenClose;
         $this->fileManagerSelectionType = $fileManagerSelectionType;
+        $this->proudlyDisplayPoweredByUppy = $proudlyDisplayPoweredByUppy;
     }
 
     /**

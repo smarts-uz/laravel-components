@@ -42,6 +42,7 @@
             disablePageScrollWhenModalOpen: {{$disablePageScrollWhenModalOpen}},
             animateOpenClose: {{$animateOpenClose}},
             fileManagerSelectionType: "{{$fileManagerSelectionType}}",
+            proudlyDisplayPoweredByUppy: {{$proudlyDisplayPoweredByUppy}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
