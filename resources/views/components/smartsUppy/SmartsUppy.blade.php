@@ -32,6 +32,7 @@
             showLinkToFileUploadResult: {{$showLinkToFileUploadResult}},
             hideUploadButton: {{$hideUploadButton}},
             hideRetryButton: {{$hideRetryButton}},
+            hidePauseResumeButton: {{$hidePauseResumeButton}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })

@@ -44,6 +44,7 @@ class SmartsUppy extends BladeComponent
     public $showLinkToFileUploadResult;
     public $hideUploadButton;
     public $hideRetryButton;
+    public $hidePauseResumeButton;
 
     public static $assets = ['uppy'];
 
@@ -82,6 +83,7 @@ class SmartsUppy extends BladeComponent
         string $showLinkToFileUploadResult = "false",
         string $hideUploadButton = "false",
         string $hideRetryButton = "false",
+        string $hidePauseResumeButton = "false",
     )
     {
         $this->url = $url;
@@ -115,6 +117,7 @@ class SmartsUppy extends BladeComponent
         $this->showLinkToFileUploadResult = $showLinkToFileUploadResult;
         $this->hideUploadButton = $hideUploadButton;
         $this->hideRetryButton = $hideRetryButton;
+        $this->hidePauseResumeButton = $hidePauseResumeButton;
     }
 
     /**
