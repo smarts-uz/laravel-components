@@ -44,6 +44,7 @@
             fileManagerSelectionType: "{{$fileManagerSelectionType}}",
             proudlyDisplayPoweredByUppy: {{$proudlyDisplayPoweredByUppy}},
             disableStatusBar: {{$disableStatusBar}},
+            disableInformer: {{$disableInformer}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
