@@ -41,6 +41,7 @@
             closeAfterFinish: {{$closeAfterFinish}},
             disablePageScrollWhenModalOpen: {{$disablePageScrollWhenModalOpen}},
             animateOpenClose: {{$animateOpenClose}},
+            fileManagerSelectionType: {{$fileManagerSelectionType}},
             theme: "{{ $theme }}",
             disabled: "{{ $disabled }}",
         })
