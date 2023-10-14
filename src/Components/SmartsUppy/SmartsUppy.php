@@ -62,6 +62,7 @@ class SmartsUppy extends BladeComponent
     public $events;
     public $id;
     public $allowMultipleUploadBatches;
+    public $meta;
 
     public static $assets = ['uppy'];
 
@@ -118,6 +119,7 @@ class SmartsUppy extends BladeComponent
         array $events = [],
         string $id = "uppy",
         string $allowMultipleUploadBatches = "true",
+        string $meta = "{}",
     )
     {
         $this->url = $url;
@@ -169,6 +171,7 @@ class SmartsUppy extends BladeComponent
         $this->events = $events;
         $this->id = $id;
         $this->allowMultipleUploadBatches = $allowMultipleUploadBatches;
+        $this->meta = $meta;
     }
 
     /**

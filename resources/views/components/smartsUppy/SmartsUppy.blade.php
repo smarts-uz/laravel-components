@@ -7,7 +7,7 @@
         debug: {{$debug}},
         autoProceed: {{$autoProceed}},
         restrictions: {!! $restrictions !!},
-        meta: {},
+        meta: {!! $meta !!},
         onBeforeFileAdded: (currentFile, files) => currentFile,
         onBeforeUpload: (files) => {
         },
