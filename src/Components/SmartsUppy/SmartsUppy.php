@@ -61,6 +61,7 @@ class SmartsUppy extends BladeComponent
     public $disableLocalFiles;
     public $events;
     public $id;
+    public $allowMultipleUploadBatches;
 
     public static $assets = ['uppy'];
 
@@ -116,6 +117,7 @@ class SmartsUppy extends BladeComponent
         string $disableLocalFiles = "false",
         array $events = [],
         string $id = "uppy",
+        string $allowMultipleUploadBatches = "true",
     )
     {
         $this->url = $url;
@@ -166,6 +168,7 @@ class SmartsUppy extends BladeComponent
         $this->disableLocalFiles = $disableLocalFiles;
         $this->events = $events;
         $this->id = $id;
+        $this->allowMultipleUploadBatches = $allowMultipleUploadBatches;
     }
 
     /**

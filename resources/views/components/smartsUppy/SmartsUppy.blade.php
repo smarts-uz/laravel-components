@@ -3,6 +3,7 @@
 <script>
     var uppy = new Uppy.Core({
         id: '{{$id}}',
+        allowMultipleUploadBatches: {{$allowMultipleUploadBatches}},
         debug: {{$debug}},
         autoProceed: {{$autoProceed}},
         restrictions: {!! $restrictions !!},
