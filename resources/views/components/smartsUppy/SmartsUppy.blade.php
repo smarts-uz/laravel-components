@@ -121,19 +121,22 @@
                 'X-CSRF-TOKEN': '{{csrf_token()}}'
             }),
         });
-    uppy.on('upload-success', (file, response) => {
-        const httpStatus = response.status // HTTP status code
-        const httpBody = response.body   // extracted response data
-        // do something with file and response
-    });
-    uppy.on('file-added', (file) => {
-        uppy.setFileMeta(file.id, {
-            size: file.size,
-        })
-        console.log(file.name);
-    });
-    uppy.on('complete', result => {
-        console.log('successful files:', result.successful)
-        console.log('failed files:', result.failed)
-    });
+    @foreach($events as $key=>$value)
+    uppy.on('{{$key}}', {!! $value !!});
+    @endforeach
+    // uppy.on('upload-success', (file, response) => {
+    //     const httpStatus = response.status // HTTP status code
+    //     const httpBody = response.body   // extracted response data
+    //     // do something with file and response
+    // });
+    // uppy.on('file-added', (file) => {
+    //     uppy.setFileMeta(file.id, {
+    //         size: file.size,
+    //     })
+    //     console.log(file.name);
+    // });
+    // uppy.on('complete', result => {
+    //     console.log('successful files:', result.successful)
+    //     console.log('failed files:', result.failed)
+    // });
 </script>

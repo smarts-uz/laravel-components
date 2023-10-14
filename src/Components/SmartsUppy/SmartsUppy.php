@@ -59,6 +59,7 @@ class SmartsUppy extends BladeComponent
     public $disableInformer;
     public $disableThumbnailGenerator;
     public $disableLocalFiles;
+    public $events;
 
     public static $assets = ['uppy'];
 
@@ -112,6 +113,7 @@ class SmartsUppy extends BladeComponent
         string $disableInformer = "false",
         string $disableThumbnailGenerator = "false",
         string $disableLocalFiles = "false",
+        array $events = [],
     )
     {
         $this->url = $url;
@@ -160,6 +162,7 @@ class SmartsUppy extends BladeComponent
         $this->disableInformer = $disableInformer;
         $this->disableThumbnailGenerator = $disableThumbnailGenerator;
         $this->disableLocalFiles = $disableLocalFiles;
+        $this->events = $events;
     }
 
     /**
