@@ -14,7 +14,7 @@
         locale: Uppy.locales.{{$locale}},
         store: new Uppy.DefaultStore(),
         logger: Uppy.justErrorsLogger,
-        infoTimeout: 5000,
+        infoTimeout: {{$infoTimeout}},
     })
         .use(Uppy.Dashboard, {
             trigger: '{{$trigger}}',

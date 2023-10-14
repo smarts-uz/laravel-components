@@ -63,6 +63,7 @@ class SmartsUppy extends BladeComponent
     public $id;
     public $allowMultipleUploadBatches;
     public $meta;
+    public $infoTimeout;
 
     public static $assets = ['uppy'];
 
@@ -120,6 +121,7 @@ class SmartsUppy extends BladeComponent
         string $id = "uppy",
         string $allowMultipleUploadBatches = "true",
         string $meta = "{}",
+        string $infoTimeout = "5000",
     )
     {
         $this->url = $url;
@@ -172,6 +174,7 @@ class SmartsUppy extends BladeComponent
         $this->id = $id;
         $this->allowMultipleUploadBatches = $allowMultipleUploadBatches;
         $this->meta = $meta;
+        $this->infoTimeout = $infoTimeout;
     }
 
     /**
