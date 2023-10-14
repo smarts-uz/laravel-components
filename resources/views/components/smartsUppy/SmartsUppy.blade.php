@@ -2,6 +2,7 @@
 
 <script>
     var uppy = new Uppy.Core({
+        id: '{{$id}}',
         debug: {{$debug}},
         autoProceed: {{$autoProceed}},
         restrictions: {!! $restrictions !!},
