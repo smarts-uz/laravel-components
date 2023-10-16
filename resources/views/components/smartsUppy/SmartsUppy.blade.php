@@ -57,6 +57,7 @@
             target: Uppy.Dashboard,
             countdown: {{$countdown}},
             modes: {{$modes}},
+            mirror: {{$mirror}},
         })
         @endif
         @if($screenCapture)
