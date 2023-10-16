@@ -71,6 +71,7 @@ class SmartsUppy extends BladeComponent
     public $showVideoSourceDropdown;
     public $showRecordingLength;
     public $preferredVideoMimeType;
+    public $preferredImageMimeType;
 
     public static $assets = ['uppy'];
 
@@ -136,6 +137,7 @@ class SmartsUppy extends BladeComponent
         string $showVideoSourceDropdown = "false",
         string $showRecordingLength = "false",
         string $preferredVideoMimeType = "null",
+        string $preferredImageMimeType = "image/jpeg",
     )
     {
         $this->url = $url;
@@ -196,6 +198,7 @@ class SmartsUppy extends BladeComponent
         $this->showVideoSourceDropdown = $showVideoSourceDropdown;
         $this->showRecordingLength = $showRecordingLength;
         $this->preferredVideoMimeType = $preferredVideoMimeType;
+        $this->preferredImageMimeType = $preferredImageMimeType;
     }
 
     /**

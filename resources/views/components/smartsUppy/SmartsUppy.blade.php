@@ -61,7 +61,8 @@
             videoConstraints: {{$videoConstraints}},
             showVideoSourceDropdown: {{$showVideoSourceDropdown}},
             showRecordingLength: {{$showRecordingLength}},
-            preferredVideoMimeType: {{$preferredVideoMimeType}},
+            preferredVideoMimeType: "{{$preferredVideoMimeType}}",
+            preferredImageMimeType: "{{$preferredImageMimeType}}",
         })
         @endif
         @if($screenCapture)
