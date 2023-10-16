@@ -63,6 +63,7 @@
             showRecordingLength: {{$showRecordingLength}},
             preferredVideoMimeType: "{{$preferredVideoMimeType}}",
             preferredImageMimeType: "{{$preferredImageMimeType}}",
+            mobileNativeCamera: {{$mobileNativeCamera}},
         })
         @endif
         @if($screenCapture)
