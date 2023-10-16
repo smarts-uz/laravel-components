@@ -85,6 +85,7 @@
             target: Uppy.Dashboard,
             companionUrl: '{{$boxUrl}}',
             companionHeaders: {{$boxHeaders}},
+            companionCookiesRule: '{{$boxCookiesRule}}',
         })
         @endif
         @if($dropboxUrl)
