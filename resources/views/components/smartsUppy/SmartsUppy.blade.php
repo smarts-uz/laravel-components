@@ -53,7 +53,10 @@
             disabled: "{{ $disabled }}",
         })
         @if($webcam)
-        .use(Uppy.Webcam, { target: Uppy.Dashboard })
+        .use(Uppy.Webcam, {
+            target: Uppy.Dashboard,
+            countdown: {{$countdown}},
+        })
         @endif
         @if($screenCapture)
         .use(Uppy.ScreenCapture, { target: Uppy.Dashboard })
