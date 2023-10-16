@@ -77,6 +77,7 @@ class SmartsUppy extends BladeComponent
     public $userMediaConstraints;
     public $screenCapturePreferredVideoMimeType;
     public $showAudioSourceDropdown;
+    public $boxHeaders;
 
     public static $assets = ['uppy'];
 
@@ -148,6 +149,7 @@ class SmartsUppy extends BladeComponent
         string $userMediaConstraints = "null",
         string $screenCapturePreferredVideoMimeType = "null",
         string $showAudioSourceDropdown = "false",
+        string $boxHeaders = "{}",
     )
     {
         $this->url = $url;
@@ -214,6 +216,7 @@ class SmartsUppy extends BladeComponent
         $this->userMediaConstraints = $userMediaConstraints;
         $this->screenCapturePreferredVideoMimeType = $screenCapturePreferredVideoMimeType;
         $this->showAudioSourceDropdown = $showAudioSourceDropdown;
+        $this->boxHeaders = $boxHeaders;
     }
 
     /**

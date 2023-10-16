@@ -84,6 +84,7 @@
         .use(Uppy.Box, {
             target: Uppy.Dashboard,
             companionUrl: '{{$boxUrl}}',
+            companionHeaders: {{$boxHeaders}},
         })
         @endif
         @if($dropboxUrl)
