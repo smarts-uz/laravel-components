@@ -69,6 +69,7 @@ class SmartsUppy extends BladeComponent
     public $mirror;
     public $videoConstraints;
     public $showVideoSourceDropdown;
+    public $showRecordingLength;
 
     public static $assets = ['uppy'];
 
@@ -132,6 +133,7 @@ class SmartsUppy extends BladeComponent
         string $mirror = "true",
         string $videoConstraints = "{}",
         string $showVideoSourceDropdown = "false",
+        string $showRecordingLength = "false",
     )
     {
         $this->url = $url;
@@ -190,6 +192,7 @@ class SmartsUppy extends BladeComponent
         $this->mirror = $mirror;
         $this->videoConstraints = $videoConstraints;
         $this->showVideoSourceDropdown = $showVideoSourceDropdown;
+        $this->showRecordingLength = $showRecordingLength;
     }
 
     /**

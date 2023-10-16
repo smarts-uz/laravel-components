@@ -60,6 +60,7 @@
             mirror: {{$mirror}},
             videoConstraints: {{$videoConstraints}},
             showVideoSourceDropdown: {{$showVideoSourceDropdown}},
+            showRecordingLength: {{$showRecordingLength}},
         })
         @endif
         @if($screenCapture)
