@@ -56,6 +56,7 @@
         .use(Uppy.Webcam, {
             target: Uppy.Dashboard,
             countdown: {{$countdown}},
+            modes: {{$modes}},
         })
         @endif
         @if($screenCapture)

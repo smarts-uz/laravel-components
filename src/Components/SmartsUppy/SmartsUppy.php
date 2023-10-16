@@ -65,6 +65,7 @@ class SmartsUppy extends BladeComponent
     public $meta;
     public $infoTimeout;
     public $countdown;
+    public $modes;
 
     public static $assets = ['uppy'];
 
@@ -124,6 +125,7 @@ class SmartsUppy extends BladeComponent
         string $meta = "{}",
         string $infoTimeout = "5000",
         string $countdown = "false",
+        string $modes = "[]",
     )
     {
         $this->url = $url;
@@ -178,6 +180,7 @@ class SmartsUppy extends BladeComponent
         $this->meta = $meta;
         $this->infoTimeout = $infoTimeout;
         $this->countdown = $countdown;
+        $this->modes = $modes;
     }
 
     /**
