@@ -75,7 +75,10 @@
         })
         @endif
         @if($audio)
-        .use(Uppy.Audio, { target: Uppy.Dashboard })
+        .use(Uppy.Audio, {
+            target: Uppy.Dashboard,
+            showAudioSourceDropdown: {{$showAudioSourceDropdown}},
+        })
         @endif
         @if($boxUrl)
         .use(Uppy.Box, {
