@@ -59,6 +59,7 @@
             modes: {{$modes}},
             mirror: {{$mirror}},
             videoConstraints: {{$videoConstraints}},
+            showVideoSourceDropdown: {{$showVideoSourceDropdown}},
         })
         @endif
         @if($screenCapture)
