@@ -70,6 +70,7 @@
         .use(Uppy.ScreenCapture, {
             target: Uppy.Dashboard,
             displayMediaConstraints: {{$displayMediaConstraints}},
+            userMediaConstraints: {{$userMediaConstraints}},
         })
         @endif
         @if($audio)

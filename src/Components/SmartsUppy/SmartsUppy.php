@@ -74,6 +74,7 @@ class SmartsUppy extends BladeComponent
     public $preferredImageMimeType;
     public $mobileNativeCamera;
     public $displayMediaConstraints;
+    public $userMediaConstraints;
 
     public static $assets = ['uppy'];
 
@@ -142,6 +143,7 @@ class SmartsUppy extends BladeComponent
         string $preferredImageMimeType = "image/jpeg",
         string $mobileNativeCamera = "false",
         string $displayMediaConstraints = "null",
+        string $userMediaConstraints = "null",
     )
     {
         $this->url = $url;
@@ -205,6 +207,7 @@ class SmartsUppy extends BladeComponent
         $this->preferredImageMimeType = $preferredImageMimeType;
         $this->mobileNativeCamera = $mobileNativeCamera;
         $this->displayMediaConstraints = $displayMediaConstraints;
+        $this->userMediaConstraints = $userMediaConstraints;
     }
 
     /**
