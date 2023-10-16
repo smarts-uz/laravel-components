@@ -67,7 +67,10 @@
         })
         @endif
         @if($screenCapture)
-        .use(Uppy.ScreenCapture, { target: Uppy.Dashboard })
+        .use(Uppy.ScreenCapture, {
+            target: Uppy.Dashboard,
+            displayMediaConstraints: {{$displayMediaConstraints}},
+        })
         @endif
         @if($audio)
         .use(Uppy.Audio, { target: Uppy.Dashboard })
