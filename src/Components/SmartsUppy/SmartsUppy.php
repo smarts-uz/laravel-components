@@ -70,11 +70,12 @@ class SmartsUppy extends BladeComponent
     public $videoConstraints;
     public $showVideoSourceDropdown;
     public $showRecordingLength;
-    public $preferredVideoMimeType;
+    public $webcamPreferredVideoMimeType;
     public $preferredImageMimeType;
     public $mobileNativeCamera;
     public $displayMediaConstraints;
     public $userMediaConstraints;
+    public $screenCapturePreferredVideoMimeType;
 
     public static $assets = ['uppy'];
 
@@ -139,11 +140,12 @@ class SmartsUppy extends BladeComponent
         string $videoConstraints = "{}",
         string $showVideoSourceDropdown = "false",
         string $showRecordingLength = "false",
-        string $preferredVideoMimeType = "null",
+        string $webcamPreferredVideoMimeType = "null",
         string $preferredImageMimeType = "image/jpeg",
         string $mobileNativeCamera = "false",
         string $displayMediaConstraints = "null",
         string $userMediaConstraints = "null",
+        string $screenCapturePreferredVideoMimeType = "null",
     )
     {
         $this->url = $url;
@@ -203,11 +205,12 @@ class SmartsUppy extends BladeComponent
         $this->videoConstraints = $videoConstraints;
         $this->showVideoSourceDropdown = $showVideoSourceDropdown;
         $this->showRecordingLength = $showRecordingLength;
-        $this->preferredVideoMimeType = $preferredVideoMimeType;
+        $this->webcamPreferredVideoMimeType = $webcamPreferredVideoMimeType;
         $this->preferredImageMimeType = $preferredImageMimeType;
         $this->mobileNativeCamera = $mobileNativeCamera;
         $this->displayMediaConstraints = $displayMediaConstraints;
         $this->userMediaConstraints = $userMediaConstraints;
+        $this->screenCapturePreferredVideoMimeType = $screenCapturePreferredVideoMimeType;
     }
 
     /**

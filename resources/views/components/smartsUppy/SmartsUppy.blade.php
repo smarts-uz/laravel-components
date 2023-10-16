@@ -61,7 +61,7 @@
             videoConstraints: {{$videoConstraints}},
             showVideoSourceDropdown: {{$showVideoSourceDropdown}},
             showRecordingLength: {{$showRecordingLength}},
-            preferredVideoMimeType: "{{$preferredVideoMimeType}}",
+            preferredVideoMimeType: "{{$webcamPreferredVideoMimeType}}",
             preferredImageMimeType: "{{$preferredImageMimeType}}",
             mobileNativeCamera: {{$mobileNativeCamera}},
         })
@@ -71,6 +71,7 @@
             target: Uppy.Dashboard,
             displayMediaConstraints: {{$displayMediaConstraints}},
             userMediaConstraints: {{$userMediaConstraints}},
+            preferredVideoMimeType: "{{$screenCapturePreferredVideoMimeType}}",
         })
         @endif
         @if($audio)
