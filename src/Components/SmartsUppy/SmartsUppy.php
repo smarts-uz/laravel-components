@@ -67,6 +67,7 @@ class SmartsUppy extends BladeComponent
     public $countdown;
     public $modes;
     public $mirror;
+    public $videoConstraints;
 
     public static $assets = ['uppy'];
 
@@ -128,6 +129,7 @@ class SmartsUppy extends BladeComponent
         string $countdown = "false",
         string $modes = "[]",
         string $mirror = "true",
+        string $videoConstraints = "{}",
     )
     {
         $this->url = $url;
@@ -184,6 +186,7 @@ class SmartsUppy extends BladeComponent
         $this->countdown = $countdown;
         $this->modes = $modes;
         $this->mirror = $mirror;
+        $this->videoConstraints = $videoConstraints;
     }
 
     /**

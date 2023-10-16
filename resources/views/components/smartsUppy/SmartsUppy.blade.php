@@ -58,6 +58,7 @@
             countdown: {{$countdown}},
             modes: {{$modes}},
             mirror: {{$mirror}},
+            videoConstraints: {{$videoConstraints}},
         })
         @endif
         @if($screenCapture)
