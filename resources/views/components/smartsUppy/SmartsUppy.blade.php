@@ -116,6 +116,8 @@
         .use(Uppy.Instagram, {
             target: Uppy.Dashboard,
             companionUrl: '{{$instagramUrl}}',
+            companionHeaders: '{{$instagramHeaders}}',
+            companionCookiesRule: '{{$instagramCookiesRule}}',
         })
         @endif
         @if($oneDriveUrl)
