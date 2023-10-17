@@ -124,6 +124,8 @@
         .use(Uppy.OneDrive, {
             target: Uppy.Dashboard,
             companionUrl: '{{$oneDriveUrl}}',
+            companionHeaders: '{{$oneDriveHeaders}}',
+            companionCookiesRule: '{{$oneDriveCookiesRule}}',
         })
         @endif
         @if($unsplashUrl)
