@@ -80,9 +80,11 @@ class SmartsUppy extends BladeComponent
     public $boxHeaders;
     public $dropboxHeaders;
     public $facebookHeaders;
+    public $googleDriveHeaders;
     public $boxCookiesRule;
     public $dropboxCookiesRule;
     public $facebookCookiesRule;
+    public $googleDriveCookiesRule;
 
     public static $assets = ['uppy'];
 
@@ -157,9 +159,11 @@ class SmartsUppy extends BladeComponent
         string $boxHeaders = "{}",
         string $dropboxHeaders = "{}",
         string $facebookHeaders = "{}",
+        string $googleDriveHeaders = "{}",
         string $boxCookiesRule = "same-origin",
         string $dropboxCookiesRule = "same-origin",
         string $facebookCookiesRule = "same-origin",
+        string $googleDriveCookiesRule = "same-origin",
     )
     {
         $this->url = $url;
@@ -229,9 +233,11 @@ class SmartsUppy extends BladeComponent
         $this->boxHeaders = $boxHeaders;
         $this->dropboxHeaders = $dropboxHeaders;
         $this->facebookHeaders = $facebookHeaders;
+        $this->googleDriveHeaders = $googleDriveHeaders;
         $this->boxCookiesRule = $boxCookiesRule;
         $this->dropboxCookiesRule = $dropboxCookiesRule;
         $this->facebookCookiesRule = $facebookCookiesRule;
+        $this->googleDriveCookiesRule = $googleDriveCookiesRule;
     }
 
     /**

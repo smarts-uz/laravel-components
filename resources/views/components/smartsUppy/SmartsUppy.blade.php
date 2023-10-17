@@ -108,6 +108,8 @@
         .use(Uppy.GoogleDrive, {
             target: Uppy.Dashboard,
             companionUrl: '{{$googleDriveUrl}}',
+            companionHeaders: '{{$googleDriveHeaders}}',
+            companionCookiesRule: '{{$googleDriveCookiesRule}}',
         })
         @endif
         @if($instagramUrl)
