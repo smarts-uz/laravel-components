@@ -78,7 +78,9 @@ class SmartsUppy extends BladeComponent
     public $screenCapturePreferredVideoMimeType;
     public $showAudioSourceDropdown;
     public $boxHeaders;
+    public $dropboxHeaders;
     public $boxCookiesRule;
+    public $dropboxCookiesRule;
 
     public static $assets = ['uppy'];
 
@@ -151,7 +153,9 @@ class SmartsUppy extends BladeComponent
         string $screenCapturePreferredVideoMimeType = "null",
         string $showAudioSourceDropdown = "false",
         string $boxHeaders = "{}",
+        string $dropboxHeaders = "{}",
         string $boxCookiesRule = "same-origin",
+        string $dropboxCookiesRule = "same-origin",
     )
     {
         $this->url = $url;
@@ -219,7 +223,9 @@ class SmartsUppy extends BladeComponent
         $this->screenCapturePreferredVideoMimeType = $screenCapturePreferredVideoMimeType;
         $this->showAudioSourceDropdown = $showAudioSourceDropdown;
         $this->boxHeaders = $boxHeaders;
+        $this->dropboxHeaders = $dropboxHeaders;
         $this->boxCookiesRule = $boxCookiesRule;
+        $this->dropboxCookiesRule = $dropboxCookiesRule;
     }
 
     /**

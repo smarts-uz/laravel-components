@@ -92,6 +92,8 @@
         .use(Uppy.Dropbox, {
             target: Uppy.Dashboard,
             companionUrl: '{{$dropboxUrl}}',
+            companionHeaders: '{{$dropboxHeaders}}',
+            companionCookiesRule: '{{$dropboxCookiesRule}}',
         })
         @endif
         @if($facebookUrl)
