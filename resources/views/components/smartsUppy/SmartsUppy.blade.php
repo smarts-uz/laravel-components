@@ -100,6 +100,8 @@
         .use(Uppy.Facebook, {
             target: Uppy.Dashboard,
             companionUrl: '{{$facebookUrl}}',
+            companionHeaders: '{{$facebookHeaders}}',
+            companionCookiesRule: '{{$facebookCookiesRule}}',
         })
         @endif
         @if($googleDriveUrl)

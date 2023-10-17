@@ -79,8 +79,10 @@ class SmartsUppy extends BladeComponent
     public $showAudioSourceDropdown;
     public $boxHeaders;
     public $dropboxHeaders;
+    public $facebookHeaders;
     public $boxCookiesRule;
     public $dropboxCookiesRule;
+    public $facebookCookiesRule;
 
     public static $assets = ['uppy'];
 
@@ -154,8 +156,10 @@ class SmartsUppy extends BladeComponent
         string $showAudioSourceDropdown = "false",
         string $boxHeaders = "{}",
         string $dropboxHeaders = "{}",
+        string $facebookHeaders = "{}",
         string $boxCookiesRule = "same-origin",
         string $dropboxCookiesRule = "same-origin",
+        string $facebookCookiesRule = "same-origin",
     )
     {
         $this->url = $url;
@@ -224,8 +228,10 @@ class SmartsUppy extends BladeComponent
         $this->showAudioSourceDropdown = $showAudioSourceDropdown;
         $this->boxHeaders = $boxHeaders;
         $this->dropboxHeaders = $dropboxHeaders;
+        $this->facebookHeaders = $facebookHeaders;
         $this->boxCookiesRule = $boxCookiesRule;
         $this->dropboxCookiesRule = $dropboxCookiesRule;
+        $this->facebookCookiesRule = $facebookCookiesRule;
     }
 
     /**
