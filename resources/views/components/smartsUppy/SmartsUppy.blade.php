@@ -132,6 +132,8 @@
         .use(Uppy.Unsplash, {
             target: Uppy.Dashboard,
             companionUrl: '{{$unsplashUrl}}',
+            companionHeaders: '{{$unsplashHeaders}}',
+            companionCookiesRule: '{{$unsplashCookiesRule}}',
         })
         @endif
         @if($urlsourceUrl)
