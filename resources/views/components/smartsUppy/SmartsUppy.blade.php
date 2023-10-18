@@ -140,6 +140,8 @@
         .use(Uppy.Url, {
             target: Uppy.Dashboard,
             companionUrl: '{{$urlsourceUrl}}',
+            companionHeaders: '{{$urlsourceHeaders}}',
+            companionCookiesRule: '{{$urlsourceCookiesRule}}',
         })
         @endif
         @if($zoomUrl)

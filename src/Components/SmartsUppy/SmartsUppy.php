@@ -84,6 +84,7 @@ class SmartsUppy extends BladeComponent
     public $instagramHeaders;
     public $oneDriveHeaders;
     public $unsplashHeaders;
+    public $urlsourceHeaders;
     public $boxCookiesRule;
     public $dropboxCookiesRule;
     public $facebookCookiesRule;
@@ -91,6 +92,7 @@ class SmartsUppy extends BladeComponent
     public $instagramCookiesRule;
     public $oneDriveCookiesRule;
     public $unsplashCookiesRule;
+    public $urlsourceCookiesRule;
 
     public static $assets = ['uppy'];
 
@@ -169,6 +171,7 @@ class SmartsUppy extends BladeComponent
         string $instagramHeaders = "{}",
         string $oneDriveHeaders = "{}",
         string $unsplashHeaders = "{}",
+        string $urlsourceHeaders = "{}",
         string $boxCookiesRule = "same-origin",
         string $dropboxCookiesRule = "same-origin",
         string $facebookCookiesRule = "same-origin",
@@ -176,6 +179,7 @@ class SmartsUppy extends BladeComponent
         string $instagramCookiesRule = "same-origin",
         string $oneDriveCookiesRule = "same-origin",
         string $unsplashCookiesRule = "same-origin",
+        string $urlsourceCookiesRule = "same-origin",
     )
     {
         $this->url = $url;
@@ -249,6 +253,7 @@ class SmartsUppy extends BladeComponent
         $this->instagramHeaders = $instagramHeaders;
         $this->oneDriveHeaders = $oneDriveHeaders;
         $this->unsplashHeaders = $unsplashHeaders;
+        $this->urlsourceHeaders = $urlsourceHeaders;
         $this->boxCookiesRule = $boxCookiesRule;
         $this->dropboxCookiesRule = $dropboxCookiesRule;
         $this->facebookCookiesRule = $facebookCookiesRule;
@@ -256,6 +261,7 @@ class SmartsUppy extends BladeComponent
         $this->instagramCookiesRule = $instagramCookiesRule;
         $this->oneDriveCookiesRule = $oneDriveCookiesRule;
         $this->unsplashCookiesRule = $unsplashCookiesRule;
+        $this->urlsourceCookiesRule = $urlsourceCookiesRule;
     }
 
     /**
