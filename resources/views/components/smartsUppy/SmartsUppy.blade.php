@@ -188,7 +188,13 @@
             sources: {{$sources}},
             companionHeaders: {{$remoteSourcesHeaders}},
             companionCookiesRule: {{$remoteSourcesCookiesRule}},
-        });
+        })
+        @endif
+        @if($remoteSourcesUrl)
+        .use(Uppy.GoldenRetriever, {
+            expires: {{$expires}},
+            serviceWorker: {{$serviceWorker}},
+        })
         @endif
         .use(Uppy.XHRUpload, {
             endpoint: '{{$url}}',
