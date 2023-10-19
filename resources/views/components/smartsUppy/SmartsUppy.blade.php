@@ -190,7 +190,7 @@
             companionCookiesRule: {{$remoteSourcesCookiesRule}},
         })
         @endif
-        @if($remoteSourcesUrl)
+        @if($goldenretriever)
         .use(Uppy.GoldenRetriever, {
             expires: {{$expires}},
             serviceWorker: {{$serviceWorker}},
