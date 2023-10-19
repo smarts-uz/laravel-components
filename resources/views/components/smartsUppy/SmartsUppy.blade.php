@@ -161,6 +161,16 @@
             alwaysRunAssembly: {{$alwaysRunAssembly}},
         })
         @endif
+        @if($tus)
+        .use(Tus, {
+            headers: {!! $headers !!},
+            endpoint: '{{$url}}',
+            withCredentials: {{$withCredentials}},
+            retryDelays: {{$retryDelays}},
+            allowedMetaFields: {{$allowedMetaFields}},
+            limit: {{$tusLimit}},
+        });
+        @endif
         .use(Uppy.XHRUpload, {
             endpoint: '{{$url}}',
             formData: true,

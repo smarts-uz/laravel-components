@@ -115,6 +115,8 @@ class SmartsUppy extends BladeComponent
     public $importFromUploadURLs;
     public $alwaysRunAssembly;
     public $transloadit;
+    public $retryDelays;
+    public $tusLimit;
 
     public static $assets = ['uppy'];
 
@@ -220,12 +222,14 @@ class SmartsUppy extends BladeComponent
         string $withCredentials = "false",
         string $service = "https://api2.transloadit.com",
         string $transloaditLimit = "20",
+        string $tusLimit = "20",
         string $assemblyOptions = "null",
         string $waitForEncoding = "false",
         string $waitForMetadata = "false",
         string $importFromUploadURLs = "false",
         string $alwaysRunAssembly = "false",
         string $transloadit = null,
+        string $retryDelays = "[0, 1000, 3000, 5000]",
     )
     {
         $this->url = $url;
@@ -324,12 +328,14 @@ class SmartsUppy extends BladeComponent
         $this->withCredentials = $withCredentials;
         $this->service = $service;
         $this->transloaditLimit = $transloaditLimit;
+        $this->tusLimit = $tusLimit;
         $this->assemblyOptions = $assemblyOptions;
         $this->waitForEncoding = $waitForEncoding;
         $this->waitForMetadata = $waitForMetadata;
         $this->importFromUploadURLs = $importFromUploadURLs;
         $this->alwaysRunAssembly = $alwaysRunAssembly;
         $this->transloadit = $transloadit;
+        $this->retryDelays = $retryDelays;
     }
 
     /**
