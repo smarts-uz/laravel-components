@@ -116,6 +116,7 @@ class SmartsUppy extends BladeComponent
     public $alwaysRunAssembly;
     public $transloadit;
     public $retryDelays;
+    public $tus;
     public $tusLimit;
     public $shouldUseMultipart;
     public $awsS3Url;
@@ -229,6 +230,7 @@ class SmartsUppy extends BladeComponent
         string $withCredentials = "false",
         string $service = "https://api2.transloadit.com",
         string $transloaditLimit = "20",
+        string $tus = null,
         string $tusLimit = "20",
         string $assemblyOptions = "null",
         string $waitForEncoding = "false",
@@ -338,6 +340,7 @@ class SmartsUppy extends BladeComponent
         $this->withCredentials = $withCredentials;
         $this->service = $service;
         $this->transloaditLimit = $transloaditLimit;
+        $this->tus = $tus;
         $this->tusLimit = $tusLimit;
         $this->assemblyOptions = $assemblyOptions;
         $this->waitForEncoding = $waitForEncoding;
