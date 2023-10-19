@@ -181,6 +181,15 @@
             retryDelays: {{$retryDelays}},
         })
         @endif
+        @if($remoteSourcesUrl)
+        .use(Uppy.RemoteSources, {
+            target: Uppy.Dashboard,
+            companionUrl: '{{$remoteSourcesUrl}}',
+            sources: {{$sources}},
+            companionHeaders: {{$remoteSourcesHeaders}},
+            companionCookiesRule: {{$remoteSourcesCookiesRule}},
+        });
+        @endif
         .use(Uppy.XHRUpload, {
             endpoint: '{{$url}}',
             method: '{{$method}}',

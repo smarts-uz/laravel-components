@@ -124,6 +124,10 @@ class SmartsUppy extends BladeComponent
     public $awsS3Headers;
     public $awsS3CookiesRule;
     public $timeout;
+    public $remoteSourcesUrl;
+    public $sources;
+    public $remoteSourcesHeaders;
+    public $remoteSourcesCookiesRule;
 
     public static $assets = ['uppy'];
 
@@ -205,6 +209,7 @@ class SmartsUppy extends BladeComponent
         string $urlsourceHeaders = "{}",
         string $zoomHeaders = "{}",
         string $awsS3Headers = "{}",
+        string $remoteSourcesHeaders = "{}",
         string $boxCookiesRule = "same-origin",
         string $dropboxCookiesRule = "same-origin",
         string $facebookCookiesRule = "same-origin",
@@ -215,6 +220,7 @@ class SmartsUppy extends BladeComponent
         string $urlsourceCookiesRule = "same-origin",
         string $zoomCookiesRule = "same-origin",
         string $awsS3CookiesRule = "same-origin",
+        string $remoteSourcesCookiesRule = "same-origin",
         string $method = "post",
         string $formData = "true",
         string $allowedMetaFields = "null",
@@ -242,6 +248,8 @@ class SmartsUppy extends BladeComponent
         string $awsS3Url = null,
         string $awsS3Limit = "6",
         string $timeout = "30_000",
+        string $remoteSourcesUrl = null,
+        string $sources = "['Box', 'Dropbox', 'Facebook', 'GoogleDrive','Instagram', 'OneDrive', 'Unsplash', 'Url', 'Zoom']",
     )
     {
         $this->url = $url;
@@ -355,6 +363,10 @@ class SmartsUppy extends BladeComponent
         $this->awsS3Headers = $awsS3Headers;
         $this->awsS3CookiesRule = $awsS3CookiesRule;
         $this->timeout = $timeout;
+        $this->remoteSourcesUrl = $remoteSourcesUrl;
+        $this->sources = $sources;
+        $this->remoteSourcesHeaders = $remoteSourcesHeaders;
+        $this->remoteSourcesCookiesRule = $remoteSourcesCookiesRule;
     }
 
     /**
