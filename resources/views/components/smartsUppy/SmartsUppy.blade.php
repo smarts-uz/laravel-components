@@ -183,11 +183,22 @@
         @endif
         .use(Uppy.XHRUpload, {
             endpoint: '{{$url}}',
-            formData: true,
+            method: '{{$method}}',
+            formData: {{$formData}},
             fieldName: '{{$fieldName}}',
-            headers: file => ({
+            allowedMetaFields: '{{$allowedMetaFields}}',
+            headers: @if($headers){!! $headers !!}@else file => ({
                 'X-CSRF-TOKEN': '{{csrf_token()}}'
-            }),
+            }) @endif,
+            bundle: {{$bundle}},
+            validateStatus: {!! $validateStatus !!}, //(status, responseText, response) => boolean
+            getResponseData: {!! $getResponseData !!}, //(responseText, response) => void
+            getResponseError: {!! $getResponseError !!}, //(responseText, response) => void
+            responseUrlFieldName: '{{ $responseUrlFieldName }}',
+            timeout: {{ $timeout }},
+            limit: {{ $limit }},
+            responseType: '{{ $responseType }}',
+            withCredentials: {{ $withCredentials }},
         });
     @foreach($events as $key=>$value)
     uppy.on('{{$key}}', {!! $value !!});

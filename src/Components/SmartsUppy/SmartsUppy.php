@@ -123,6 +123,7 @@ class SmartsUppy extends BladeComponent
     public $awsS3Limit;
     public $awsS3Headers;
     public $awsS3CookiesRule;
+    public $timeout;
 
     public static $assets = ['uppy'];
 
@@ -217,13 +218,11 @@ class SmartsUppy extends BladeComponent
         string $method = "post",
         string $formData = "true",
         string $allowedMetaFields = "null",
-        string $headers = "file => ({
-                'X-CSRF-TOKEN': '{{csrf_token()}}'
-            })",
+        string $headers = null,
         string $bundle = "false",
-        string $validateStatus = "(status, responseText, response) => boolean",
-        string $getResponseData = "(responseText, response) => void",
-        string $getResponseError = "(responseText, response) => void",
+        string $validateStatus = "(status, responseText, response) => status",
+        string $getResponseData = "(responseText, response) => responseText",
+        string $getResponseError = "(responseText, response) => responseText",
         string $responseUrlFieldName = "url",
         string $limit = "5",
         string $responseType = "text",
@@ -242,6 +241,7 @@ class SmartsUppy extends BladeComponent
         string $shouldUseMultipart = "(file) => file.size > 100 * 2 ** 20",
         string $awsS3Url = null,
         string $awsS3Limit = "6",
+        string $timeout = "30_000",
     )
     {
         $this->url = $url;
@@ -354,6 +354,7 @@ class SmartsUppy extends BladeComponent
         $this->awsS3Limit = $awsS3Limit;
         $this->awsS3Headers = $awsS3Headers;
         $this->awsS3CookiesRule = $awsS3CookiesRule;
+        $this->timeout = $timeout;
     }
 
     /**
