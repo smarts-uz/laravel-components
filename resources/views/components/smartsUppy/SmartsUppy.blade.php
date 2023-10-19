@@ -162,7 +162,7 @@
         })
         @endif
         @if($tus)
-        .use(Tus, {
+        .use(Uppy.Tus, {
             headers: {!! $headers !!},
             endpoint: '{{$url}}',
             withCredentials: {{$withCredentials}},
@@ -170,6 +170,16 @@
             allowedMetaFields: {{$allowedMetaFields}},
             limit: {{$tusLimit}},
         });
+        @endif
+        @if($awsS3Url)
+        .use(Uppy.AwsS3, {
+            shouldUseMultipart: {{$shouldUseMultipart}},
+            limit: {{$awsS3Limit}},
+            companionUrl: '{{$awsS3Url}}',
+            companionHeaders: {{$awsS3Headers}},
+            companionCookiesRule: {{$awsS3CookiesRule}},
+            retryDelays: {{$retryDelays}},
+        })
         @endif
         .use(Uppy.XHRUpload, {
             endpoint: '{{$url}}',

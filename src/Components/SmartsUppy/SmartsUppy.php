@@ -117,6 +117,11 @@ class SmartsUppy extends BladeComponent
     public $transloadit;
     public $retryDelays;
     public $tusLimit;
+    public $shouldUseMultipart;
+    public $awsS3Url;
+    public $awsS3Limit;
+    public $awsS3Headers;
+    public $awsS3CookiesRule;
 
     public static $assets = ['uppy'];
 
@@ -197,6 +202,7 @@ class SmartsUppy extends BladeComponent
         string $unsplashHeaders = "{}",
         string $urlsourceHeaders = "{}",
         string $zoomHeaders = "{}",
+        string $awsS3Headers = "{}",
         string $boxCookiesRule = "same-origin",
         string $dropboxCookiesRule = "same-origin",
         string $facebookCookiesRule = "same-origin",
@@ -206,6 +212,7 @@ class SmartsUppy extends BladeComponent
         string $unsplashCookiesRule = "same-origin",
         string $urlsourceCookiesRule = "same-origin",
         string $zoomCookiesRule = "same-origin",
+        string $awsS3CookiesRule = "same-origin",
         string $method = "post",
         string $formData = "true",
         string $allowedMetaFields = "null",
@@ -230,6 +237,9 @@ class SmartsUppy extends BladeComponent
         string $alwaysRunAssembly = "false",
         string $transloadit = null,
         string $retryDelays = "[0, 1000, 3000, 5000]",
+        string $shouldUseMultipart = "(file) => file.size > 100 * 2 ** 20",
+        string $awsS3Url = null,
+        string $awsS3Limit = "6",
     )
     {
         $this->url = $url;
@@ -336,6 +346,11 @@ class SmartsUppy extends BladeComponent
         $this->alwaysRunAssembly = $alwaysRunAssembly;
         $this->transloadit = $transloadit;
         $this->retryDelays = $retryDelays;
+        $this->shouldUseMultipart = $shouldUseMultipart;
+        $this->awsS3Url = $awsS3Url;
+        $this->awsS3Limit = $awsS3Limit;
+        $this->awsS3Headers = $awsS3Headers;
+        $this->awsS3CookiesRule = $awsS3CookiesRule;
     }
 
     /**
