@@ -150,6 +150,17 @@
             companionUrl: '{{$zoomUrl}}',
         })
         @endif
+        @if($transloadit)
+        .use(Uppy.Transloadit, {
+            service: '{{$service}}',
+            limit: {{$transloaditLimit}},
+            assemblyOptions: {{$assemblyOptions}},
+            waitForEncoding: {{$waitForEncoding}},
+            waitForMetadata: {{$waitForMetadata}},
+            importFromUploadURLs: {{$importFromUploadURLs}},
+            alwaysRunAssembly: {{$alwaysRunAssembly}},
+        })
+        @endif
         .use(Uppy.XHRUpload, {
             endpoint: '{{$url}}',
             formData: true,

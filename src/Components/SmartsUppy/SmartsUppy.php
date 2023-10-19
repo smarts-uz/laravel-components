@@ -85,6 +85,7 @@ class SmartsUppy extends BladeComponent
     public $oneDriveHeaders;
     public $unsplashHeaders;
     public $urlsourceHeaders;
+    public $zoomHeaders;
     public $boxCookiesRule;
     public $dropboxCookiesRule;
     public $facebookCookiesRule;
@@ -93,13 +94,34 @@ class SmartsUppy extends BladeComponent
     public $oneDriveCookiesRule;
     public $unsplashCookiesRule;
     public $urlsourceCookiesRule;
+    public $zoomCookiesRule;
+    public $method;
+    public $formData;
+    public $allowedMetaFields;
+    public $headers;
+    public $bundle;
+    public $validateStatus;
+    public $getResponseData;
+    public $getResponseError;
+    public $responseUrlFieldName;
+    public $limit;
+    public $responseType;
+    public $withCredentials;
+    public $service;
+    public $transloaditLimit;
+    public $assemblyOptions;
+    public $waitForEncoding;
+    public $waitForMetadata;
+    public $importFromUploadURLs;
+    public $alwaysRunAssembly;
+    public $transloadit;
 
     public static $assets = ['uppy'];
 
     public function __construct(
         $url,
         $target,
-        $fieldName,
+        $fieldName = "files[]",
         $width = '650',$height = '550',
         string $boxUrl = null,
         string $dropboxUrl = null,
@@ -172,6 +194,7 @@ class SmartsUppy extends BladeComponent
         string $oneDriveHeaders = "{}",
         string $unsplashHeaders = "{}",
         string $urlsourceHeaders = "{}",
+        string $zoomHeaders = "{}",
         string $boxCookiesRule = "same-origin",
         string $dropboxCookiesRule = "same-origin",
         string $facebookCookiesRule = "same-origin",
@@ -180,6 +203,29 @@ class SmartsUppy extends BladeComponent
         string $oneDriveCookiesRule = "same-origin",
         string $unsplashCookiesRule = "same-origin",
         string $urlsourceCookiesRule = "same-origin",
+        string $zoomCookiesRule = "same-origin",
+        string $method = "post",
+        string $formData = "true",
+        string $allowedMetaFields = "null",
+        string $headers = "file => ({
+                'X-CSRF-TOKEN': '{{csrf_token()}}'
+            })",
+        string $bundle = "false",
+        string $validateStatus = "(status, responseText, response) => boolean",
+        string $getResponseData = "(responseText, response) => void",
+        string $getResponseError = "(responseText, response) => void",
+        string $responseUrlFieldName = "url",
+        string $limit = "5",
+        string $responseType = "text",
+        string $withCredentials = "false",
+        string $service = "https://api2.transloadit.com",
+        string $transloaditLimit = "20",
+        string $assemblyOptions = "null",
+        string $waitForEncoding = "false",
+        string $waitForMetadata = "false",
+        string $importFromUploadURLs = "false",
+        string $alwaysRunAssembly = "false",
+        string $transloadit = null,
     )
     {
         $this->url = $url;
@@ -254,6 +300,7 @@ class SmartsUppy extends BladeComponent
         $this->oneDriveHeaders = $oneDriveHeaders;
         $this->unsplashHeaders = $unsplashHeaders;
         $this->urlsourceHeaders = $urlsourceHeaders;
+        $this->zoomHeaders = $zoomHeaders;
         $this->boxCookiesRule = $boxCookiesRule;
         $this->dropboxCookiesRule = $dropboxCookiesRule;
         $this->facebookCookiesRule = $facebookCookiesRule;
@@ -262,6 +309,27 @@ class SmartsUppy extends BladeComponent
         $this->oneDriveCookiesRule = $oneDriveCookiesRule;
         $this->unsplashCookiesRule = $unsplashCookiesRule;
         $this->urlsourceCookiesRule = $urlsourceCookiesRule;
+        $this->zoomCookiesRule = $zoomCookiesRule;
+        $this->method = $method;
+        $this->formData = $formData;
+        $this->allowedMetaFields = $allowedMetaFields;
+        $this->headers = $headers;
+        $this->bundle = $bundle;
+        $this->validateStatus = $validateStatus;
+        $this->getResponseData = $getResponseData;
+        $this->getResponseError = $getResponseError;
+        $this->responseUrlFieldName = $responseUrlFieldName;
+        $this->limit = $limit;
+        $this->responseType = $responseType;
+        $this->withCredentials = $withCredentials;
+        $this->service = $service;
+        $this->transloaditLimit = $transloaditLimit;
+        $this->assemblyOptions = $assemblyOptions;
+        $this->waitForEncoding = $waitForEncoding;
+        $this->waitForMetadata = $waitForMetadata;
+        $this->importFromUploadURLs = $importFromUploadURLs;
+        $this->alwaysRunAssembly = $alwaysRunAssembly;
+        $this->transloadit = $transloadit;
     }
 
     /**
