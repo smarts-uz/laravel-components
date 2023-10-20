@@ -128,8 +128,12 @@ class SmartsUppy extends BladeComponent
     public $sources;
     public $remoteSourcesHeaders;
     public $remoteSourcesCookiesRule;
+    public $goldenretriever;
     public $expires;
     public $serviceWorker;
+    public $compressor;
+    public $compressorQuality;
+    public $compressorLimit;
 
     public static $assets = ['uppy'];
 
@@ -252,8 +256,12 @@ class SmartsUppy extends BladeComponent
         string $timeout = "30_000",
         string $remoteSourcesUrl = null,
         string $sources = "['Box', 'Dropbox', 'Facebook', 'GoogleDrive','Instagram', 'OneDrive', 'Unsplash', 'Url', 'Zoom']",
+        string $goldenretriever = null,
         string $expires = "24 * 60 * 60 * 1000",
         string $serviceWorker = "false",
+        string $compressor = null,
+        string $compressorQuality = "0.6",
+        string $compressorLimit = "10",
     )
     {
         $this->url = $url;
@@ -371,8 +379,12 @@ class SmartsUppy extends BladeComponent
         $this->sources = $sources;
         $this->remoteSourcesHeaders = $remoteSourcesHeaders;
         $this->remoteSourcesCookiesRule = $remoteSourcesCookiesRule;
+        $this->goldenretriever = $goldenretriever;
         $this->expires = $expires;
         $this->serviceWorker = $serviceWorker;
+        $this->compressor = $compressor;
+        $this->compressorQuality = $compressorQuality;
+        $this->compressorLimit = $compressorLimit;
     }
 
     /**

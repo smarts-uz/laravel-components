@@ -196,6 +196,12 @@
             serviceWorker: {{$serviceWorker}},
         })
         @endif
+        @if($compressor)
+        .use(Uppy.Compressor, {
+            quality: {{$compressorQuality}},
+            limit: {{$compressorLimit}},
+        })
+        @endif
         .use(Uppy.XHRUpload, {
             endpoint: '{{$url}}',
             method: '{{$method}}',
