@@ -169,7 +169,7 @@
             retryDelays: {{$retryDelays}},
             allowedMetaFields: {{$allowedMetaFields}},
             limit: {{$tusLimit}},
-        });
+        })
         @endif
         @if($awsS3Url)
         .use(Uppy.AwsS3, {
