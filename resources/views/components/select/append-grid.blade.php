@@ -1,8 +1,8 @@
 <table id="{{$id}}" {{ $attributes }}></table>
 <script>
-    var myAppendGrid;
+    var myAppendGrid{{$id}};
     document.addEventListener("DOMContentLoaded", function () {
-        myAppendGrid = new AppendGrid({
+        myAppendGrid{{$id}} = new AppendGrid({
             element: "{{$id}}",
             uiFramework: "{{$uiFramework}}",
             iconFramework: "{{$iconFramework}}",
@@ -19,5 +19,8 @@
                     {{$key}}: {!! $value !!},
             @endforeach
         });
+        @foreach($addEventListener as $key)
+        document.getElementById("{{$key['id']}}").addEventListener('{{$key['key']}}',{!! $key['value'] !!});
+        @endforeach
     });
 </script>
