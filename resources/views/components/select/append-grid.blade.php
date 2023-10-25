@@ -20,7 +20,7 @@
             @endforeach
         });
         @foreach($addEventListener as $key)
-        document.getElementById("{{$key['id']}}").addEventListener('{{$key['key']}}',{!! $key['value'] !!});
+            document.getElementById("{{$key['id']}}").addEventListener('{{$key['key']}}',{!! $key['value'] !!});
         @endforeach
     });
 </script>
