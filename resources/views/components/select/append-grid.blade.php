@@ -19,8 +19,13 @@
                     {{$key}}: {!! $value !!},
             @endforeach
         });
+        @foreach($addFunction as $function)
+        function {{$function['name']}}({{$function['parameters']}}) {
+            {!! $function['value'] !!}
+        }
+        @endforeach
         @foreach($addEventListener as $key)
-            document.getElementById("{{$key['id']}}").addEventListener('{{$key['key']}}',{!! $key['value'] !!});
+        document.getElementById("{{$key['id']}}").addEventListener('{{$key['key']}}',{!! $key['value'] !!});
         @endforeach
     });
 </script>

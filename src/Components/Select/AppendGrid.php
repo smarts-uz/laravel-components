@@ -29,6 +29,9 @@ class AppendGrid extends BladeComponent
     /** @var array */
     public $addEventListener;
 
+    /** @var array */
+    public $addFunction;
+
     protected static $assets = ['append-grid'];
 
     public function __construct(string $id,
@@ -37,7 +40,8 @@ class AppendGrid extends BladeComponent
                                 string $uiFramework = 'bootstrap5',
                                 string $iconFramework = 'fontawesome5',
                                 array $options = [],
-                                array $addEventListener = [])
+                                array $addEventListener = [],
+                                array $addFunction = [])
     {
         $this->id = $id;
         $this->columns = $columns;
@@ -46,6 +50,7 @@ class AppendGrid extends BladeComponent
         $this->iconFramework = $iconFramework;
         $this->options = $options;
         $this->addEventListener = $addEventListener;
+        $this->addFunction = $addFunction;
     }
 
     public function render(): View
