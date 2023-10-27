@@ -10,7 +10,7 @@
                     @foreach($columns as $column)
                 {
                     @foreach($column as $key=>$value)
-                            {{$key}}: "{{$value}}",
+                            {{$key}}: {!!  $value !!},
                     @endforeach
                 },
                 @endforeach
