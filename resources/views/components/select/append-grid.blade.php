@@ -28,4 +28,8 @@
         document.getElementById("{{$key['id']}}").addEventListener('{{$key['key']}}',{!! $key['value'] !!});
         @endforeach
     });
+    @if($fixedHeader)
+    // Fix header
+    $("#{{$id}}").floatThead();
+    @endif
 </script>
