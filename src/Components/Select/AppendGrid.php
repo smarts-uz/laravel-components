@@ -45,7 +45,7 @@ class AppendGrid extends BladeComponent
                                 array $options = [],
                                 array $addEventListener = [],
                                 array $addFunction = [],
-                                string $fixedHeader = "false")
+                                string $fixedHeader = null)
     {
         $this->id = $id;
         $this->columns = $columns;
