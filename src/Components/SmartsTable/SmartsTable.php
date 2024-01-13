@@ -15,39 +15,173 @@ class SmartsTable extends BladeComponent
      *
      * @return void
      */
+
+    /**
+     * @var string
+     * Table name
+     */
     public string $tableTitle;
+    /**
+     * @var array
+     * Table column
+     */
     public array $dtColumns;
+    /**
+     * @var string
+     * Table id
+     */
     public string $tableId;
+    /**
+     * @var string
+     * Table data
+     */
     public string $getData;
+    /**
+     * @var string
+     */
     public string $language;
+    /**
+     * @var string
+     * Default "Blfrtip"
+     */
     public string $dom;
+    /**
+     * @var int
+     * Button collection that will control the DataTables' page length.
+     */
     public int $pageLength;
+    /**
+     * @var string
+     * As part of the DataTables constructor, the buttons option can be given as an array of the buttons you wish to show - this is typically just the button name, although you can provide options to customise the button's actions
+     */
     public string $buttons;
+    /**
+     * @var bool
+     * ColReorder adds the ability for the end user to be able to reorder columns in a DataTable through a click and drag operation
+     */
     public bool $colReorder;
+    /**
+     * @var bool
+     * State saving - restore table state on page reload.
+     */
     public bool $stateSave;
+    /**
+     * @var bool
+     * DataTables provides a server-side processing option for handling large data sets.
+     */
     public bool $serverSide;
+    /**
+     * @var string
+     * Horizontal scrolling.
+     */
     public string $scrollX;
+    /**
+     * @var bool|string
+     * Enable and configure the Responsive extension for DataTables.
+     */
     public bool|string $responsive;
+    /**
+     * @var bool|string
+     * Select configuration object.
+     */
     public bool|string $select;
+    /**
+     * @var string|int
+     * Vertical scrolling.
+     */
     public string|int $scrollY;
+    /**
+     * @var bool
+     * Enable and configure the Scroller extension for DataTables.
+     */
     public bool $scroller;
+    /**
+     * @var bool
+     * Enable and configure the KeyTable extension for DataTables.
+     */
     public bool $keys;
+    /**
+     * @var bool|string
+     * Enable and configure the RowReorder extension for DataTables.
+     */
     public bool|string $rowReorder;
+    /**
+     * @var bool|string
+     * A single button that displays the SearchBuilder container in a popover.
+     */
     public bool|string $searchBuilder;
+    /**
+     * @var array
+     * Add something before creating table
+     */
     public array $fn;
+    /**
+     * @var bool|string
+     * Enable and configure the RowGroup extension for DataTables.
+     */
     public bool|string $rowGroup;
+    /**
+     * @var string
+     * Pagination button display options.
+     */
     public string $pagingType;
+    /**
+     * @var string
+     */
     public $startDate;
+    /**
+     * @var string
+     */
     public $endDate ;
+    /**
+     * @var array
+     * Table header
+     */
     public array $dtHeaders;
+    /**
+     * @var string
+     * Excel export class
+     */
     public $exportId;
+    /**
+     * @var array
+     * Add other table options
+     */
     public array $options;
+    /**
+     * @var array
+     * Event
+     */
     public array $events;
+    /**
+     * @var array
+     * Add new object
+     */
     public array $objects;
+    /**
+     * @var array
+     * Add addEventListener
+     */
     public array $addEventListener;
+    /**
+     * @var array
+     * Create new function before creating table
+     */
     public array $functions;
+    /**
+     * @var array
+     * Add querySelectorAll
+     */
     public array $querySelectorAll;
+    /**
+     * @var bool
+     * Header Clone
+     */
     public bool $headerclone;
+    /**
+     * @var bool
+     * Actions
+     */
     public bool $tableControlers;
 
     public static $assets = ['yajra'];
