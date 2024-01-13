@@ -11,28 +11,42 @@ class AppendGrid extends BladeComponent
     /** @var string */
     public $id;
 
-    /** @var array */
+    /** @var array
+     * Array of column options
+     */
     public $columns;
 
     /** @var string */
     public $attributes;
 
-    /** @var string */
+    /** @var string
+     * The name of UI framework to be used for styling.
+     */
     public $uiFramework;
 
-    /** @var string */
+    /** @var string
+     * The name of icon framework to be used on buttons. These icon frameworks may have several download format. AppendGrid is implemented to work with their Webfont format.
+     */
     public $iconFramework;
 
-    /** @var array */
+    /** @var array
+     * Other column options
+     */
     public $options;
 
-    /** @var array */
+    /** @var array
+     * addEventListener
+     */
     public $addEventListener;
 
-    /** @var array */
+    /** @var array
+     * Add new function
+     */
     public $addFunction;
 
-    /** @var array */
+    /** @var array
+     * Fixed Header
+     */
     public $fixedHeader;
 
     protected static $assets = ['append-grid'];
