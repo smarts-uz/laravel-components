@@ -12,127 +12,722 @@ class SmartsUppy extends BladeComponent
      *
      * @return void
      */
+
+    /**
+     * @var
+     * UrlComponent
+     */
     public $url;
+    /**
+     * @var
+     *
+     * A quick overview of the complete API.
+     */
     public $target;
+    /**
+     * @var
+     *
+     * When formData is set to true, this is used as the form field name for the file to be uploaded.
+     */
     public $fieldName;
+    /**
+     * @var
+     *
+     * Drag and drop area width (string, default: '100%').
+     */
     public $width;
+    /**
+     * @var
+     *
+     * Drag and drop area height (string, default: '100%').
+     */
     public $height;
+    /**
+     * @var
+     *
+     * Box Url
+     */
     public $boxUrl;
+    /**
+     * @var
+     *
+     * dropBox Url
+     */
     public $dropboxUrl;
+    /**
+     * @var
+     *
+     * Facebook Url
+     */
     public $facebookUrl;
+    /**
+     * @var
+     *
+     * GoogleDrive Url
+     */
     public $googleDriveUrl;
+    /**
+     * @var
+     *
+     * Instagram Url
+     */
     public $instagramUrl;
+    /**
+     * @var
+     *
+     * OneDrive Url
+     */
     public $oneDriveUrl;
+    /**
+     * @var
+     *
+     * Unsplash Url
+     */
     public $unsplashUrl;
+    /**
+     * @var
+     *
+     * urlSource Url
+     */
     public $urlsourceUrl;
+    /**
+     * @var
+     *
+     * Zoom Url
+     */
     public $zoomUrl;
     public $webcam;
     public $screenCapture;
     public $audio;
+    /**
+     * @var
+     *
+     * Light or dark theme for the Dashboard (string, default: 'light').
+     */
     public $theme;
+    /**
+     * @var
+     *
+     * Enabling this option makes the Dashboard grayed-out and non-interactive (boolean, default: false).
+     */
     public $disabled;
+    /**
+     * @var
+     *
+     * Locale
+     */
     public $locale;
+    /**
+     * @var
+     *
+     *
+     * Optionally, specify a string of text that explains something about the upload for the user (string, default: null).
+     * This is a place to explain any restrictions that are put in place. For example: 'Images and video only, 2–3 files, up to 1 MB'.
+     */
     public $note;
+    /**
+     * @var
+     *
+     * Conditions for restricting an upload (Object, default: {}).
+     */
     public $restrictions;
+    /**
+     * @var
+     *
+     * Whether to send debugging and warning logs (boolean, default: false).
+     */
     public $debug;
+    /**
+     * @var
+     *
+     * Upload as soon as files are added (boolean, default: false).
+     */
     public $autoProceed;
+    /**
+     * @var
+     *
+     * Display remaining upload size and estimated time (boolean, default: false)
+     */
     public $showProgressDetails;
+    /**
+     * @var
+     *
+     * Render the Dashboard as a modal or inline (boolean, default: false).
+     */
     public $inline;
+    /**
+     * @var
+     *
+     * A CSS selector for a button that will trigger opening the Dashboard modal (string, default: null).
+     */
     public $trigger;
+    /**
+     * @var
+     *
+     * Create text or custom input fields for the user to fill in (Array<Object> or Function, default: null).
+     */
     public $metaFields;
+    /**
+     * @var
+     *
+     * Whether to wait for all thumbnails to be ready before starting the upload (boolean, default: false).
+     */
     public $waitForThumbnailsBeforeUpload;
+    /**
+     * @var
+     *
+     * Turn the file icon and thumbnail in the Dashboard into a link to the uploaded file (boolean, default: false).
+     */
     public $showLinkToFileUploadResult;
+    /**
+     * @var
+     *
+     * Hide the upload button (boolean, default: false).
+     */
     public $hideUploadButton;
+    /**
+     * @var
+     *
+     * Hide the retry button (boolean, default: false).
+     */
     public $hideRetryButton;
+    /**
+     * @var
+     *
+     * Hide pause/resume buttons (for resumable uploads, via tus, for example) (boolean, default: false).
+     */
     public $hidePauseResumeButton;
+    /**
+     * @var
+     *
+     * Hide the cancel button (boolean, default: false).
+     */
     public $hideCancelButton;
+    /**
+     * @var
+     *
+     * Hide the status bar after the upload has finished (boolean, default: false).
+     */
     public $hideProgressAfterFinish;
+    /**
+     * @var
+     *
+     * Show the list of added files with a preview and file information (boolean, default: true).
+     */
     public $showSelectedFiles;
+    /**
+     * @var
+     *
+     * When only one file is selected, its preview and meta information will be centered and enlarged (boolean, default: true).
+     */
     public $singleFileFullScreen;
+    /**
+     * @var
+     *
+     * Set to true to automatically close the modal when the user clicks outside of it (boolean, default: false).
+     */
     public $closeModalOnClickOutside;
+    /**
+     * @var
+     *
+     * Set to true to automatically close the modal when all current uploads are complete (boolean, default: false).
+     */
     public $closeAfterFinish;
+    /**
+     * @var
+     *
+     * Disable page scroll when the modal is open (boolean, default: true).
+     */
     public $disablePageScrollWhenModalOpen;
+    /**
+     * @var
+     *
+     * Add animations when the modal dialog is opened or closed, for a more satisfying user experience (boolean, default: true).
+     */
     public $animateOpenClose;
+    /**
+     * @var
+     *
+     * Configure the type of selections allowed when browsing your file system via the file manager selection window (string, default: 'files').
+     */
     public $fileManagerSelectionType;
+    /**
+     * @var
+     *
+     * Show the Uppy logo with a link (boolean, default: true).
+     */
     public $proudlyDisplayPoweredByUppy;
+    /**
+     * @var
+     *
+     * Disable the status bar completely (boolean, default: false).
+     */
     public $disableStatusBar;
+    /**
+     * @var
+     *
+     * Disable informer (shows notifications in the form of toasts) completely (boolean, default: false).
+     */
     public $disableInformer;
+    /**
+     * @var
+     *
+     * Disable the thumbnail generator completely (boolean, default: false).
+     */
     public $disableThumbnailGenerator;
+    /**
+     * @var
+     *
+     * Disable local files (boolean, default: false).
+     */
     public $disableLocalFiles;
+    /**
+     * @var
+     *
+     * You can use on and once to listen to these events.
+     */
     public $events;
+    /**
+     * @var
+     *
+     * ID
+     */
     public $id;
+    /**
+     * @var
+     *
+     * Whether to allow several upload batches (boolean, default: true).
+     */
     public $allowMultipleUploadBatches;
+    /**
+     * @var
+     *
+     * The meta data will only be set on a file object if it’s entered by the user.
+     */
     public $meta;
+    /**
+     * @var
+     *
+     * How long an Informer notification will be visible (number, default: 5000).
+     */
     public $infoTimeout;
+    /**
+     * @var
+     *
+     * When taking a picture: the amount of seconds to wait before actually taking a snapshot (boolean, default: false).
+     */
     public $countdown;
+    /**
+     * @var
+     *
+     * The types of recording modes to allow (Array, default: []).
+     */
     public $modes;
+    /**
+     * @var
+     *
+     * Configures whether to mirror preview image from the camera (boolean, default: true).
+     */
     public $mirror;
+    /**
+     * @var
+     *
+     * Configure the MediaTrackConstraints (Object, default: {}).
+     */
     public $videoConstraints;
+    /**
+     * @var
+     */
     public $showVideoSourceDropdown;
+    /**
+     * @var
+     *
+     * Configures whether to show a dropdown which enables to choose the video device to use (boolean, default: false).
+     */
     public $showRecordingLength;
+    /**
+     * @var
+     *
+     * Set the preferred mime type for video recordings, for example 'video/webm' (string, default: null).
+     */
     public $webcamPreferredVideoMimeType;
+    /**
+     * @var
+     *
+     * Set the preferred mime type for images, for example 'image/png' (string, default: image/jpeg).
+     */
     public $preferredImageMimeType;
+    /**
+     * @var
+     *
+     * Replaces Uppy’s custom camera UI on mobile and tablet with the native device camera (Function: boolean or boolean, default: isMobile()).
+     */
     public $mobileNativeCamera;
+    /**
+     * @var
+     *
+     * Options passed to MediaDevices.getDisplayMedia() (Object, default: null).
+     */
     public $displayMediaConstraints;
+    /**
+     * @var
+     *
+     * Options passed to MediaDevices.getUserMedia() (Object, default: null).
+     */
     public $userMediaConstraints;
+    /**
+     * @var
+     *
+     * Set the preferred mime type for video recordings, for example 'video/webm' (string, default: null).
+     */
     public $screenCapturePreferredVideoMimeType;
+    /**
+     * @var
+     *
+     * Configures whether to show a dropdown to select audio device (boolean, default: false).
+     */
     public $showAudioSourceDropdown;
+    /**
+     * @var
+     *
+     * Custom headers that should be sent along to Companion on every request (Object, default: {}).
+     */
     public $boxHeaders;
+    /**
+     * @var
+     *
+     * Custom headers that should be sent along to Companion on every request (Object, default: {}).
+     */
     public $dropboxHeaders;
+    /**
+     * @var
+     *
+     * Custom headers that should be sent along to Companion on every request (Object, default: {}).
+     */
     public $facebookHeaders;
+    /**
+     * @var
+     *
+     * Custom headers that should be sent along to Companion on every request (Object, default: {}).
+     */
     public $googleDriveHeaders;
+    /**
+     * @var
+     *
+     * Custom headers that should be sent along to Companion on every request (Object, default: {}).
+     */
     public $instagramHeaders;
+    /**
+     * @var
+     *
+     * Custom headers that should be sent along to Companion on every request (Object, default: {}).
+     */
     public $oneDriveHeaders;
+    /**
+     * @var
+     *
+     * Custom headers that should be sent along to Companion on every request (Object, default: {}).
+     */
     public $unsplashHeaders;
+    /**
+     * @var
+     *
+     * Custom headers that should be sent along to Companion on every request (Object, default: {}).
+     */
     public $urlsourceHeaders;
+    /**
+     * @var
+     *
+     * Custom headers that should be sent along to Companion on every request (Object, default: {}).
+     */
     public $zoomHeaders;
+    /**
+     * @var
+     *
+     * This option correlates to the RequestCredentials value (string, default: 'same-origin').
+     */
     public $boxCookiesRule;
+    /**
+     * @var
+     *
+     * This option correlates to the RequestCredentials value (string, default: 'same-origin').
+     */
     public $dropboxCookiesRule;
+    /**
+     * @var
+     *
+     * This option correlates to the RequestCredentials value (string, default: 'same-origin').
+     */
     public $facebookCookiesRule;
+    /**
+     * @var
+     *
+     * This option correlates to the RequestCredentials value (string, default: 'same-origin').
+     */
     public $googleDriveCookiesRule;
+    /**
+     * @var
+     *
+     * This option correlates to the RequestCredentials value (string, default: 'same-origin').
+     */
     public $instagramCookiesRule;
+    /**
+     * @var
+     *
+     * This option correlates to the RequestCredentials value (string, default: 'same-origin').
+     */
     public $oneDriveCookiesRule;
+    /**
+     * @var
+     *
+     * This option correlates to the RequestCredentials value (string, default: 'same-origin').
+     */
     public $unsplashCookiesRule;
+    /**
+     * @var
+     *
+     * This option correlates to the RequestCredentials value (string, default: 'same-origin').
+     */
     public $urlsourceCookiesRule;
+    /**
+     * @var
+     *
+     * This option correlates to the RequestCredentials value (string, default: 'same-origin').
+     */
     public $zoomCookiesRule;
+    /**
+     * @var
+     *
+     * Methods
+     */
     public $method;
+    /**
+     * @var
+     *
+     * Configures whether to use a multipart form upload, using FormData (boolean, default: true).
+     */
     public $formData;
+    /**
+     * @var
+     *
+     * Pass an array of field names to limit the metadata fields that will be added to upload.
+     */
     public $allowedMetaFields;
+    /**
+     * @var
+     *
+     * An object containing HTTP headers to use for the upload request. Keys are header names, values are header values.
+     */
     public $headers;
+    /**
+     * @var
+     *
+     * Send all files in a single multipart request (boolean, default: false).
+     */
     public $bundle;
+    /**
+     * @var
+     *
+     * Check if the response was successful (function, default: (status, responseText, response) => boolean).
+     */
     public $validateStatus;
+    /**
+     * @var
+     *
+     * Extract the response data from the successful upload (function, default: (responseText, response) => void).
+     */
     public $getResponseData;
+    /**
+     * @var
+     *
+     * Extract the error from the failed upload (function, default: (responseText, response) => void).
+     */
     public $getResponseError;
+    /**
+     * @var
+     *
+     * The field name containing the location of the uploaded file (string, default: 'url').
+     */
     public $responseUrlFieldName;
+    /**
+     * @var
+     *
+     * Number of images that will be compressed in parallel (number, default: 10).
+     */
     public $limit;
+    /**
+     * @var
+     *
+     * The response type expected from the server, determining how the xhr.response property should be filled (string, default: 'text').
+     */
     public $responseType;
+    /**
+     * @var
+     *
+     * Configure the requests to send Cookies using the xhr.withCredentials property (boolean, default: false).
+     */
     public $withCredentials;
+    /**
+     * @var
+     *
+     * The Transloadit API URL to use (string, default: https://api2.transloadit.com).
+     */
     public $service;
+    /**
+     * @var
+     *
+     * Limit the amount of uploads going on at the same time (number, default: 20).
+     */
     public $transloaditLimit;
+    /**
+     * @var
+     *
+     * Configure the Assembly Instructions, the fields to send along to the assembly, and authentication (object | function, default: null).
+     */
     public $assemblyOptions;
+    /**
+     * @var
+     *
+     * Wait for the template to finish, rather than only the upload, before marking the upload complete (boolean, default: false).
+     */
     public $waitForEncoding;
+    /**
+     * @var
+     *
+     * Wait for Transloadit’s backend to catch early errors, not the entire Assembly to complete. (boolean, default: false)
+     */
     public $waitForMetadata;
+    /**
+     * @var
+     *
+     * Allow another plugin to upload files, and then import those files into the Transloadit Assembly (boolean, default: false).
+     */
     public $importFromUploadURLs;
+    /**
+     * @var
+     *
+     * Always create and run an Assembly when uppy.upload() is called, even if no files were selected (boolean, default: false).
+     */
     public $alwaysRunAssembly;
+    /**
+     * @var
+     *
+     * True or False
+     */
     public $transloadit;
+    /**
+     * @var
+     *
+     * When uploading a chunk fails, automatically try again after the defined millisecond intervals (Array<number>, default: [0, 1000, 3000, 5000]).
+     */
     public $retryDelays;
+    /**
+     * @var
+     *
+     * True or False
+     */
     public $tus;
+    /**
+     * @var
+     *
+     * Limit the amount of uploads going on at the same time (number, default: 20).
+     */
     public $tusLimit;
+    /**
+     * @var
+     *
+     * A boolean, or a function that returns a boolean which is called for each file that is uploaded with the corresponding UppyFile instance as argument.
+     */
     public $shouldUseMultipart;
+    /**
+     * @var
+     *
+     * AwsS3 Url
+     */
     public $awsS3Url;
+    /**
+     * @var
+     *
+     * The maximum amount of files to upload in parallel (number, default: 6).
+     */
     public $awsS3Limit;
+    /**
+     * @var
+     *
+     * Custom headers that should be sent along to Companion on every request (Object, default: {}).
+     */
     public $awsS3Headers;
+    /**
+     * @var
+     *
+     * This option correlates to the RequestCredentials value (string, default: 'same-origin').
+     */
     public $awsS3CookiesRule;
+    /**
+     * @var
+     *
+     * Limit the amount of uploads going on at the same time (number, default: 5).
+     */
     public $timeout;
+    /**
+     * @var
+     *
+     * Remote Sources Url
+     */
     public $remoteSourcesUrl;
+    /**
+     * @var
+     *
+     * List of remote sources that will be enabled (array, default: ['Box', 'Dropbox', 'Facebook', 'GoogleDrive','Instagram', 'OneDrive', 'Unsplash', 'Url', 'Zoom']).
+     */
     public $sources;
+    /**
+     * @var
+     *
+     * Custom headers that should be sent along to Companion on every request (object, default: {}).
+     */
     public $remoteSourcesHeaders;
+    /**
+     * @var
+     *
+     * This option correlates to the Request.credentials value, which tells the plugin whether to send cookies to Companion (string, default: same-origin).
+     */
     public $remoteSourcesCookiesRule;
+    /**
+     * @var
+     *
+     * True or False
+     */
     public $goldenretriever;
+    /**
+     * @var
+     *
+     * How long to store metadata and files for. Used for LocalStorage and IndexedDB (number, default: 24 * 60 * 60 * 1000 // 24 hours).
+     */
     public $expires;
+    /**
+     * @var
+     *
+     * Whether to enable Service Worker storage (boolean, default: false).
+     */
     public $serviceWorker;
+    /**
+     * @var
+     *
+     * True or False
+     */
     public $compressor;
+    /**
+     * @var
+     *
+     * The quality of the output image passed to Compressor.js (number, default: 0.6).
+     */
     public $compressorQuality;
+    /**
+     * @var
+     *
+     * Number of images that will be compressed in parallel (number, default: 10).
+     */
     public $compressorLimit;
 
     public static $assets = ['uppy'];
